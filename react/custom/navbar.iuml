@@ -1,0 +1,9 @@
+class Navbar{
+  + loggedIn(bool)
+  + links(Links[])
+  ---
+  + link-logo to index
+  + link to price page
+  + link to help page
+  + links based on login and type user
+}

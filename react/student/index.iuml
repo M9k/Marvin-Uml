@@ -1,0 +1,4 @@
+package StudentPages <<UC 9>> {
+
+class StudentIndex{
+}

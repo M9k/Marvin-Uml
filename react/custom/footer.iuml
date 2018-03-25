@@ -1,0 +1,10 @@
+class Footer{
+  + pure component()
+  ---
+  + credits to the team
+}
+
+note right of Footer
+ Reference image
+<img:http://plantuml.com/logoc.png>
+end note

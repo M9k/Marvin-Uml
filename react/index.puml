@@ -1,12 +1,11 @@
 @startuml
 
-title Relationships - Class Diagram
+title Relationships - Class Diagram for Marvin Frontend
 
 package Bootstrap-React <<npm module components>> {
 
 !include bootstrap/button.iuml
 !include bootstrap/checkbox.iuml
-
 !include bootstrap/formcontrol.iuml
 
 
@@ -18,9 +17,8 @@ class PageHeader{
 int v
 }
 
-class Panel{
-int v
-}
+!include bootstrap/panel.iuml
+
 
 class Radio{
 int v
@@ -37,6 +35,12 @@ bootstrap links?
 }
 
 package custom-components <<components created by us>>{
+
+!include custom/navbar.iuml
+
+!include custom/footer.iuml
+
+
 class Login <<UC 2>>{
   ---
   + getTypeUser()
@@ -47,22 +51,6 @@ class Logout <<UC 4>>{
   + resetStore()
   + resetHistory()
 }
-
-class NavBar{
-  + loggedIn(bool)
-  + links(Links[])
-  ---
-}
-
-class Footer{
-  + small(bool)
-  ---
-}
-
-note right of Footer
- Reference image
-<img:http://plantuml.com/logoc.png>
-end note
 
 }
 
@@ -92,7 +80,10 @@ package SubmissionPage <<UC 13>> {
   }
 }
 
+!include university/index.iuml
+!include admin/index.iuml
+!include teacher/index.iuml
+!include student/index.iuml
 
-@enduml
 
 @enduml

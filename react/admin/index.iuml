@@ -1,0 +1,15 @@
+package AdminPage <<UC 5 & UC7>> {
+
+class AdminIndex{
+}
+
+class AdminUsersConfirmed{
+}
+
+class AdminUsersNotConfirmed{
+}
+
+class AdminCourses{
+}
+
+}
