@@ -1,0 +1,98 @@
+@startuml
+
+title Relationships - Class Diagram
+
+package Bootstrap-React <<npm module components>> {
+
+!include bootstrap/button.iuml
+!include bootstrap/checkbox.iuml
+
+!include bootstrap/formcontrol.iuml
+
+
+class FormGroup{
+int v
+}
+
+class PageHeader{
+int v
+}
+
+class Panel{
+int v
+}
+
+class Radio{
+int v
+}
+
+class Table{
+int v
+}
+
+class Links?{
+bootstrap links?
+}
+
+}
+
+package custom-components <<components created by us>>{
+class Login <<UC 2>>{
+  ---
+  + getTypeUser()
+}
+
+class Logout <<UC 4>>{
+  ---
+  + resetStore()
+  + resetHistory()
+}
+
+class NavBar{
+  + loggedIn(bool)
+  + links(Links[])
+  ---
+}
+
+class Footer{
+  + small(bool)
+  ---
+}
+
+note right of Footer
+ Reference image
+<img:http://plantuml.com/logoc.png>
+end note
+
+}
+
+package HelpPage <<UC 1>> {
+  class HelpPage{
+    + export default function()
+  }
+}
+
+package PricePage <<UC 11>> {
+  class PricePage{
+    + currentEthPrice()
+    + currentGasPrice()
+    ---
+    + export default function()
+  }
+}
+
+package SubmissionPage <<UC 13>> {
+  class SubmissionPage{
+    + currentAddr(addr)
+    + courses(List[])
+    ---
+    + export default function()
+    + submitStudent()
+    + submitTeacher()
+  }
+}
+
+
+@enduml
+
+@enduml

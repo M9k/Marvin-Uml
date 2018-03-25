@@ -1,0 +1,6 @@
+class Button{
+  + active(bool)
+  + disabled(bool)
+  + onClick(function)
+}
+/'Questa è una prova 3'/

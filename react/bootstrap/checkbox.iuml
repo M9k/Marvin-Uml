@@ -1,0 +1,8 @@
+class Checkbox{
+  + inline(bool)
+  + disabled(bool)
+  + title(str)
+  + validationState('success', 'warning', 'error', null)
+  + inputRef()
+}
+/'Questa è una prova'/

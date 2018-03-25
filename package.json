@@ -1,0 +1,15 @@
+{
+  "name": "marvinuml",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/Giorat/Marvin-Uml.git",
+  "author": "giorat <giorat.96@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/index.js"
+  },
+  "dependencies": {
+    "plantuml-encoder": "^1.2.5"
+  }
+}

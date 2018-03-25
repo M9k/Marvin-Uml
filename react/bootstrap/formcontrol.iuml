@@ -1,0 +1,4 @@
+class FormControl{
++ type(string)
++ inputRef(func)
+}
