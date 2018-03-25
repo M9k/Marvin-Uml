@@ -1,0 +1,5 @@
+class CardWithIcon{
+    --render--
+        card with icon and description
+        plus a link button to go to a specific page
+}

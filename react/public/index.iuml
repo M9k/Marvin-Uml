@@ -1,0 +1,30 @@
+package HelpPage <<UC 1>> {
+  class HelpPage{
+    --render--
+    + show list of paragraphs and videos/images to help user
+    with common problem or questions
+  }
+}
+
+package PricePage <<UC 11>> {
+  class PricePage{
+    ----
+    - currentEthPrice()
+    - currentGasPrice()
+    --render--
+    + show list of actions and related price with table
+  }
+}
+
+package SubmissionPage <<UC 13>> {
+  class SubmissionPage{
+    --props--
+    + currentAddr(addr)
+    + courses(List[])
+    + submitStudent()
+    + submitTeacher()
+    --render--
+    + show a form with name,surname
+    and two selectbox to choose type of user
+  }
+}

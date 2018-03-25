@@ -1,4 +1,5 @@
 class Button{
+  --props--
   + active(bool)
   + disabled(bool)
   + onClick(function)

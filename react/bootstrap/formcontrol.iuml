@@ -1,4 +1,5 @@
 class FormControl{
-+ type(string)
-+ inputRef(func)
+    --props--
+    + type(string)
+    + inputRef(func)
 }

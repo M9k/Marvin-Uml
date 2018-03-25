@@ -6,29 +6,28 @@ const path = require('path');
 
 
 const build = 'build';
+const javaPlant = 'java -jar scripts/plantuml.jar ';
 
 cleanBuild();
-generateFolder('general');
+//checkInstall();
 
-//generateFolder('react');
+generateFolder('general');
+generateFolder('react');
+
 
 function generateFolder(directory) {
     fs.readdirSync(directory).forEach(file => {
         const extens = path.extname(file).substring(1);
-        const name = path.parse(file).name;
-        if (extens === 'puml')
-            getImagePuml(name, directory);
+        const PathFileName = path.join(directory, file);
+        if (extens === 'puml') {
+            getImagePuml(PathFileName);
+        }
     });
 }
 
-function getImagePuml(puml_name, directory) {
-    const file = fs.readFileSync(path.join(directory, puml_name + '.puml'), 'utf8');
-
-    const encoded = plantumlEncoder.encode(file);
-
-    const url = 'http://www.plantuml.com/plantuml/img/' + encoded;
-
-    request(url).pipe(fs.createWriteStream(path.join(build, puml_name + '.png')));
+function getImagePuml(PathFileName) {
+    const command = javaPlant +'"' + PathFileName + '" -o "../build"';
+    exec(command);
 }
 
 function cleanBuild() {

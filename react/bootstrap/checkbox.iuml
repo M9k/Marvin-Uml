@@ -1,4 +1,5 @@
 class Checkbox{
+  --props--
   + inline(bool)
   + disabled(bool)
   + title(str)

@@ -1,15 +1,80 @@
 package AdminPage <<UC 5 & UC7>> {
 
-class AdminIndex{
+class AdminRoutes{
+--routes--
++ index -> AdminIndex
++ confirm/teacher -> AdminUsersNotConfirmed
++ confirm/students -> AdminUsersNotConfirmed
++ user/teacher -> AdminUserConfirmed
++ user/students -> AdminUserConfirmed
++ courses -> AdminCourses
++ courses/:examId -> AdminCourseExams
 }
+
+
+class AdminIndex{
+--render--
+    heroImage
+    cardWithIcon to go confirm/teacher -> AdminUsersNotConfirmed
+    cardWithIcon to go confirm/student -> AdminUsersNotConfirmed
+
+    cardWithIcon to go user/teacher -> AdminUserConfirmed
+    cardWithIcon to go user/students -> AdminUserConfirmed
+
+    cardWithIcon to go -> AdminCourses
+}
+AdminIndex ..|> CardWithIcon
 
 class AdminUsersConfirmed{
+    --props--
+        userType(User)
+        getUsers(function)
+        functionDeleteUser(function)
+    --render--
+        table with user list and one button
+        for each row to delete
 }
+AdminUsersConfirmed ..|> Table
+AdminUsersConfirmed ..|> Button
 
 class AdminUsersNotConfirmed{
+    --props--
+        userType(User)
+        getUsers(function)
+        functionConfirmUser(function)
+        functionDeleteUser(function)
+    --render--
+        table with user list and two button
+        for each row to confirm or delete
 }
+AdminUsersNotConfirmed ..|> Table
+AdminUsersNotConfirmed ..|> Button
+
 
 class AdminCourses{
+    --props--
+        getCourses(function)
+        addCourse(function)
+        validCourse(function)
+    --render--
+        table with courses list and form to
+        add a new one from specific year
 }
+AdminCourses ..|> Table
+AdminCourses ..|> Form
+
+class AdminCourseExams{
+    --props--
+        course(Course)
+        getExams(function)
+        addExam(function)
+        validExam(function)
+    --render--
+        table with exams list from specific course
+        with a form to add a new one to the current
+        course
+}
+AdminCourseExams ..|> Table
+AdminCourseExams ..|> Form
 
 }

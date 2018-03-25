@@ -1,0 +1,22 @@
+/'
+Custom components
+created by 353 group
+'/
+
+package custom-components <<components created by us>>{
+
+!include navbar.iuml
+
+!include field.iuml
+
+!include form.iuml
+
+!include footer.iuml
+
+!include login.iuml
+
+!include logout.iuml
+
+!include cardWithIcon.iuml
+
+}
