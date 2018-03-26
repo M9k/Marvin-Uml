@@ -1,0 +1,62 @@
+@startuml
+!include redux.iuml
+!include react.iuml
+!include reactRedux.iuml
+package marvin {
+  class UniversityAdmin{
+    + object reducer(object, object)
+    - object initialState
+    == types ==
+    + SET_ADMIN_NUMBER : string
+    + SET_ADMINS_LIST : string
+    + POP_ADMIN : string
+    + PUSH_ADMIN : string
+    == actions ==
+    + object setAdminNumber(int)
+    + object setAdminList(array<Object>)
+    + object pushAdmin(string)
+    + object popAdmin(string)
+  }
+  class AdminOverviewComponent{
+    # adminNumber: int
+    # adminAccount: array
+    # getAdminNumber: function
+    # removeAdminFunction: function
+    # getAllAdmin: function
+    + constructor(object)
+    + componentDidMount()
+    + jsx render()
+  }
+  class AdminOverviewContainer{
+    + AdminOverviewComponent component
+    + void mapStateToProps()
+    + void mapDispatchToProps()
+  }
+  class universitySaga{
+    +handler()
+    == types ==
+    + ADD_NEW_ADMIN : string
+    + REMOVE_ADMIN : string
+    + GET_ADMIN_NUMBER : string
+    + GET_ALL_ADMINS : string
+    == sagas ==
+    + void addAdmin(action)
+    + void removeAdmin(action)
+    + void getAllAdmins()
+    + void adminNumber()
+    == actions ==
+    + object addNewAdminAction(string)
+    + object removeAdminAction(string)
+    + object getAdminNumberAction()
+    + object getAllAdminsAction()
+  }
+  AdminOverviewComponent --|> react.Component
+  AdminOverviewContainer ..> AdminOverviewComponent : <<create>>
+  AdminOverviewContainer ..> reactRedux.Connect : <<use>>
+  AdminOverviewContainer -- redux.Store
+  AdminOverviewContainer ..> universitySaga : <<use>>
+  universitySaga ..> UniversityAdmin : <<use>>
+  universitySaga -- redux.SagaMiddleware
+  UniversityAdmin ..> redux.Store : <<use>>
+}
+@enduml
