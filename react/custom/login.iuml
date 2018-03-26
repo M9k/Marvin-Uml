@@ -1,4 +1,4 @@
 class Login <<UC 2>>{
   --props--
-  + getUserType(function)
+    + getUserType(function)
 }

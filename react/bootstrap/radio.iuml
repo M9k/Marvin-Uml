@@ -1,9 +1,9 @@
 class Radio{
   --props--
-  + inline(bool)
-  + disabled(bool)
-  + title(str)
-  + validationState('success', 'warning', 'error', null)
-  + inputRef()
+      + inline(bool)
+      + disabled(bool)
+      + title(str)
+      + validationState('success', 'warning', 'error', null)
+      + inputRef()
 }
 /'Radio button'/

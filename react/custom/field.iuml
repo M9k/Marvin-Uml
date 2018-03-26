@@ -16,3 +16,4 @@ class Field{
 Field ..|> ControlLabel
 Field ..|> FormControl
 Field ..|> FormGroup
+Field ..|> Radio

@@ -4,16 +4,17 @@ title Relationships - Class Diagram for Marvin Frontend
 
 skinparam linetype ortho
 
-!include bootstrap/index.iuml
-!include custom/index.iuml
+/' Base Bootstrap elements and Custom one '/
+    !include bootstrap/index.iuml
+    !include custom/index.iuml
 
-/'Page templates or public one'/
-!include public/index.iuml
+/'Page templates or public one '/
+    !include public/index.iuml
 
 /' User pages different section for each one '/
-!include university/index.iuml
-!include admin/index.iuml
-!include teacher/index.iuml
-!include student/index.iuml
+    !include university/index.iuml
+    !include admin/index.iuml
+    !include teacher/index.iuml
+    !include student/index.iuml
 
 @enduml

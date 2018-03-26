@@ -1,4 +1,4 @@
 class ControlLabel{
     --props--
-    + children(string)
+        + children(string)
 }
