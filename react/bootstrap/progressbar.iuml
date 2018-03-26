@@ -1,6 +1,13 @@
 class ProgressBar{
     --props--
-        - number min
-        + bordered(bool) border outside
-        + hover(bool) hover row change bg
+        + min(number)
+        + now(number)
+        + max(number)
+        + label(node)
+        + srOnly(bool)
+        + striped(bool)
+        + active(bool)
+        + children(onlyProgressBar)
+        + isChild(bool)
+        + bsClass(string)
 }
