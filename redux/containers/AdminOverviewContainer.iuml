@@ -1,0 +1,24 @@
+!include ../react/component.iuml
+!include ../reactRedux/connect.iuml
+!include ../redux/store.iuml
+!include ../sagas/UniversitySaga.iuml
+class AdminOverviewComponent{
+  # adminNumber: int
+  # adminAccount: array
+  # getAdminNumber: function
+  # removeAdminFunction: function
+  # getAllAdmin: function
+  + constructor(object)
+  + componentDidMount()
+  + jsx render()
+}
+class AdminOverviewContainer{
+  + AdminOverviewComponent component
+  + void mapStateToProps()
+  + void mapDispatchToProps()
+}
+AdminOverviewComponent --|> react.Component
+AdminOverviewContainer ..> AdminOverviewComponent : <<create>>
+AdminOverviewContainer ..> reactRedux.Connect : <<use>>
+AdminOverviewContainer -- redux.Store
+AdminOverviewContainer ..> marvin.UniversitySaga : <<use>>
