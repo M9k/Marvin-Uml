@@ -1,0 +1,4 @@
+interface Duck{
+  - initialState : object
+  + object reducer(object, object)
+}
