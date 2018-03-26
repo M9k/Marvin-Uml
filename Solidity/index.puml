@@ -29,6 +29,12 @@ Course o-- Exam
 UniversityExam --> Exam
 UniversityExam --> Teacher
 UniversityTeacher o-- Teacher
+note on link: confirmed
+UniversityTeacher o-- Teacher
+note on link: unconfirmed
 UniversityStudent o-- Student
+note on link: confirmed
+UniversityStudent o-- Student
+note on link: unconfirmed
 
 @enduml
