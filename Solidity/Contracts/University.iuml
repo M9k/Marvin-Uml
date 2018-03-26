@@ -5,7 +5,7 @@ class University{
 __
 onlyFounder
 registrableAddress
-_
+__
 +University()
 +@ isUniversityFounder(_address: address): bool
 +@ getRoleByAddress(_address: address): uint8
