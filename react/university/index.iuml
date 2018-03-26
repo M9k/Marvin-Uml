@@ -1,7 +1,51 @@
 package UniversityPages <<UC 6 & UC10>> {
 
-class UniversityIndex{
-
+class UniversityIndex {
+    --render--
+        heroImage
+        cardWithIcon to go -> UniversityAcademicYears
+        cardWithIcon to go -> UniversityAdmins
 }
+UniversityIndex ..> CardWithIcon
+
+class UniversityRoutes {
+    --routes--
+        + index -> UniversityIndex
+        + academicyears -> UniversityAcademicYears
+        + admins -> UniversityAdmins
+}
+
+class UniversityAcademicYears {
+    --props--
+        + getAcademicYears(function)
+        + addAcademicYear(function)
+        + validAcademicYear(function)
+        + deleteAcademicYear(function)
+        + getSolarYears(function)
+        + addSolarYear(function)
+        + validSolarYear(function)
+    --render--
+    table with academic years list,
+     one button for each row to delete
+     one of them and a form to add a
+     new academic years
+}
+UniversityAcademicYears ..> PageTableForm
+
+
+class UniversityAdmins {
+    --props--
+        + addAdmin(function)
+        + getAdmins(function)
+        + validAdmin(function)
+        + deleteAdmin(function)
+    --render--
+    table with admins list, one
+    button for each row to delete
+    one of them and a form to add
+    a new admin
+}
+UniversityAdmins ..> PageTableForm
+
 
 }
