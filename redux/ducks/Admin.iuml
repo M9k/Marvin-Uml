@@ -1,0 +1,27 @@
+!include ../interfaces/duck.iuml
+
+class Admin{
+  + object reducer(object, object)
+  + ROLES: enum
+  - initialState : object
+  ==types==
+
+  ==actions==
+
+}
+
+note right of Admin
+initialState: {
+  errored: false,
+  loading: true,
+  role: 2,
+  data: {
+    errored: false,
+    loading: false,
+    name: string
+    surname: string
+    course: string
+  }
+}
+end note
+Admin --|>marvin.duck

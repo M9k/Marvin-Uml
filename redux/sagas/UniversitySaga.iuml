@@ -13,10 +13,10 @@ class UniversitySaga{
   + *getAllAdmins(): void
   + *adminNumber(): void
   == actions ==
-  + addNewAdminAction(string: object
-  + removeAdminAction(string: object
-  + getAdminNumberAction(: object
-  + getAllAdminsAction(: object
+  + addNewAdminAction(string): object
+  + removeAdminAction(string): object
+  + getAdminNumberAction(): object
+  + getAllAdminsAction(): object
 }
 UniversitySaga --|> marvin.Saga
 UniversitySaga ..> marvin.University : <<use>>
