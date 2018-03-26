@@ -11,3 +11,4 @@ class PageTableForm{
 PageTableForm ..|> Table
 PageTableForm ..|> Button
 PageTableForm ..|> Form
+PageTableForm ..> Modal

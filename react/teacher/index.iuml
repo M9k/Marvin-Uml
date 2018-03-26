@@ -1,6 +1,37 @@
 package TeacherPages <<UC 8>> {
 
-class TeacherIndex{
+class TeacherIndex {
+    --render--
+        heroImage
+        cardWithIcon to go -> TeacherExams
 }
+TeacherIndex ..> CardWithIcon
+
+class TeacherRoutes {
+    --routes--
+    + index -> TeacherIndex
+    + exams -> TeacherExams
+    + exams/:examid -> TeacherExamStudents
+}
+
+class TeacherExams {
+    --props--
+        + getExams(function)
+    --render--
+    table with exams list and one
+    button to see the students
+    list of the selected exam
+}
+TeacherExams ..> PageTableForm
+
+class TeacherExamStudents {
+    --props--
+        + getStudents(function)
+        + addGrade(function)
+    --render--
+    table with the students list
+    of the seleted exam
+}
+TeacherExamStudents ..> PageTableForm
 
 }

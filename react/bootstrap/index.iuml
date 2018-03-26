@@ -18,4 +18,5 @@ package Bootstrap-React <<npm module components>> {
 
 !include dropdownbutton.iuml
 !include menuitem.iuml
+!include modal.iuml
 }
