@@ -1,6 +1,7 @@
 !include ../interfaces/duck.iuml
 class Session{
   - initialState: object
+  + ROLES: enum
   + reducer(object, object): object
   == types ==
   - SET_ROLE: string

@@ -1,6 +1,7 @@
 !include ../interfaces/duck.iuml
 class University{
   - initialState : object
+  + ROLES: enum
   + reducer(object, object): object
   == types ==
   - SET_ADMIN_NUMBER : string

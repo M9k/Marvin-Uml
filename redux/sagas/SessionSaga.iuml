@@ -7,13 +7,13 @@ class SessionSaga{
   - LOGOUT: string
   - UPDATE: string
   == sagas ==
-  + performLogin(): void
-  + retrieveData(): void
-  + performLogout(): void
+  + *performLogin(): void
+  + *retrieveData(): void
+  + *performLogout(): void
   == actions ==
-  + *loginAction(): object
-  + *logoutAction(): object
-  + *updateData(): object
+  + loginAction(): object
+  + logoutAction(): object
+  + updateData(): object
 }
 SessionSaga --|> marvin.Saga
 SessionSaga ..> marvin.Session : <<use>>
