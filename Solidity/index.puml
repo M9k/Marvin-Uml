@@ -23,9 +23,12 @@ UniversityStudent --|> UniversityTeacher
 UniversityYear --|> UniversityStudent
 UniversityExam --|> UniversityYear
 
-University --* User : <<create>>
-University --* Course : <<create>>
-University --* Exam : <<create>>
-University --* Year : <<create>>
+UniversityYear o-- Year
+Year o-- Course
+Course o-- Exam
+UniversityExam --> Exam
+UniversityExam --> Teacher
+UniversityTeacher o-- Teacher
+UniversityStudent o-- Student
 
 @enduml
