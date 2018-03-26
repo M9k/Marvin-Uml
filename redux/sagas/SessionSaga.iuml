@@ -4,15 +4,12 @@ class SessionSaga{
   + handler(): void
   == types ==
   - LOGIN: string
-  - LOGOUT: string
   - UPDATE: string
   == sagas ==
   + *performLogin(): void
   + *retrieveData(): void
-  + *performLogout(): void
   == actions ==
   + loginAction(): object
-  + logoutAction(): object
   + updateData(): object
 }
 SessionSaga --|> marvin.Saga
