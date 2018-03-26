@@ -1,4 +1,4 @@
-package AdminPage <<UC 5 & UC7>> {
+package AdminPages <<UC 5 & UC7>> {
 
 class AdminRoutes{
 --routes--

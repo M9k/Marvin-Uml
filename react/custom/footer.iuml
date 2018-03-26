@@ -1,6 +1,6 @@
 class Footer{
   --render--
-    + credits to the team
+    credits to the team
 }
 
 /'
