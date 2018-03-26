@@ -1,5 +1,5 @@
 class Logout <<UC 4>>{
   --props--
-  + resetStore()
-  + resetHistory()
+  + resetStore(function)
+  + resetHistory(function)
 }

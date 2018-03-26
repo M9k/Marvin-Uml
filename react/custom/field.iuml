@@ -1,7 +1,10 @@
 class Field{
     --props--
+        id(int)
         name(str)
-        type(str)
+        label(string)
+        help(string)
+        type(string)
         values(array json?)
         validateFunction(function)
     ----
@@ -10,3 +13,6 @@ class Field{
         display the type of the field and
         dynamic update its value and state
 }
+Field ..|> ControlLabel
+Field ..|> FormControl
+Field ..|> FormGroup

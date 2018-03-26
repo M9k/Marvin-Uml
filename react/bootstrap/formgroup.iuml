@@ -1,0 +1,5 @@
+class FormGroup{
+    --props--
+        + controlId(string)
+        +validationState('success', 'warning', 'error', null)
+}

@@ -2,6 +2,10 @@ class Button{
   --props--
   + active(bool)
   + disabled(bool)
+  + href(string)
   + onClick(function)
+  --render--
+  passing href will use <a>
+  wihtout href will use <button/>
 }
 /'Questa è una prova 3'/

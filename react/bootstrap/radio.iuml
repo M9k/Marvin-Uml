@@ -1,4 +1,4 @@
-class Checkbox{
+class Radio{
   --props--
   + inline(bool)
   + disabled(bool)
@@ -6,4 +6,4 @@ class Checkbox{
   + validationState('success', 'warning', 'error', null)
   + inputRef()
 }
-/'Questa è una prova'/
+/'Radio button'/

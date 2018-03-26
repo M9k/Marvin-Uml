@@ -4,30 +4,15 @@ from https://react-bootstrap.github.io/components/alerts/
 '/
 package Bootstrap-React <<npm module components>> {
 
-!include button.iuml
-!include checkbox.iuml
+/'BEGIN Form'/
+!include formgroup.iuml
 !include formcontrol.iuml
+!include controllabel.iuml
+
+!include radio.iuml
+/'END Form'/
+
 !include panel.iuml
-
-
-class FormGroup{
-int v
-}
-
-class PageHeader{
-int v
-}
-
-class Radio{
-int v
-}
-
-class Table{
-int v
-}
-
-class Links?{
-bootstrap links?
-}
-
+!include table.iuml
+!include button.iuml
 }

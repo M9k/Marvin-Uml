@@ -2,10 +2,12 @@ class Navbar{
   --props--
     + loggedIn(bool)
     + links(Links[])
-    + functionLogin()
   --render--
     list of link-logo to index
     link to price page
     link to help page
     links based on login and type user
 }
+
+Navbar ..|> Login
+Navbar ..|> Logout

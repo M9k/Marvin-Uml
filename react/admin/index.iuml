@@ -11,7 +11,6 @@ class AdminRoutes{
 + courses/:examId -> AdminCourseExams
 }
 
-
 class AdminIndex{
 --render--
     heroImage
@@ -27,54 +26,49 @@ AdminIndex ..|> CardWithIcon
 
 class AdminUsersConfirmed{
     --props--
-        userType(User)
-        getUsers(function)
-        functionDeleteUser(function)
+        + userType(User)
+        + getUsers(function)
+        + functionDeleteUser(function)
     --render--
         table with user list and one button
         for each row to delete
 }
-AdminUsersConfirmed ..|> Table
-AdminUsersConfirmed ..|> Button
+AdminUsersConfirmed ..|> PageTableForm
 
 class AdminUsersNotConfirmed{
     --props--
-        userType(User)
-        getUsers(function)
-        functionConfirmUser(function)
-        functionDeleteUser(function)
+        + userType(User)
+        + getUsers(function)
+        + functionConfirmUser(function)
+        + functionDeleteUser(function)
     --render--
         table with user list and two button
         for each row to confirm or delete
 }
-AdminUsersNotConfirmed ..|> Table
-AdminUsersNotConfirmed ..|> Button
-
+AdminUsersNotConfirmed ..|> PageTableForm
 
 class AdminCourses{
     --props--
-        getCourses(function)
-        addCourse(function)
-        validCourse(function)
+        + getCourses(function)
+        + addCourse(function)
+        + validCourse(function)
     --render--
         table with courses list and form to
         add a new one from specific year
 }
-AdminCourses ..|> Table
-AdminCourses ..|> Form
+AdminCourses ..|> PageTableForm
 
 class AdminCourseExams{
     --props--
-        course(Course)
-        getExams(function)
-        addExam(function)
-        validExam(function)
+        + course(Course)
+        + getExams(function)
+        + addExam(function)
+        + validExam(function)
     --render--
         table with exams list from specific course
         with a form to add a new one to the current
         course
 }
-AdminCourseExams ..|> Table
-AdminCourseExams ..|> Form
+AdminCourseExams ..|> PageTableForm
 
 }
