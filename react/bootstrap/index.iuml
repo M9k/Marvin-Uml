@@ -15,4 +15,5 @@ package Bootstrap-React <<npm module components>> {
 !include panel.iuml
 !include table.iuml
 !include button.iuml
+!include progressbar.iuml
 }

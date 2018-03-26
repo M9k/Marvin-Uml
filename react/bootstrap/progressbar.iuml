@@ -1,0 +1,6 @@
+class ProgressBar{
+    --props--
+        - number min
+        + bordered(bool) border outside
+        + hover(bool) hover row change bg
+}
