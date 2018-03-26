@@ -1,0 +1,16 @@
+@startuml
+
+    !include Contracts/Course.iuml
+    !include Contracts/Exam.iuml
+    !include Contracts/Migrations.iuml
+    !include Contracts/Student.iuml
+    !include Contracts/Teacher.iuml
+    !include Contracts/University.iuml
+    !include Contracts/UniversityExam.iuml
+    !include Contracts/UniversityStudent.iuml
+    !include Contracts/UniversityTeacher.iuml
+    !include Contracts/UniversityYear.iuml
+    !include Contracts/User.iuml
+    !include Contracts/Year.iuml
+
+@enduml
