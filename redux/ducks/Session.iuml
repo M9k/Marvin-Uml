@@ -1,0 +1,32 @@
+!include ../interfaces/duck.iuml
+class Session{
+  - initialState: object
+  + reducer(object, object): object
+  == types ==
+  - SET_ROLE: string
+  - SET_DATA: string
+  - CLEAN_DATA: string
+  - ROLE_LOADING: string
+  - DATA_LOADING: string
+  == actions ==
+  + setRole(int, bool=false): object
+  + setData(object, bool=false): object
+  + cleanData(): object
+  + loadRole(): object
+  + loadData(): object
+}
+note right of Session
+initialState: {
+  errored: false,
+  loading: false,
+  role: string = null,
+  data: {
+    errored: false,
+    loading: false,
+    name: string = null,
+    surname: string = null,
+    course: string = null
+  }
+}
+end note
+Session --|> marvin.Duck

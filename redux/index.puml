@@ -6,8 +6,12 @@
 namespace marvin <<business logic for the frontend app>> {
   !include interfaces/duck.iuml
   !include interfaces/saga.iuml
-  !include ducks/UniversityAdmin.iuml
+
+  !include ducks/University.iuml
   !include sagas/UniversitySaga.iuml
-  !include containers/AdminOverviewContainer.iuml
+  '!include containers/AdminOverviewContainer.iuml
+
+  !include ducks/Session.iuml
+  !include sagas/SessionSaga.iuml
 }
 @enduml

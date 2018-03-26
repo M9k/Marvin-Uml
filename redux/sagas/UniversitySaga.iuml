@@ -1,22 +1,22 @@
 !include ../interfaces/saga.iuml
-!include ../ducks/UniversityAdmin.iuml
+!include ../ducks/University.iuml
 class UniversitySaga{
-  + void handler()
+  + handler(): void
   == types ==
   - ADD_NEW_ADMIN : string
   - REMOVE_ADMIN : string
   - GET_ADMIN_NUMBER : string
   - GET_ALL_ADMINS : string
   == sagas ==
-  + void addAdmin(action)
-  + void removeAdmin(action)
-  + void getAllAdmins()
-  + void adminNumber()
+  + *addAdmin(action): void
+  + *removeAdmin(action): void
+  + *getAllAdmins(): void
+  + *adminNumber(): void
   == actions ==
-  + object addNewAdminAction(string)
-  + object removeAdminAction(string)
-  + object getAdminNumberAction()
-  + object getAllAdminsAction()
+  + addNewAdminAction(string: object
+  + removeAdminAction(string: object
+  + getAdminNumberAction(: object
+  + getAllAdminsAction(: object
 }
 UniversitySaga --|> marvin.Saga
-UniversitySaga ..> marvin.UniversityAdmin : <<use>>
+UniversitySaga ..> marvin.University : <<use>>

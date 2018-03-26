@@ -2,5 +2,5 @@ namespace redux {
 !include redux/store.iuml
 !include redux/sagaMiddleware.iuml
 
-Store -- SagaMiddleware
+Store ..> SagaMiddleware: <<create>>
 }
