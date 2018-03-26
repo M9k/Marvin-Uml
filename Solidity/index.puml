@@ -10,7 +10,22 @@
     !include Contracts/UniversityStudent.iuml
     !include Contracts/UniversityTeacher.iuml
     !include Contracts/UniversityYear.iuml
+    !include Contracts/UniversityAdmin.iuml
     !include Contracts/User.iuml
     !include Contracts/Year.iuml
+
+Teacher --|> User
+Student --|> User
+
+UniversityAdmin --|> University
+UniversityTeacher --|> UniversityAdmin
+UniversityStudent --|> UniversityTeacher
+UniversityYear --|> UniversityStudent
+UniversityExam --|> UniversityYear
+
+University --* User : <<create>>
+University --* Course : <<create>>
+University --* Exam : <<create>>
+University --* Year : <<create>>
 
 @enduml
