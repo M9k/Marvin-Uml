@@ -1,8 +1,6 @@
 @startuml
 skinparam classAttributeIconSize 0
 class UniversityStudent {
-- countStudentsByIndex: uint
-- countUnconfirmedStudentsByIndex: uint
 __
 isValidContractUnconfirmedStudent(_student: Student)
 isValidContractStudent(_student: Student)
@@ -19,7 +17,6 @@ __
 + confirmStudent(_student: Student) {onlyAdmin, isValidContractUnconfirmedStudent(_student: Student)}
 + denyStudent(_student: Student) {onlyAdmin, isValidContractUnconfirmedStudent(_student: Student)}
 + removeStudent(_student: Student) {onlyAdmin, isValidContractStudent(_student: Student)}
-- removeUnconfirmedStudent(_askingAccount: address, _student: Student)
 - deleteSubscription(_student: Student)
 }
 @enduml

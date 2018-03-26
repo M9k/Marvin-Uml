@@ -2,7 +2,6 @@
 skinparam classAttributeIconSize 0
 class Year {
 - university: Univeristy
-- countListCourseByIndex: uint
 - solarYear: uint16
 __
 onlyAdmin

@@ -1,8 +1,6 @@
 @startuml
 skinparam classAttributeIconSize 0
 class UniversityTeacher{
-- countTeachersByIndex: uint
-- countUnconfirmedTeachersByIndex: uint
 __
 isValidContractUnconfirmedTeacher(_teacher: Teacher)
 isValidContractTeacher(_teacher: Teacher)
@@ -19,6 +17,5 @@ __
 + confirmTeacher(_teacher: Teacher) {onlyAdmin, isValidContractUnconfirmedTeacher(_teacher: Teacher)}
 + denyTeacher(_teacher: Teacher) {onlyAdmin, isValidContractUnconfirmedTeacher(_teacher: Teacher)}
 + removeTeacher(_teacher: Teacher) {onlyAdmin, isValidContractTeacher(_teacher: Teacher)}
-- removeUnconfirmedTeacher(_askingAccount: address, _teacher: Teacher)
 }
 @enduml

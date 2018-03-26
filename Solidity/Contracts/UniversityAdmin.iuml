@@ -10,7 +10,7 @@ __
 +@ isAdmin(_adminAddress: address): bool
 +@ getAdminNumber(): uint
 +@ getAdminAt(_index: uint): address
-+ removeAdmin(_address: address) {onlyFounder, validAdminAddress(_address: address)}
 +@ getRoleByAddress(_address: address): uint8
++ removeAdmin(_address: address) {onlyFounder, validAdminAddress(_address: address)}
 }
 @enduml

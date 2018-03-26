@@ -1,7 +1,7 @@
 @startuml
 skinparam classAttributeIconSize 0
 class Teacher {
-- countAssignedExam: uint
+- examList: Exam [0...*]
 __
 
 __

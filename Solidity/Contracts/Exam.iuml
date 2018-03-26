@@ -1,11 +1,11 @@
 @startuml
 skinparam classAttributeIconSize 0
 class Exam{
-- countListSubscriberByIndex: uint
 - name: bytes32
 - credits: uint8
 - obbligatoriety: bool
 - teacher: Teacher
+- subscriberList: Student [0...*]
 - course: Course
 - year: Year
 - university: University

@@ -1,7 +1,6 @@
 @startuml
 skinparam classAttributeIconSize 0
 class Course{
-- countListExamsByIndex: uint
 - name: bytes32
 - creditsToGraduation: uint16
 - year: Year
