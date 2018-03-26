@@ -1,5 +1,5 @@
 !include redux.iuml
-namespace aggregators{
+namespace aggregators <<connect the custom classes to the redux store>>{
   !include aggregators/sagas.iuml
   !include aggregators/reducers.iuml
   Sagas -- redux.SagaMiddleware
