@@ -1,12 +1,12 @@
 !include ../interfaces/duck.iuml
 class UniversityAdmin{
   + object reducer(object, object)
-  - object initialState
+  - initialState : object
   == types ==
-  + SET_ADMIN_NUMBER : string
-  + SET_ADMINS_LIST : string
-  + POP_ADMIN : string
-  + PUSH_ADMIN : string
+  - SET_ADMIN_NUMBER : string
+  - SET_ADMINS_LIST : string
+  - POP_ADMIN : string
+  - PUSH_ADMIN : string
   == actions ==
   + object setAdminNumber(int)
   + object setAdminList(array<Object>)
