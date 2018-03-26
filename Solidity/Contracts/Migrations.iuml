@@ -1,0 +1,14 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Migrations {
++ owner: address
++ last_completed_migration: uint
+__
+restricted
+__
++ Migrations()
++ setCompleted(completed: uint) {restricted}
++ upgrade(new_address: address) {restricted}
+}
+
+@enduml

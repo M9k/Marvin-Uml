@@ -1,0 +1,16 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Year {
+- university: Univeristy
+- countListCourseByIndex: uint
+- solarYear: uint16
+__
+onlyAdmin
+__
++ Year(_solarYear: uint16)
++@ getCourseNumber(): uint
++@ getCourseContractAt(_index: uint): Course
++@ getSolarYear(): uint16
++ addNewCourse(_name:bytes32, _creditsForGraduation: uint16) {onlyAdmin}
+}
+@enduml

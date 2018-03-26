@@ -1,0 +1,8 @@
+@startuml
+skinparam classAttributeIconSize 0
+class UniversityExam {
+__
+__
++ associateTeacherToExam (_teacher: Teacher, _exam: Exam) {onlyAdmin}
+}
+@enduml

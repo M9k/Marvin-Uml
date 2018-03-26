@@ -1,0 +1,16 @@
+@startuml
+skinparam classAttributeIconSize 0
+class UniversityYear {
+- countYearsByIndex: uint
+__
+yearNotFound(_year: uint16)
+yearFound(_year: uint16)
+yearEmpty(_year: uint16)
+__
++@ getAcademicYearNumber(): uint
++@ getAcademicYearContractAt(_index: uint): Year
++@ getAcademicYearContractByYear(_year:uint16): Year
++ addNewAcademicYear(_year: uint16) {onlyFounder, yearNotFound(_year: uint16)}
++ removeAcademicYear(_year: uint16) {onlyFounder, yearFound(_year: uint16), yearEmpty(_year: uint16)}
+}
+@enduml

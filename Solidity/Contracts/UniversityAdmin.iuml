@@ -1,0 +1,16 @@
+@startuml
+skinparam classAttributeIconSize 0
+class UniveristyAdmin {
+- countAdministratorsByIndex: uint
+__
+validAdminAddress( _address:address)
+onlyAdmin
+__
++ addNewAdmin(_adminAddress: address) {onlyFounder, registrableAddress(_adminAddress: address)}
++@ isAdmin(_adminAddress: address): bool
++@ getAdminNumber(): uint
++@ getAdminAt(_index: uint): address
++ removeAdmin(_address: address) {onlyFounder, validAdminAddress(_address: address)}
++@ getRoleByAddress(_address: address): uint8
+}
+@enduml

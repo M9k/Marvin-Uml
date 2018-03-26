@@ -1,0 +1,24 @@
+@startuml
+skinparam classAttributeIconSize 0
+class UniversityTeacher{
+- countTeachersByIndex: uint
+- countUnconfirmedTeachersByIndex: uint
+__
+isValidContractUnconfirmedTeacher(_teacher: Teacher)
+isValidContractTeacher(_teacher: Teacher)
+__
++@ getTeacherNumber(): uint
++@ getTeacherContractAddressAt(_index: uint): Teacher
++@ getNonApprovedTeacherNumber(): uint
++@ getNotApprovedTeacherContractAddressAt(_index: uint): Teacher
++@ getTeacherContractFromPublicAddress(_address: address): Teacher
++@ isTeacher(_address: address): bool
++@ isNotConfirmedTeacher(_address: address): bool
++@ getRoleByAddress(_address: address): uint8
++ requestTeacherAccount( _name: bytes32, _surname: bytes32) {registrableAddress(msg.sender: address)}
++ confirmTeacher(_teacher: Teacher) {onlyAdmin, isValidContractUnconfirmedTeacher(_teacher: Teacher)}
++ denyTeacher(_teacher: Teacher) {onlyAdmin, isValidContractUnconfirmedTeacher(_teacher: Teacher)}
++ removeTeacher(_teacher: Teacher) {onlyAdmin, isValidContractTeacher(_teacher: Teacher)}
+- removeUnconfirmedTeacher(_askingAccount: address, _teacher: Teacher)
+}
+@enduml

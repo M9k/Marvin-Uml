@@ -1,0 +1,13 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Teacher {
+- countAssignedExam: uint
+__
+
+__
++ Teacher(_name: bytes32, _surname: bytes32, _publicAddress: address)
++@ getExamNumber(): uint
++@ getExamContractAt(_index: uint): Exam
++ registerNewVoteStudentExam(_examindex: uint, _student: uint, _valuation: uint8) {onlySubject}
+}
+@enduml

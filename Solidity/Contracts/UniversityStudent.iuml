@@ -1,0 +1,25 @@
+@startuml
+skinparam classAttributeIconSize 0
+class UniversityStudent {
+- countStudentsByIndex: uint
+- countUnconfirmedStudentsByIndex: uint
+__
+isValidContractUnconfirmedStudent(_student: Student)
+isValidContractStudent(_student: Student)
+__
++@ getStudentNumber(): uint
++@ getStudentContractAddressAt(_index: uint): Student
++@ getNonApprovedStudentNumber(): uint
++@ getNotApprovedStudentContractAddressAt(_index: uint): Student
++@ getStudentContractFromPublicAddress(_address: address): Student
++@ isStudent(_address: address): bool
++@ isNotConfirmedStudent(_address: address): bool
++@ getRoleByAddress(_address: address): uint8
++ requestStudentAccount(_name: bytes32, _surname: bytes32, _course: Course) {registrableAddress(msg.sender: address)}
++ confirmStudent(_student: Student) {onlyAdmin, isValidContractUnconfirmedStudent(_student: Student)}
++ denyStudent(_student: Student) {onlyAdmin, isValidContractUnconfirmedStudent(_student: Student)}
++ removeStudent(_student: Student) {onlyAdmin, isValidContractStudent(_student: Student)}
+- removeUnconfirmedStudent(_askingAccount: address, _student: Student)
+- deleteSubscription(_student: Student)
+}
+@enduml

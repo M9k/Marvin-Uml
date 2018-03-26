@@ -1,0 +1,27 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Exam{
+- countListSubscriberByIndex: uint
+- name: bytes32
+- credits: uint8
+- obbligatoriety: bool
+- teacher: Teacher
+- course: Course
+- year: Year
+- university: University
+__
+onlyFromUniversityContract
+__
++ Exam(_name: bytes32, _credits: uint8, _obbligatoriety: bool, _year: Year, _university: University)
++@ getEnrolledNumber(): uint
++@ getEnrolledContractAt( _index:uint): Student
++@ getCourse(): Course
++@ getName(): bytes32
++@ getTeacherContract(): Teacher
++@ getObbligatoriety(): bool
++@ getCredits(): uint8
++ addSubscribers()
++ removeSubscriber(_address: address) {onlyFromUniversityContract}
++ associateTeacher(_teacher: Teacher) {onlyFromUniversityContract}
+}
+@enduml
