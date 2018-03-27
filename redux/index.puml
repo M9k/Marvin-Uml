@@ -7,7 +7,6 @@ skinparam linetype ortho
 namespace marvin <<business logic for the frontend app>> {
   !include interfaces/duck.iuml
   !include interfaces/saga.iuml
-
   !include ducks/University.iuml
   !include sagas/UniversitySaga.iuml
   '!include containers/AdminOverviewContainer.iuml
