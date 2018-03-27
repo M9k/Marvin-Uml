@@ -1,7 +1,7 @@
 @startuml
 skinparam classAttributeIconSize 0
 class UniversityAdmin {
-- countAdministratorsByIndex: uint
+- adminList: address [0...*]
 __
 validAdminAddress( _address:address)
 onlyAdmin

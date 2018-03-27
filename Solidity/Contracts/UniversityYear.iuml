@@ -1,7 +1,6 @@
 @startuml
 skinparam classAttributeIconSize 0
 class UniversityYear {
-- countYearsByIndex: uint
 __
 yearNotFound(_year: uint16)
 yearFound(_year: uint16)

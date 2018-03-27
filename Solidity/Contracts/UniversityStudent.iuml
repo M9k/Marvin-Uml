@@ -17,6 +17,5 @@ __
 + confirmStudent(_student: Student) {onlyAdmin, isValidContractUnconfirmedStudent(_student: Student)}
 + denyStudent(_student: Student) {onlyAdmin, isValidContractUnconfirmedStudent(_student: Student)}
 + removeStudent(_student: Student) {onlyAdmin, isValidContractStudent(_student: Student)}
-- deleteSubscription(_student: Student)
 }
 @enduml

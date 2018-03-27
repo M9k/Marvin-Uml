@@ -3,11 +3,16 @@ skinparam classAttributeIconSize 0
 class Teacher {
 - examList: Exam [0...*]
 __
-
+onlyUniversity
+notAssigned(Exam _exam)
+validExamIndex(uint _index)
+correctValuation(value: uint8)
 __
 + Teacher(_name: bytes32, _surname: bytes32, _publicAddress: address)
 +@ getExamNumber(): uint
 +@ getExamContractAt(_index: uint): Exam
-+ registerNewVoteStudentExam(_examindex: uint, _student: uint, _valuation: uint8) {onlySubject}
++ addExam(Exam _exam) {onlyUniversity notAssigned(_exam)}
++ removeExam(Exam _exam) {onlyUniversity}
++ registerNewVoteStudentExam(_examindex: uint, _student: uint, _valuation: uint8) {onlySubject, correctValuation(_valuation: uint8)}
 }
 @enduml
