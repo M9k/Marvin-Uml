@@ -20,7 +20,7 @@ __
 +@ getTeacherContract(): Teacher
 +@ getObbligatoriety(): bool
 +@ getCredits(): uint8
-+ addSubscribers()
++ addMeAsSubscriber()
 + removeSubscriber(_address: address) {onlyFromUniversityContract}
 + associateTeacher(_teacher: Teacher) {onlyFromUniversityContract}
 }
