@@ -1,16 +1,26 @@
 const fs = require('fs');
 const path = require('path');
 
+getDir('react');
+getDir('redux');
+getDir('Solidity');
 
-const currentDir = '../react/bootstrap';
+function getDir(homePath){
+    const dirs = dir => fs.readdirSync(dir).filter(f => fs.statSync(path.join(dir, f)).isDirectory());
+    const subDir = dirs(homePath);
+    const mapFiles = subDir.map(x =>getFiles(path.join(homePath,x)));
+}
 
-fs.readdirSync(currentDir).forEach(file => {
-    const extens = path.extname(file).substring(1);
-const name = path.parse(file).name;
-if (extens === 'iuml')
-    getCommentsIuml(currentDir+'/'+name);
-});
+getFiles('react/bootstrap');
 
+function getFiles(currentDir){
+    fs.readdirSync(currentDir).forEach(file => {
+        const extens = path.extname(file).substring(1);
+        const name = path.parse(file).name;
+        if (extens === 'iuml')
+            getCommentsIuml(currentDir+'/'+name);
+    });
+    }
 
 function getCommentsIuml(name){
     const str = fs.readFileSync(name + '.iuml', 'utf8');
