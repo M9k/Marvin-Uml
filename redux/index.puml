@@ -8,8 +8,8 @@ skinparam classAttributeIconSize 0
 namespace marvin <<business logic for the frontend app>> {
   !include interfaces/duck.iuml
   !include interfaces/saga.iuml
-  !include ducks/University.iuml
-  !include sagas/UniversitySaga.iuml
+  !include ducks/AdminEmployer.iuml
+  !include sagas/AdminEmployerSaga.iuml
   '!include containers/AdminOverviewContainer.iuml
 
   !include ducks/Admin.iuml
