@@ -2,7 +2,6 @@
 
     !include Contracts/Course.iuml
     !include Contracts/Exam.iuml
-    !include Contracts/Migrations.iuml
     !include Contracts/Student.iuml
     !include Contracts/Teacher.iuml
     !include Contracts/University.iuml
@@ -23,18 +22,18 @@ UniversityStudent --|> UniversityTeacher
 UniversityYear --|> UniversityStudent
 UniversityExam --|> UniversityYear
 
-UniversityYear o-- Year
-Year o-- Course
-Course o-- Exam
+UniversityYear *-- Year
+Year *-- Course
+Course *-- Exam
 UniversityExam --> Exam
 UniversityExam --> Teacher
-UniversityTeacher o-- Teacher
+UniversityTeacher *-- Teacher
 note on link: confirmed
-UniversityTeacher o-- Teacher
+UniversityTeacher *-- Teacher
 note on link: unconfirmed
-UniversityStudent o-- Student
+UniversityStudent *-- Student
 note on link: confirmed
-UniversityStudent o-- Student
+UniversityStudent *-- Student
 note on link: unconfirmed
 
 @enduml
