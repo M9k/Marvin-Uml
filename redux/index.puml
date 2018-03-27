@@ -4,6 +4,7 @@
 !include reactRedux.iuml
 !include aggregators.iuml
 skinparam linetype ortho
+skinparam classAttributeIconSize 0
 namespace marvin <<business logic for the frontend app>> {
   !include interfaces/duck.iuml
   !include interfaces/saga.iuml
