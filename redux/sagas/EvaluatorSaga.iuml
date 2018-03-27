@@ -1,0 +1,16 @@
+!include ../interfaces/saga.iuml
+!include ../ducks/Evaluator.iuml
+class EvaluatorSaga{
+  + handler(): void
+  == types ==
+  - GET_LIST: string
+  - ASSIGN_VOTE: string
+  == sagas ==
+  - *getList(string): void
+  - *assignVote(string, int): void
+  == actions ==
+  + getListAction(string): object
+  + assignVoteAction(string, int): object
+}
+EvaluatorSaga --|> marvin.Saga
+EvaluatorSaga ..> marvin.Evaluator: <<use>>

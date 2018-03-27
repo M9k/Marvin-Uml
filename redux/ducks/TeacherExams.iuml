@@ -19,7 +19,7 @@ class TeacherExams{
   + listHasErrored(): object
 }
 note right of TeacherExams
-{
+initialState = {
   loading: false,
   errored: false,
   list: array<{code, courseName}>
