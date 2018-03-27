@@ -9,9 +9,9 @@ namespace marvin <<business logic for the frontend app>> {
   !include interfaces/saga.iuml
   !include ducks/University.iuml
   !include sagas/UniversitySaga.iuml
-
+  dienfienfi
   '!include containers/AdminOverviewContainer.iuml
-  
+
   !include ducks/Admin.iuml
   !include sagas/AdminSaga.iuml
 
