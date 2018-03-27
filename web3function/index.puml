@@ -1,0 +1,16 @@
+@startuml
+
+    !include file/Course.iuml
+    !include file/Exam.iuml
+    !include file/Student.iuml
+    !include file/Teacher.iuml
+    !include file/University.iuml
+    !include file/UniversityExam.iuml
+    !include file/UniversityStudent.iuml
+    !include file/UniversityTeacher.iuml
+    !include file/UniversityYear.iuml
+    !include file/UniversityAdmin.iuml
+    !include file/User.iuml
+    !include file/Year.iuml
+
+@enduml

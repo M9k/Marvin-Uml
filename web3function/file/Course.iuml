@@ -1,0 +1,11 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Course{
++ getExamNumber(contract: address): uint
++ getExamContractAt(contract: address, uint _index): address
++ getName(contract: address): bytes32
++ getCreditsToGraduate(contract: address): uint16
++ getSolarYear(contract: address): uint16
++ addNewExam(contract: address, _name: bytes32, _credits: uint8, _obbligatoriety: bool)
+}
+@enduml

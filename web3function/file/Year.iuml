@@ -1,0 +1,9 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Year {
++ getCourseNumber(contract: address): uint
++ getCourseContractAt(contract: address, _index: uint): address
++ getSolarYear(contract: address): uint16
++ addNewCourse(contract: address, _name:bytes32, _creditsForGraduation: uint16)
+}
+@enduml

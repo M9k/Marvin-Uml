@@ -1,0 +1,8 @@
+@startuml
+skinparam classAttributeIconSize 0
+class User{
++ getPublicAddress(contract: address): address
++ getName(contract: address): bytes32
++ getSurname(contract: address): bytes32
+}
+@enduml

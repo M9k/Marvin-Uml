@@ -1,0 +1,17 @@
+@startuml
+skinparam classAttributeIconSize 0
+class UniversityTeacher{
++ getTeacherNumber(): uint
++ getTeacherContractAddressAt(_index: uint): address
++ getNonApprovedTeacherNumber(): uint
++ getNotApprovedTeacherContractAddressAt(_index: uint): address
++ getTeacherContractFromPublicAddress(_address: address): address
++ isTeacher(_address: address): bool
++ isNotConfirmedTeacher(_address: address): bool
++ getRoleByAddress(_address: address): uint8
++ requestTeacherAccount( _name: bytes32, _surname: bytes32)
++ confirmTeacher(_teacher: address)
++ denyTeacher(_teacher: address)
++ removeTeacher(_teacher: address)
+}
+@enduml

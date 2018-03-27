@@ -1,0 +1,8 @@
+@startuml
+skinparam classAttributeIconSize 0
+class University{
++ isUniversityFounder(_address: address): bool
++ getRoleByAddress(_address: address): uint8
++ login(): uint8
+}
+@enduml

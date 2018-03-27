@@ -1,0 +1,10 @@
+@startuml
+skinparam classAttributeIconSize 0
+class UniversityAdmin {
++ isAdmin(_adminAddress: address): bool
++ getAdminNumber(): uint
++ getAdminAt(_index: uint): address
++ getRoleByAddress(_address: address): uint8
++ removeAdmin(_address: address)
+}
+@enduml

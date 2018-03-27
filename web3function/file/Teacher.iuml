@@ -1,0 +1,8 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Teacher {
++ getExamNumber(contract: address): uint
++ getExamContractAt(contract: address, _index: uint): Exam
++ registerNewVoteStudentExam(contract: address, _examindex: uint, _student: uint, _valuation: uint8)
+}
+@enduml

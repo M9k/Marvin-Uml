@@ -1,0 +1,17 @@
+@startuml
+skinparam classAttributeIconSize 0
+class UniversityStudent {
++ getStudentNumber(): uint
++ getStudentContractAddressAt(_index: uint): address
++ getNonApprovedStudentNumber(): uint
++ getNotApprovedStudentContractAddressAt(_index: uint): address
++ getStudentContractFromPublicAddress(_address: address): address
++ isStudent(_address: address): bool
++ isNotConfirmedStudent(_address: address): bool
++ getRoleByAddress(_address: address): uint8
++ requestStudentAccount(_name: bytes32, _surname: bytes32, _course: address)
++ confirmStudent(_student: address)
++ denyStudent(_student: address)
++ removeStudent(_student: address)
+}
+@enduml
