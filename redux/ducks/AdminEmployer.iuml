@@ -12,7 +12,7 @@ class AdminEmployer{
   + pushAdmin(string): object
   + popAdmin(string): object
 }
-note right of University
+note right of AdminEmployer
 initialState = {
  loading: false,
  errored: false,
