@@ -29,5 +29,5 @@ class AdminSaga {
     + removeTeacherAction(string): object
 }
 
-UniversitySaga --|> marvin.Saga
-UniversitySaga ..> marvin.Admin : <<use>>
+AdminSaga --|> marvin.Saga
+AdminSaga ..> marvin.Admin : <<use>>

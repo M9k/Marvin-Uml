@@ -24,4 +24,4 @@ initialState: {
   }
 }
 end note
-Admin --|>marvin.duck
+Admin --|>marvin.Duck
