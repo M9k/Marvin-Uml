@@ -16,5 +16,8 @@ namespace marvin <<business logic for the frontend app>> {
 
   !include ducks/Session.iuml
   !include sagas/SessionSaga.iuml
+
+  !include ducks/Booking.iuml
+  !include sagas/BookingSaga.iuml
 }
 @enduml

@@ -8,10 +8,10 @@ class UniversitySaga{
   - GET_ADMIN_NUMBER : string
   - GET_ALL_ADMINS : string
   == sagas ==
-  + *addAdmin(action): void
-  + *removeAdmin(action): void
-  + *getAllAdmins(): void
-  + *adminNumber(): void
+  - *addAdmin(action): void
+  - *removeAdmin(action): void
+  - *getAllAdmins(): void
+  - *adminNumber(): void
   == actions ==
   + addNewAdminAction(string): object
   + removeAdminAction(string): object

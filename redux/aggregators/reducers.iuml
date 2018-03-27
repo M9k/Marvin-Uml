@@ -1,3 +1,10 @@
 class Reducers{
   + {static} combine(): object
 }
+note right of Reducers
+{
+  currentUser: Session
+  admins: University
+  signup: Booking
+}
+end note

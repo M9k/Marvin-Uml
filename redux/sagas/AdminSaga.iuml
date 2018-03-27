@@ -12,13 +12,13 @@ class AdminSaga {
     - REMOVE_STUDENT: string
     - REMOVE_TEACHER: string
     ==sagas==
-    + *getStudentList(): List<object>
-    + *getTeacherList(): List<object>
-    + *getPendingUsersList(): List<object>
-    + *addStudent(action): void
-    + *addTeacher (action): void
-    + *removeStudent(action): void
-    + *removeTeacher(action): void
+    - *getStudentList(): List<object>
+    - *getTeacherList(): List<object>
+    - *getPendingUsersList(): List<object>
+    - *addStudent(action): void
+    - *addTeacher (action): void
+    - *removeStudent(action): void
+    - *removeTeacher(action): void
     ==actions==
     + getStudentsListAction(): object
     + getTeachersListActiob(): object

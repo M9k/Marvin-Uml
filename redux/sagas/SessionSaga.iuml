@@ -6,8 +6,8 @@ class SessionSaga{
   - LOGIN: string
   - UPDATE: string
   == sagas ==
-  + *performLogin(): void
-  + *retrieveData(): void
+  - *performLogin(): void
+  - *retrieveData(): void
   == actions ==
   + loginAction(): object
   + updateData(): object
