@@ -26,7 +26,7 @@ AdminIndex ..> CardWithIcon
 
 class AdminUsersConfirmed{
     --props--
-        + userType(User)
+        + userType(string)
         + getUsers(function)
         + functionDeleteUser(function)
     --render--
@@ -37,7 +37,7 @@ AdminUsersConfirmed ..> PageTableForm
 
 class AdminUsersNotConfirmed{
     --props--
-        + userType(User)
+        + userType(string)
         + getUsers(function)
         + functionConfirmUser(function)
         + functionDeleteUser(function)
