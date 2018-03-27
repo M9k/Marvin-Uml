@@ -1,3 +1,8 @@
 interface Saga{
   + void handler()
+  -- purpouse --
+  classes inherited by this interface achieve
+  asyncronus connection with external apis
+  and notify the retrived data to the app
+  via ducks' actions
 }
