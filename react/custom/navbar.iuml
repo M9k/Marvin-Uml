@@ -9,5 +9,5 @@ class Navbar{
     links based on login and type user
 }
 
-Navbar ..|> Login
-Navbar ..|> Logout
+Navbar ..> Login
+Navbar ..> Logout

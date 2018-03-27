@@ -13,9 +13,9 @@ class Field{
         display the type of the field and
         dynamic update its value and state
 }
-Field ..|> ControlLabel
-Field ..|> FormControl
-Field ..|> FormGroup
-Field ..|> Radio
+Field ..> ControlLabel
+Field ..> FormControl
+Field ..> FormGroup
+Field ..> Radio
 Field ..> MenuItem
 Field ..> DropdownButton

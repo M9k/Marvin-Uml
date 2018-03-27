@@ -22,7 +22,7 @@ class AdminIndex{
 
     cardWithIcon to go -> AdminCourses
 }
-AdminIndex ..|> CardWithIcon
+AdminIndex ..> CardWithIcon
 
 class AdminUsersConfirmed{
     --props--
@@ -33,7 +33,7 @@ class AdminUsersConfirmed{
         table with user list and one button
         for each row to delete
 }
-AdminUsersConfirmed ..|> PageTableForm
+AdminUsersConfirmed ..> PageTableForm
 
 class AdminUsersNotConfirmed{
     --props--
@@ -45,7 +45,7 @@ class AdminUsersNotConfirmed{
         table with user list and two button
         for each row to confirm or delete
 }
-AdminUsersNotConfirmed ..|> PageTableForm
+AdminUsersNotConfirmed ..> PageTableForm
 
 class AdminCourses{
     --props--
@@ -56,7 +56,7 @@ class AdminCourses{
         table with courses list and form to
         add a new one from specific year
 }
-AdminCourses ..|> PageTableForm
+AdminCourses ..> PageTableForm
 
 class AdminCourseExams{
     --props--
@@ -69,6 +69,6 @@ class AdminCourseExams{
         with a form to add a new one to the current
         course
 }
-AdminCourseExams ..|> PageTableForm
+AdminCourseExams ..> PageTableForm
 
 }

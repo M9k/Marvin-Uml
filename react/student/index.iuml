@@ -11,7 +11,7 @@ class StudentIndex{
     cardWithIcon to go confirm/teacher -> StudentExams
     cardWithIcon to go confirm/student -> CreditsToEnd
 }
-StudentIndex ..|> CardWithIcon
+StudentIndex ..> CardWithIcon
 
 class StudentExams{
 --functions--
@@ -26,4 +26,4 @@ class CreditsToEnd{
 --render()--
 show all credits and credits to end with progressbar
 }
-CreditsToEnd ..|> ProgressBar
+CreditsToEnd ..> ProgressBar

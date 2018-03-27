@@ -3,5 +3,5 @@ class Form{
         + fields(Field[])
         + submitFunction(function)
 }
-Form ..|> Button
-Form ..|> Field
+Form ..> Button
+Form ..> Field

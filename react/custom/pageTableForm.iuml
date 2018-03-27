@@ -8,7 +8,7 @@ class PageTableForm{
         render table with custom row with buttons
         and a form to add some data related to that table
 }
-PageTableForm ..|> Table
-PageTableForm ..|> Button
-PageTableForm ..|> Form
+PageTableForm ..> Table
+PageTableForm ..> Button
+PageTableForm ..> Form
 PageTableForm ..> Modal
