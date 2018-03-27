@@ -5,9 +5,13 @@ class Admin{
   + ROLES: enum
   - initialState : object
   ==types==
-
+  - SET_STUDENTS_LIST: string
+  - SET_TEACHERS_LIST: string
+  - SET_PENDING_LIST: string
   ==actions==
-
+  + setStudentsList(array<Object>): object
+  + setTeachersList(array<Object>): object
+  + setPendingList(array<Object>): object
 }
 
 note right of Admin
@@ -15,12 +19,10 @@ initialState: {
   errored: false,
   loading: true,
   role: 2,
-  data: {
-    errored: false,
-    loading: false,
-    name: string
-    surname: string
-    course: string
+  lists: {
+    StudentsList: array<Object> = []
+    TeachersList: array<Object> = []
+    PendingList: array<Object> = []
   }
 }
 end note

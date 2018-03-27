@@ -12,9 +12,9 @@ class AdminSaga {
     - REMOVE_STUDENT: string
     - REMOVE_TEACHER: string
     ==sagas==
-    - *getStudentList(): List<object>
-    - *getTeacherList(): List<object>
-    - *getPendingUsersList(): List<object>
+    - *getStudentList(): void
+    - *getTeacherList(): void
+    - *getPendingUsersList(): void
     - *addStudent(action): void
     - *addTeacher (action): void
     - *removeStudent(action): void

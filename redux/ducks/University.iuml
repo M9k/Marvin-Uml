@@ -8,11 +8,17 @@ class University{
   - SET_ADMINS_LIST : string
   - POP_ADMIN : string
   - PUSH_ADMIN : string
+  - SET_ACADEMIIC_YERS_LIST: string
+  - POP_EMPTY_YEAR : string
+  - PUSH_ACADEMIC_YEAR : string
   == actions ==
   + setAdminNumber(int): object
   + setAdminList(array<Object>): object
   + pushAdmin(string): object
   + popAdmin(string): object
+  + setAcademicYear(array<uint>): object
+  + popEmptyYear(uint): object
+  + pushAcademicYear(uint): object
 }
 note right of University
 initialState = {
@@ -20,6 +26,7 @@ initialState = {
  errored: false,
  adminNumber: 0,
  adminAccounts: array<string> = []
+ academicYears: array<string> = []
 }
 end note
 University--|> marvin.Duck
