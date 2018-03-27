@@ -10,7 +10,7 @@ for dr in "${modules[@]}";do
     ERROR=true
     echo "$OUT"
   else
-    $PLANT index.puml -o ../build/$dr.png
+    $PLANT index.puml -o ../build/$dr
   fi
   cd ..
 done

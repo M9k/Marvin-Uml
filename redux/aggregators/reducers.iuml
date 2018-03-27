@@ -5,6 +5,8 @@ note right of Reducers
 {
   currentUser: Session
   admins: University
-  signup: Booking
+  signup: Booking,
+  exams: TeacherExams,
+  selectedExam: Evaluator
 }
 end note

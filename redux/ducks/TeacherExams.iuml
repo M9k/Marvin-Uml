@@ -1,0 +1,28 @@
+!include ../interfaces/duck.iuml
+class TeacherExams{
+  - initialState: object
+  + reducer(object, object): object
+  == types ==
+  - SET_EXAMS_LIST: string
+  - PUSH_EXAM: string
+  - POP_EXAM: string
+  - LIST_LOADING: string
+  - LIST_ERRORED: string
+  == selectors ==
+  + examByCode(int): array<object>
+  + examByCourse(int): array<object>
+  == actions ==
+  + setExamsList(array<object>): object
+  + pushExam(object): object
+  + popExam(string): object
+  + listIsLoading(): object
+  + listHasErrored(): object
+}
+note right of TeacherExams
+initialState = {
+  loading: false,
+  errored: false,
+  list: array<{code, courseName}>
+}
+end note
+TeacherExams --|> marvin.Duck

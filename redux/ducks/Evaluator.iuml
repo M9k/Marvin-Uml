@@ -1,0 +1,42 @@
+!include ../interfaces/duck.iuml
+class Evaluator{
+  - initialState: object
+  + reducer(object, object): object
+  == types ==
+  - SET_EXAM_DATA: string
+  - SET_STUDENTS_LIST: string
+  - PUSH_STUDENT: string
+  - POP_STUDENT: string
+  - ASSIGN_VOTE: string
+  - VOTE_LOADING: string
+  - VOTE_ERRORED: string
+  - LIST_LOADING: string
+  - LIST_ERRORED: string
+  == selectors ==
+  + studentByName(int): array<object>
+  + studentBySurname(int): array<object>
+  + studentByVote: array<object>
+  + studentByVotePresence: array<object>
+  == actions ==
+  + setExamData(string, string): object
+  + setStudentsList(array<object>): object
+  + pushStudent(object): object
+  + popStudent(string): object
+  + assignVote(string, int): object
+  + voteIsLoading(): object
+  + voteHasErrored(): object
+  + listIsLoading(): object
+  + listHasErrored(): object
+}
+note right of Evaluator
+initialState = {
+  loading: false,
+  errored: false,
+  code: string = null,
+  course: string = null,
+  studentList: array<{name, surname, address, vote}> = []
+}
+Da valutare se spezzare in due, ma è difficile
+che il modulo non venga usato tutto insieme
+end note
+Evaluator --|> marvin.Duck
