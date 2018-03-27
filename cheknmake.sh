@@ -1,4 +1,4 @@
-PLANT="java -jar ../scripts/plantuml.jar"
+PLANT="java -jar ../bin/plantuml.jar"
 mkdir -p build
 ERROR=false
 declare -a modules=("redux" "Solidity" "react")
@@ -15,4 +15,6 @@ for dr in "${modules[@]}";do
 done
 if $ERROR; then
   echo "ERRORED"
+  exit 1
 fi
+exit 0
