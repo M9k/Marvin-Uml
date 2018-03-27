@@ -4,5 +4,5 @@ jdk: oraclejdk8
 notifications:
   email: false
   slack: 353swe:TBr27Dyzfxr9mmz1qYaWjJiv
-install: skip
+install: sudo apt-get install graphviz
 script: /bin/bash cheknmake.sh
