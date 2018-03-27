@@ -13,5 +13,6 @@ class BookingSaga{
   + performSignUp(string, string, object = null): object
   + performLoad(int = null): void
 }
+BookingSaga --|> marvin.Saga
 BookingSaga ..> marvin.Booking: <<use>>
 BookingSaga ..> marvin.Session: <<use>>

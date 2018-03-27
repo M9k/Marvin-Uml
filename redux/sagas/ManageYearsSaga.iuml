@@ -1,5 +1,5 @@
 !include ../interfaces/saga.iuml
-!include ../ducks/University.iuml
+!include ../ducks/ManageYears.iuml
 class ManageYearsSaga{
   + handler(): void
   == types ==
@@ -16,4 +16,4 @@ class ManageYearsSaga{
   + getAllYearsAction() : object
 }
 ManageYearsSaga --|> marvin.Saga
-ManageYearsSaga ..> marvin.ManageYears
+ManageYearsSaga ..> marvin.ManageYears: <<use>>

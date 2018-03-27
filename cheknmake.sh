@@ -1,4 +1,5 @@
 PLANT="java -jar ../bin/plantuml.jar"
+rm -rf build/
 mkdir -p build
 ERROR=false
 declare -a modules=("redux" "Solidity" "react")

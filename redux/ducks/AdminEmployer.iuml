@@ -1,15 +1,13 @@
 !include ../interfaces/duck.iuml
-class University{
+class AdminEmployer{
   - initialState : object
   + ROLES: enum
   + reducer(object, object): object
   == types ==
-  - SET_ADMIN_NUMBER : string
   - SET_ADMINS_LIST : string
   - POP_ADMIN : string
   - PUSH_ADMIN : string
   == actions ==
-  + setAdminNumber(int): object
   + setAdminList(array<Object>): object
   + pushAdmin(string): object
   + popAdmin(string): object
@@ -18,8 +16,7 @@ note right of University
 initialState = {
  loading: false,
  errored: false,
- adminNumber: 0,
  adminAccounts: array<string> = []
 }
 end note
-University--|> marvin.Duck
+AdminEmployer--|> marvin.Duck
