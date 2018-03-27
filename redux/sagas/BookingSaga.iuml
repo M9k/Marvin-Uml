@@ -1,0 +1,17 @@
+!include ../interfaces/saga.iuml
+!include ../ducks/Booking.iuml
+!include ../ducks/Session.iuml
+class BookingSaga{
+  + handler(): void
+  == types ==
+  - SIGN_UP: string
+  - LOAD_COURSES: string
+  == sagas ==
+  - *signUp(string, string, object = null): void
+  - *loadCourses(int = null): void
+  == actions ==
+  + performSignUp(string, string, object = null): object
+  + performLoad(int = null): void
+}
+BookingSaga ..> marvin.Booking: <<use>>
+BookingSaga ..> marvin.Session: <<use>>

@@ -1,0 +1,24 @@
+!include ../interfaces/duck.iuml
+class Booking{
+  - initialState: object
+  + reducer(object, object): object
+  == types ==
+  - SIGN_UP_LOADING: string
+  - SIGN_UP_ERRORED: string
+  - SET_COURSES: string
+  == action ==
+  + loadSignUp(): object
+  + signUpErrored(): object
+  + setCourses(Array<object>): object
+}
+note right of Booking
+initialState = {
+  loading: bool = false,
+  errored: bool = false,
+  availableCourse: {
+    loading: bool = false,
+    errored: bool = true,
+    list: Array<Object> = null
+}
+end note
+Booking --|> marvin.Duck
