@@ -1,0 +1,19 @@
+!include ../interfaces/saga.iuml
+!include ../ducks/University.iuml
+class ManageYearsSaga{
+  + handler(): void
+  == types ==
+  - ADD_NEW_YEAR : string
+  - REMOVE_EMPTY_YEAR : string
+  - GET_ALL_YEARS : string
+  == sagas ==
+  - *addYear() : void
+  - *removeEmptyYear() : void
+  - *getAllYears() : void
+  == actions ==
+  + addYearAction(uint): object
+  + removeEmptyYearAction(uint): object
+  + getAllYearsAction() : object
+}
+ManageYearsSaga --|> marvin.Saga
+ManageYearsSaga ..> marvin.ManageYears

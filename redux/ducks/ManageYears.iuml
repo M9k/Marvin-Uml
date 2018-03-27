@@ -1,0 +1,22 @@
+!include ../interfaces/duck.iuml
+class ManageYears{
+  - initialState : object
+  + ROLES: enum
+  + reducer(object, object): object
+  == types ==
+  - SET_ACADEMIIC_YERS_LIST: string
+  - POP_EMPTY_YEAR : string
+  - PUSH_ACADEMIC_YEAR : string
+  == actions ==
+  + setAcademicYear(array<uint>): object
+  + popEmptyYear(uint): object
+  + pushAcademicYear(uint): object
+}
+note right of ManageYears
+initialState = {
+ loading: false,
+ errored: false,
+ academicYears: array<string> = []
+}
+end note
+ManageYears--|> marvin.Duck
