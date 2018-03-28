@@ -2,6 +2,8 @@
 
 title Relationships - Class Diagram for Marvin Frontend
 
+skinparam classAttributeIconSize 0
+
 skinparam linetype ortho
 
 /' Base Bootstrap elements and Custom one '/
@@ -16,5 +18,20 @@ skinparam linetype ortho
     !include admin/index.iuml
     !include teacher/index.iuml
     !include student/index.iuml
+
+
+UniversityPages -[hidden]left- CustomComponents
+AdminPages -[hidden]left- CustomComponents
+
+
+
+
+TeacherPages -[hidden]right- CustomComponents
+
+HelpPage -[hidden]left- CustomComponents
+CustomComponents -[hidden]left-  PricePage
+SubmissionPage -[hidden]left- CustomComponents
+
+TeacherPages -[hidden]left- CustomComponents
 
 @enduml

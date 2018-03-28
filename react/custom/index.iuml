@@ -3,7 +3,7 @@ Custom components
 created by 353 group
 '/
 
-package custom-components <<components created by us>>{
+package custom-components as CustomComponents <<components created by us>>{
 
 !include navbar.iuml
 
