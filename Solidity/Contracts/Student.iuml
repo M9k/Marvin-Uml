@@ -8,6 +8,7 @@ confirmedStudent
 byCorrectProfessor(_ofExam: uint)
 notEnrolled(_index: uint)
 enrolled(_index: uint)
+withoutValuation(_index: uint)
 __
 + Student(_name: bytes32, _surname: bytes32, _publicAddress: address, _course: Course)
 +@ getCourseContract(): Course
@@ -16,7 +17,7 @@ __
 +@ getExamSubscriptionAt(_index: uint): bool
 +@ getExamValuationAt(_index: uint): uint8
 + enrollToOptionalExam(_index: uint) {onlySubject, notEnrolled(_index: uint)}
-+ registerValuation(_exam: uint, _valuation: uint8) {byCorrectProfessor(index: uint), confirmedStudent, enrolled(_index: uint)}
++ registerValuation(_exam: uint, _valuation: uint8) {withoutValuation(_index: uint)}
 + getIndexOfExam(exam: Exam): uint
 }
 @enduml
