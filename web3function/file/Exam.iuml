@@ -6,7 +6,7 @@ class Exam{
 + getCourse(contract: address): address
 + getName(contract: address): bytes32
 + getTeacherContract(contract: address): address
-+ getObbligatoriety(contract: address): bool
++ getObligatoriness(contract: address): bool
 + getCredits(contract: address): uint8
 + addMeAsSubscriber(contract: address)
 }
