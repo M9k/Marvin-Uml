@@ -11,6 +11,7 @@ class Exam{
 - university: University
 __
 onlyFromUniversityContract
+onlyFromStudentContract
 __
 + Exam(_name: bytes32, _credits: uint8, _obbligatoriety: bool, _year: Year, _university: University)
 +@ getEnrolledNumber(): uint
@@ -20,7 +21,7 @@ __
 +@ getTeacherContract(): Teacher
 +@ getObbligatoriety(): bool
 +@ getCredits(): uint8
-+ addMeAsSubscriber()
++ addMeAsSubscriber() {onlyFromStudentContract}
 + removeSubscriber(_address: address) {onlyFromUniversityContract}
 + associateTeacher(_teacher: Teacher) {onlyFromUniversityContract}
 }
