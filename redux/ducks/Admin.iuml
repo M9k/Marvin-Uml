@@ -19,11 +19,9 @@ initialState: {
   errored: false,
   loading: true,
   role: 2,
-  lists: {
-    StudentsList: array<Object> = []
-    TeachersList: array<Object> = []
-    PendingList: array<Object> = []
-  }
+  StudentsList: array<{name, surname, address, courses}> = [],
+  TeachersList: array<name, surname, address> = [],
+  PendingList: array<name, surname, address, role, courses> = []
 }
 end note
 Admin --|>marvin.Duck

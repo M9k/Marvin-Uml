@@ -1,0 +1,26 @@
+!include ../interfaces/duck.iuml
+class ManageExams{
+  - initialState: object
+  + reducer(object, object): object
+  == types ==
+  - PUSH_NEW_EXAM : string
+  - SET_ALL_EXAMS_LIST : string
+  - SET_EXAMS_LIST_BY_COURSE : string
+  == actions ==
+  + pushNewExam(sting) : object
+  + setAllExamsList(array<Object>) : object
+  + setExamsListByCourse(array<Object>) : object
+  + listIsLoading(): object
+  + listHasErrored(): object
+}
+
+note right of ManageExams
+initialState = {
+  loading: false,
+  errored: false,
+  allExamsList: array<{name, credits, sign, professorName, professorSurname}> = [],
+  examsListByCourse: array<{name, credits, sign, professorName, professorSurname}> = []
+}
+end note
+
+ManageExams --|> marvin.Duck
