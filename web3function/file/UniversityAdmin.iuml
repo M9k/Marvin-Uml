@@ -5,6 +5,7 @@ class UniversityAdmin {
 + getAdminNumber(): uint
 + getAdminAt(_index: uint): address
 + getRoleByAddress(_address: address): uint8
++ addNewAdmin(_adminAddress: address)
 + removeAdmin(_address: address)
 }
 @enduml

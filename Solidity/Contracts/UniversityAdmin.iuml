@@ -6,11 +6,11 @@ __
 validAdminAddress( _address:address)
 onlyAdmin
 __
-+ addNewAdmin(_adminAddress: address) {onlyFounder, registrableAddress(_adminAddress: address)}
 +@ isAdmin(_adminAddress: address): bool
 +@ getAdminNumber(): uint
 +@ getAdminAt(_index: uint): address
 +@ getRoleByAddress(_address: address): uint8
++ addNewAdmin(_adminAddress: address) {onlyFounder, registrableAddress(_adminAddress: address)}
 + removeAdmin(_address: address) {onlyFounder, validAdminAddress(_address: address)}
 }
 @enduml
