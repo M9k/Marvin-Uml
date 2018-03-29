@@ -21,6 +21,8 @@ package custom-components as CustomComponents <<components created by us>>{
 
 !include deleteButton.iuml
 
+!include routerFactory.iuml
+
 !include pageTableForm.iuml
 
 !include pageContainer.iuml

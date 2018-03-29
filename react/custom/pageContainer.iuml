@@ -6,7 +6,6 @@ class PageContainer{
     --render--
         render navbar and footer with inside his children when page is not loading
 }
-
+PageContainer ..> Panel
 PageContainer ..> Footer
-PageContainer ..> Navbar
 PageContainer ..> ProgressBar

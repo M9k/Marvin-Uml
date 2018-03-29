@@ -8,13 +8,6 @@ class UniversityIndex {
 }
 UniversityIndex ..> CardWithIcon
 
-class UniversityRoutes {
-    --routes--
-        + index -> UniversityIndex
-        + academicyears -> UniversityAcademicYears
-        + admins -> UniversityAdmins
-}
-
 class UniversityAcademicYears {
     --props--
         + getAcademicYears(function)
