@@ -1,0 +1,8 @@
+class DeleteButton{
+    --props--
+        + objectToRemove(string)
+        + functionToDelete(function)
+    --render--
+        delete button with delete icon and
+         text equal to Delete + objectToRemove
+}

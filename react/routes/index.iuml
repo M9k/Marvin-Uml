@@ -1,0 +1,49 @@
+
+package Routes{
+
+class UniversityRoutes {
+    --routes--
+        + index -> UniversityIndex
+        + academicyears -> UniversityAcademicYears
+        + admins -> UniversityAdmins
+}
+UniversityRoutes ..> UniversityPages
+
+class AdminRoutes{
+    --routes--
+        + index -> AdminIndex
+        + confirm/teacher -> AdminUsersNotConfirmed
+        + confirm/students -> AdminUsersNotConfirmed
+        + user/teacher -> AdminUserConfirmed
+        + user/students -> AdminUserConfirmed
+        + courses -> AdminCourses
+        + courses/:examId -> AdminCourseExams
+}
+AdminRoutes ..> AdminPages
+
+class TeacherRoutes {
+    --routes--
+        + index -> TeacherIndex
+        + exams -> TeacherExams
+        + exams/:examid -> TeacherExamStudents
+}
+TeacherRoutes ..> TeacherPages
+
+class StudentRoutes{
+    --render--
+         index -> StudentIndex
+         other exams -> OptionalExams
+}
+StudentRoutes ..> StudentPages
+
+class PublicRoutes{
+    --routes--
+        + index -> PublicIndex
+        + help -> HelpPage
+        + price -> PricePage
+        + request -> SubmissionPage
+}
+PublicRoutes .> PublicPages
+
+
+}

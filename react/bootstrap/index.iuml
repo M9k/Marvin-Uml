@@ -2,7 +2,7 @@
 Bootstrap components
 from https://react-bootstrap.github.io/components/alerts/
 '/
-package Bootstrap-React <<npm module components>> {
+package Bootstrap-React as BR <<npm module components>> {
 
 /'BEGIN Form'/
 !include formgroup.iuml

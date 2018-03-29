@@ -1,0 +1,27 @@
+!include ../interfaces/duck.iuml
+class Student{
+  - initialState : object
+  + ROLES: enum
+  + reducer(object, object): object
+  ==types==
+  - SET_SUBSCRIBED_EXAMS_LIST : string
+  - SET_OPTIONAL_EXAMS_LIST : string
+  - SET_CREDIT_NUMBER : string
+  - PUSH_OPTIONAL_EXAM_SUBSCRIPTION : string
+  ==action==
+  + setSubscribedExamList(array<Object>) : object
+  + setOptionalExamsList(array<Object>) : object
+  + setCreditNumber() : object
+  + pushOptionalExamSubscription() : object
+}
+
+note right of Student
+initialState = {
+ loading: false,
+ errored: false,
+ creditsNumber = null,
+ subscribedExamList: array<{name, credits, obligatoriness, vote}> = [],
+ optionalExamsList: array<{name, credits}> = []
+}
+end note
+Student--|> marvin.Duck

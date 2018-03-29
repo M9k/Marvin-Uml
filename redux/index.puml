@@ -29,5 +29,15 @@ namespace marvin <<business logic for the frontend app>> {
 
   !include ducks/Evaluator.iuml
   !include sagas/EvaluatorSaga.iuml
+
+  !include ducks/Student.iuml
+  !include sagas/StudentSaga.iuml
+
+  !include ducks/ManageExams.iuml
+  !include sagas/ManageExamsSaga.iuml
+
+  !include ducks/Course.iuml
+  !include sagas/CourseSaga.iuml
+
 }
 @enduml

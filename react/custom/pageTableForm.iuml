@@ -12,3 +12,4 @@ PageTableForm ..> Table
 PageTableForm ..> Button
 PageTableForm ..> Form
 PageTableForm ..> Modal
+PageTableForm ..> DeleteButton

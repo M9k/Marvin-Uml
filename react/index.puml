@@ -6,6 +6,8 @@ skinparam classAttributeIconSize 0
 
 skinparam linetype ortho
 
+left to right direction
+
 /' Base Bootstrap elements and Custom one '/
     !include bootstrap/index.iuml
     !include custom/index.iuml
@@ -19,19 +21,17 @@ skinparam linetype ortho
     !include teacher/index.iuml
     !include student/index.iuml
 
+    !include routes/index.iuml
 
 UniversityPages -[hidden]left- CustomComponents
 AdminPages -[hidden]left- CustomComponents
-
-
-
-
 TeacherPages -[hidden]right- CustomComponents
+HelpPage -[hidden]right- CustomComponents
 
-HelpPage -[hidden]left- CustomComponents
 CustomComponents -[hidden]left-  PricePage
 SubmissionPage -[hidden]left- CustomComponents
 
 TeacherPages -[hidden]left- CustomComponents
+
 
 @enduml

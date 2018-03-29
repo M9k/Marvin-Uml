@@ -1,16 +1,5 @@
 package AdminPages <<UC 5 & UC7>> {
 
-class AdminRoutes{
---routes--
-+ index -> AdminIndex
-+ confirm/teacher -> AdminUsersNotConfirmed
-+ confirm/students -> AdminUsersNotConfirmed
-+ user/teacher -> AdminUserConfirmed
-+ user/students -> AdminUserConfirmed
-+ courses -> AdminCourses
-+ courses/:examId -> AdminCourseExams
-}
-
 class AdminIndex{
 --render--
     heroImage

@@ -7,13 +7,6 @@ class TeacherIndex {
 }
 TeacherIndex ..> CardWithIcon
 
-class TeacherRoutes {
-    --routes--
-    + index -> TeacherIndex
-    + exams -> TeacherExams
-    + exams/:examid -> TeacherExamStudents
-}
-
 class TeacherExams {
     --props--
         + getExams(function)

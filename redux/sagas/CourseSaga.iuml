@@ -1,0 +1,22 @@
+!include ../interfaces/saga.iuml
+!include ../ducks/Course.iuml
+class CourseSaga{
+  + handler(): void
+  == types ==
+  - ADD_NEW_DEGREE_COURSE : string
+  - GET_ALL_DEGREE_COURSES : string
+  - GET_ALL_YEARS : string
+  - ASSOCIATE_PROFESSOR : string
+  == sagas ==
+  - *addNewDegreeCourse(string) : void
+  - *getAllDegreeCourses() : void
+  - *getAllYears() : void
+  - *associateProfessor(string, string) : void
+  == actions ==
+  + addNewDegreeCourseAction(string) : object
+  + getAllDegreeCoursesAction() : object
+  + getAllYearsAction() : object
+  * *associateProfessorAction(string, string) : void
+}
+CourseSaga --|> marvin.Saga
+CourseSaga ..> marvin.Session : <<use>>

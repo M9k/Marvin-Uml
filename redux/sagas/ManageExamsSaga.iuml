@@ -1,0 +1,19 @@
+!include ../interfaces/saga.iuml
+!include ../ducks/ManageExams.iuml
+class ManageExamsSaga{
+  + handler(): void
+  == types ==
+  - ADD_NEW_EXAM : string
+  - GET_ALL_EXAMS : string
+  - GET_EXAMS_BY_COURSE : string
+  == sagas ==
+  - *addNewExam(string, string, uint, bool) : void
+  - *getAllExams() : void
+  - *getExamsByCourse(string) : void
+  == actions ==
+  + addNewExamAction(string, string, uint, bool) : object
+  + getAllExamsAction() : object
+  + getExamsByCourse(string) : object
+}
+ManageExamsSaga --|> marvin.Saga
+ManageExamsSaga ..> marvin.Session : <<use>>

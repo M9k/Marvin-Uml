@@ -1,0 +1,35 @@
+!include ../interfaces/duck.iuml
+class Course{
+  - initialState: object
+  + reducer(object, object): object
+  == types ==
+  - PUSH_NEW_COURSE: string
+  - SET_DEGREE_LIST : string
+  - SET_ACADEMIC_YEARS_LIST : string
+  - SET_PROFESSORS_LIST : string
+  - LIST_LOADING: string
+  - LIST_ERRORED: string
+  == selectors ==
+  + degreeCourseBySign()
+  + degreeCourseByAcademicYear()
+  ==actions==
+  + pushNewCourse(string): object
+  + setDegreeList(array<Object>): object
+  + setAllExamsList(array<Object>): object
+  + setAcademicYearsList(array<Object>): object
+  + setProfessorsList(array<Object>): object
+  + listIsLoading(): object
+  + listHasErrored(): object
+}
+
+note right of Course
+initialState = {
+  loading: false,
+  errored: false,
+  degreeList: array<{name, surname, address, vote}> = [],
+  academicYears: array<{solarYear}> = [],
+  professorsList: array<{name, surname, address}> = []
+  }
+end note
+
+Course --|> marvin.Duck

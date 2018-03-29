@@ -1,0 +1,22 @@
+!include ../interfaces/saga.iuml
+!include ../ducks/Student.iuml
+class StudentSaga{
+  + handler(): void
+  == types ==
+  - GET_SUBSCRIBED_EXAMS_LIST : string
+  - GET_OPTIONAL_EXAMS_LIST : string
+  - GET_ALL_CREDITS : string
+  - SUBSCRIBE_OPTOINAL_EXAM : string
+  == sagas ==
+  - getSubscribedExamList() : void
+  - getOptionalExamsList() : void
+  - getAllCredits() : void
+  - subscribeOptionalMessage(string) : void
+  == actions ==
+  + getSubscribedExamListAction() : object
+  + getOptionalExamsListAction() : object
+  + getAllCreditsAction() : object
+  + subscribeOptionalExamAction(string) : object
+}
+StudentSaga --|> marvin.Saga
+StudentSaga ..> marvin.Session : <<use>>

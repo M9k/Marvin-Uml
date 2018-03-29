@@ -1,23 +1,25 @@
-package HelpPage <<UC 1>> {
-  class HelpPage{
+package PublicPages {
+
+  class PublicIndex {
+    --render--
+    describes marvin system with images, logo and text
+  }
+
+  class HelpPage <<UC 1>>{
     --render--
     show list of paragraphs and videos/images to help user
     with common problem or questions
   }
-}
 
-package PricePage <<UC 11>> {
-  class PricePage{
+  class PricePage <<UC 11>> {
     ----
     - currentEthPrice()
     - currentGasPrice()
     --render--
     show list of actions and related price with table
   }
-}
 
-package SubmissionPage <<UC 13>> {
-  class SubmissionPage{
+  class SubmissionPage <<UC 13>> {
     --props--
     + currentAddr(addr)
     + courses(List[])
@@ -27,4 +29,5 @@ package SubmissionPage <<UC 13>> {
     show a form with name,surname
     and two selectbox to choose type of user
   }
+
 }

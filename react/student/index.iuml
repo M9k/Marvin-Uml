@@ -1,29 +1,24 @@
 package StudentPages <<UC 9>> {
 
-class StudentRoutes{
---render--
- index -> StudentIndex
- other exams -> OptionalExams
-}
-
 class StudentIndex{
---render--
-    cardWithIcon to go confirm/teacher -> StudentExams
-    cardWithIcon to go confirm/student -> CreditsToEnd
+    --render--
+        cardWithIcon to go confirm/teacher -> StudentExams
+        cardWithIcon to go confirm/student -> CreditsToEnd
 }
 StudentIndex ..> CardWithIcon
 
 class StudentExams{
---functions--
-    + getExams(function)
---render--
-    table with list of all exams
+    --functions--
+        + getExams(function)
+    --render--
+        table with list of all exams
 }
 
 class CreditsToEnd{
---functions--
- +getAllCredits()
---render--
-show all credits and credits to end with progressbar
+    --functions--
+        +getAllCredits()
+    --render--
+        show all credits and credits to end with progressbar
 }
-CreditsToEnd ..> ProgressBar
+
+}
