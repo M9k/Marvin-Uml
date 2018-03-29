@@ -26,4 +26,3 @@ class CreditsToEnd{
 --render--
 show all credits and credits to end with progressbar
 }
-CreditsToEnd ..> ProgressBar

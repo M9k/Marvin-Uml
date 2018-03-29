@@ -1,0 +1,12 @@
+class PageContainer{
+    Base Component for all the routes
+    --props--
+        + isLoading(bool)
+        + children(nodes)
+    --render--
+        render navbar and footer with inside his children when page is not loading
+}
+
+PageContainer ..> Footer
+PageContainer ..> Navbar
+PageContainer ..> ProgressBar
