@@ -6,7 +6,6 @@ class StudentIndex{
         cardWithIcon to go confirm/student -> CreditsToEnd
 }
 StudentIndex ..> CardWithIcon
-StudentIndex ..> PageContainer
 
 class StudentExams{
     --functions--
@@ -14,7 +13,6 @@ class StudentExams{
     --render--
         table with list of all exams
 }
-StudentExams ..> PageContainer
 
 class CreditsToEnd{
     --functions--
@@ -22,6 +20,5 @@ class CreditsToEnd{
     --render--
         show all credits and credits to end with progressbar
 }
-CreditsToEnd ..> PageContainer
 
 }

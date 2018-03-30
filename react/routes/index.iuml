@@ -1,16 +1,13 @@
 
 package Routes{
 
-class RoutesFactory{
-	TODO - metodo per la creazione
-}
-
 class UniversityRoutes {
     --routes--
         + index -> UniversityIndex
         + academicyears -> UniversityAcademicYears
         + admins -> UniversityAdmins
 }
+UniversityRoutes ..> UniversityPages
 
 class AdminRoutes{
     --routes--
@@ -22,6 +19,7 @@ class AdminRoutes{
         + courses -> AdminCourses
         + courses/:examId -> AdminCourseExams
 }
+AdminRoutes ..> AdminPages
 
 class TeacherRoutes {
     --routes--
@@ -29,13 +27,14 @@ class TeacherRoutes {
         + exams -> TeacherExams
         + exams/:examid -> TeacherExamStudents
 }
+TeacherRoutes ..> TeacherPages
 
 class StudentRoutes{
     --render--
          index -> StudentIndex
          other exams -> OptionalExams
-	TODO - fixare
 }
+StudentRoutes ..> StudentPages
 
 class PublicRoutes{
     --routes--
@@ -44,34 +43,7 @@ class PublicRoutes{
         + price -> PricePage
         + request -> SubmissionPage
 }
+PublicRoutes .> PublicPages
 
-RoutesFactory --> UniversityRoutes
-RoutesFactory --> AdminRoutes
-RoutesFactory --> TeacherRoutes
-RoutesFactory --> StudentRoutes
-RoutesFactory --> PublicRoutes
-
-UniversityRoutes ..> UniversityIndex
-UniversityRoutes ..> UniversityAcademicYears
-UniversityRoutes ..> UniversityAdmins
-
-AdminRoutes ..> AdminIndex
-AdminRoutes ..> AdminUsersConfirmed
-AdminRoutes ..> AdminUsersNotConfirmed
-AdminRoutes ..> AdminCourses
-AdminRoutes ..> AdminCourseExams
-
-TeacherRoutes ..> TeacherIndex
-TeacherRoutes ..> TeacherExams
-TeacherRoutes ..> TeacherExamStudents
-
-StudentRoutes ..> StudentIndex
-StudentRoutes ..> StudentExams
-StudentRoutes ..> CreditsToEnd
-
-PublicRoutes .> PublicIndex
-PublicRoutes .> HelpPage
-PublicRoutes .> PricePage
-PublicRoutes .> SubmissionPage
 
 }
