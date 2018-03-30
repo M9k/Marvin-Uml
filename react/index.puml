@@ -33,5 +33,6 @@ SubmissionPage -[hidden]left- CustomComponents
 
 TeacherPages -[hidden]left- CustomComponents
 
+CustomComponents -[hidden]- BR
 
 @enduml

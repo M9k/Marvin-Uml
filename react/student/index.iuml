@@ -1,3 +1,7 @@
+skinparam package<<UC 9>> {
+    backgroundColor #beafca
+}
+
 package StudentPages <<UC 9>> {
 
 class StudentIndex{

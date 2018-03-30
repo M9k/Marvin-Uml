@@ -1,3 +1,7 @@
+skinparam package<<UC 5 & UC7>> {
+    backgroundColor #ffbd9d
+}
+
 package AdminPages <<UC 5 & UC7>> {
 
 class AdminIndex{

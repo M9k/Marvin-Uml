@@ -1,3 +1,8 @@
+skinparam package<<UC 6 & UC10  >> {
+    backgroundColor #DAE8FC
+}
+
+
 package UniversityPages <<UC 6 & UC10>> {
 
 class UniversityIndex {
