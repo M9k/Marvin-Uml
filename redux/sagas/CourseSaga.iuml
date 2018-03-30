@@ -16,7 +16,7 @@ class CourseSaga{
   + addNewDegreeCourseAction(string) : object
   + getAllDegreeCoursesAction() : object
   + getAllYearsAction() : object
-  * *associateProfessorAction(string, string) : void
+  + associateProfessorAction(string, string) : void
 }
 CourseSaga --|> marvin.Saga
 CourseSaga ..> marvin.Course : <<use>>
