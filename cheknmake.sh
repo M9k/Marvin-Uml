@@ -2,7 +2,7 @@ PLANT="java -jar ../bin/plantuml.jar"
 rm -rf build/
 mkdir -p build
 ERROR=false
-declare -a modules=("redux" "Solidity" "react")
+declare -a modules=("redux" "Solidity" "react" "web3function")
 for dr in "${modules[@]}";do
   cd $dr
   OUT=$(cat index.puml | $PLANT -syntax)
