@@ -2,11 +2,10 @@
 namespace aggregators <<istantiate the custom classes to fill in the redux store>>{
   !include aggregators/sagas.iuml
   !include aggregators/reducers.iuml
-  redux.SagaMiddleware ..> Sagas : <<use>>
-  Sagas ..> marvin.Saga : <<create>>
-  redux.Store ..> Reducers : <<use>>
 
-  'Non capisco perchè ma mi renderizza lo <<use>> vicino
-  'all'associazione Sagas--redux.SagaMiddleware
-  Reducers ..> marvin.Duck : <<create>>
+  redux.SagaMiddleware "1" *-- "1" Sagas
+    Sagas "1" o-- "*" marvin.Saga
+
+  redux.Store "1" *-- "1" Reducers
+  Reducers "1" o-- "*" marvin.Duck
 }

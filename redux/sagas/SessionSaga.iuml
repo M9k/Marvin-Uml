@@ -13,5 +13,5 @@ class SessionSaga{
   + updateData(): object
 }
 SessionSaga --|> marvin.Saga
-SessionSaga ..> marvin.Session : <<use>>
+SessionSaga ..> marvin.Session: <<use>>
 SessionSaga ..> marvin.StudentSaga: <<use>>

@@ -6,3 +6,6 @@ interface Duck{
   are responsible to manage the redux
   state by reacting to predefined actions
 }
+note bottom of Duck
+ Strategy Pattern
+end note

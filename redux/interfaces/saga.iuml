@@ -6,3 +6,6 @@ interface Saga{
   and notify the retrived data to the app
   via ducks' actions
 }
+note bottom of Saga
+ Strategy Pattern
+end note
