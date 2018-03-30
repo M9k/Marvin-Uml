@@ -7,6 +7,7 @@ class UniversityIndex {
         cardWithIcon to go -> UniversityAdmins
 }
 UniversityIndex ..> CardWithIcon
+UniversityIndex ..> PageContainer
 
 class UniversityAcademicYears {
     --props--
@@ -21,6 +22,7 @@ class UniversityAcademicYears {
      new academic years
 }
 UniversityAcademicYears ..> PageTableForm
+UniversityAcademicYears ..> PageContainer
 
 
 class UniversityAdmins {
@@ -36,6 +38,7 @@ class UniversityAdmins {
     a new admin
 }
 UniversityAdmins ..> PageTableForm
+UniversityAdmins ..> PageContainer
 
 
 }

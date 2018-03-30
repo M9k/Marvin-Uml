@@ -12,6 +12,7 @@ class AdminIndex{
     cardWithIcon to go -> AdminCourses
 }
 AdminIndex ..> CardWithIcon
+AdminIndex ..> PageContainer
 
 class AdminUsersConfirmed{
     --props--
@@ -23,6 +24,7 @@ class AdminUsersConfirmed{
         for each row to delete
 }
 AdminUsersConfirmed ..> PageTableForm
+AdminUsersConfirmed ..> PageContainer
 
 class AdminUsersNotConfirmed{
     --props--
@@ -35,6 +37,7 @@ class AdminUsersNotConfirmed{
         for each row to confirm or delete
 }
 AdminUsersNotConfirmed ..> PageTableForm
+AdminUsersNotConfirmed ..> PageContainer
 
 class AdminCourses{
     --props--
@@ -46,6 +49,7 @@ class AdminCourses{
         add a new one from specific year
 }
 AdminCourses ..> PageTableForm
+AdminCourses ..> PageContainer
 
 class AdminCourseExams{
     --props--
@@ -59,5 +63,6 @@ class AdminCourseExams{
         course
 }
 AdminCourseExams ..> PageTableForm
+AdminCourseExams ..> PageContainer
 
 }

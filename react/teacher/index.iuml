@@ -6,6 +6,7 @@ class TeacherIndex {
         cardWithIcon to go -> TeacherExams
 }
 TeacherIndex ..> CardWithIcon
+TeacherIndex ..> PageContainer
 
 class TeacherExams {
     --props--
@@ -16,6 +17,7 @@ class TeacherExams {
     list of the selected exam
 }
 TeacherExams ..> PageTableForm
+TeacherExams ..> PageContainer
 
 class TeacherExamStudents {
     --props--
@@ -26,5 +28,6 @@ class TeacherExamStudents {
     of the seleted exam
 }
 TeacherExamStudents ..> PageTableForm
+TeacherExamStudents ..> PageContainer
 
 }

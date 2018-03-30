@@ -22,6 +22,7 @@ left to right direction
     !include student/index.iuml
 
     !include routes/index.iuml
+    !include index/index.iuml
 
 UniversityPages -[hidden]left- CustomComponents
 AdminPages -[hidden]left- CustomComponents

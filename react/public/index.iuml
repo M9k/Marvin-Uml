@@ -4,12 +4,14 @@ package PublicPages {
     --render--
     describes marvin system with images, logo and text
   }
+  PublicIndex ..> PageContainer
 
   class HelpPage <<UC 1>>{
     --render--
     show list of paragraphs and videos/images to help user
     with common problem or questions
   }
+  HelpPage ..> PageContainer
 
   class PricePage <<UC 11>> {
     ----
@@ -18,6 +20,7 @@ package PublicPages {
     --render--
     show list of actions and related price with table
   }
+  PricePage ..> PageContainer
 
   class SubmissionPage <<UC 13>> {
     --props--
@@ -29,5 +32,6 @@ package PublicPages {
     show a form with name,surname
     and two selectbox to choose type of user
   }
+  SubmissionPage ..> PageContainer
 
 }
