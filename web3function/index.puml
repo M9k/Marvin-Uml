@@ -4,6 +4,7 @@
     !include file/Exam.iuml
     !include file/Student.iuml
     !include file/Teacher.iuml
+    !include file/UniversityContractSupplier.iuml
     !include file/University.iuml
     !include file/UniversityExam.iuml
     !include file/UniversityStudent.iuml
@@ -12,5 +13,12 @@
     !include file/UniversityAdmin.iuml
     !include file/User.iuml
     !include file/Year.iuml
+
+University --> UniversityContractSupplier
+UniversityExam --> UniversityContractSupplier
+UniversityStudent --> UniversityContractSupplier
+UniversityTeacher --> UniversityContractSupplier
+UniversityYear --> UniversityContractSupplier
+UniversityAdmin --> UniversityContractSupplier
 
 @enduml

@@ -1,0 +1,9 @@
+@startuml
+skinparam classAttributeIconSize 0
+class UniversityContractSupplier << Singleton >> {
+- contractUniversityInstance: contract
+__
++ getUniversityInstance(): object
+}
+@enduml
+
