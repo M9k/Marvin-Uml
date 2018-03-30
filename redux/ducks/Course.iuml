@@ -1,7 +1,5 @@
 !include ../interfaces/duck.iuml
 class Course{
-  - initialState: object
-  + reducer(object, object): object
   == types ==
   - PUSH_NEW_COURSE: string
   - SET_DEGREE_LIST : string

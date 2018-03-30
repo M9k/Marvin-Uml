@@ -1,8 +1,5 @@
 !include ../interfaces/duck.iuml
 class ManageYears{
-  - initialState : object
-  + ROLES: enum
-  + reducer(object, object): object
   == types ==
   - SET_ACADEMIIC_YERS_LIST: string
   - POP_EMPTY_YEAR : string

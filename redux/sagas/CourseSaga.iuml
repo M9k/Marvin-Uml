@@ -1,7 +1,6 @@
 !include ../interfaces/saga.iuml
 !include ../ducks/Course.iuml
 class CourseSaga{
-  + handler(): void
   == types ==
   - ADD_NEW_DEGREE_COURSE : string
   - GET_ALL_DEGREE_COURSES : string

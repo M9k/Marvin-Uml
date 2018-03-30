@@ -2,7 +2,6 @@
 !include ../ducks/Booking.iuml
 !include ../ducks/Session.iuml
 class BookingSaga{
-  + handler(): void
   == types ==
   - SIGN_UP: string
   - LOAD_COURSES: string

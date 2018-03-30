@@ -1,7 +1,6 @@
 !include ../interfaces/saga.iuml
 !include ../ducks/ManageExams.iuml
 class ManageExamsSaga{
-  + handler(): void
   == types ==
   - ADD_NEW_EXAM : string
   - GET_ALL_EXAMS : string

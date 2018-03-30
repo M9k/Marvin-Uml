@@ -1,8 +1,5 @@
 !include ../interfaces/duck.iuml
 class AdminEmployer{
-  - initialState : object
-  + ROLES: enum
-  + reducer(object, object): object
   == types ==
   - SET_ADMINS_LIST : string
   - POP_ADMIN : string

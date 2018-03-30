@@ -1,7 +1,6 @@
 !include ../interfaces/saga.iuml
 !include ../ducks/AdminEmployer.iuml
 class AdminEmployerSaga{
-  + handler(): void
   == types ==
   - ADD_NEW_ADMIN : string
   - REMOVE_ADMIN : string

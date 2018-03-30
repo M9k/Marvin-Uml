@@ -1,8 +1,5 @@
 !include ../interfaces/duck.iuml
 class Student{
-  - initialState : object
-  + ROLES: enum
-  + reducer(object, object): object
   ==types==
   - SET_SUBSCRIBED_EXAMS_LIST : string
   - SET_OPTIONAL_EXAMS_LIST : string

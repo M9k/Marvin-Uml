@@ -1,7 +1,5 @@
 !include ../interfaces/duck.iuml
 class TeacherExams{
-  - initialState: object
-  + reducer(object, object): object
   == types ==
   - SET_EXAMS_LIST: string
   - PUSH_EXAM: string

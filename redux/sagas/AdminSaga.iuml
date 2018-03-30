@@ -2,7 +2,6 @@
 !include ../ducks/Admin.iuml
 
 class AdminSaga {
-    + void handler()
     ==types==
     - GET_STUDENT_LIST: string
     - GET_TEACHERS_LIST: string

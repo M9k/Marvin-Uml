@@ -1,9 +1,6 @@
 !include ../interfaces/duck.iuml
 
 class Admin{
-  + object reducer(object, object)
-  + ROLES: enum
-  - initialState : object
   ==types==
   - SET_STUDENTS_LIST: string
   - SET_TEACHERS_LIST: string

@@ -1,7 +1,6 @@
 !include ../interfaces/saga.iuml
 !include ../ducks/Session.iuml
 class SessionSaga{
-  + handler(): void
   == types ==
   - LOGIN: string
   - UPDATE: string

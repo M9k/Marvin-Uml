@@ -1,7 +1,5 @@
 !include ../interfaces/duck.iuml
 class Evaluator{
-  - initialState: object
-  + reducer(object, object): object
   == types ==
   - SET_EXAM_DATA: string
   - SET_STUDENTS_LIST: string

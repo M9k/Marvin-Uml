@@ -1,7 +1,6 @@
 !include ../interfaces/saga.iuml
 !include ../ducks/ManageYears.iuml
 class ManageYearsSaga{
-  + handler(): void
   == types ==
   - ADD_NEW_YEAR : string
   - REMOVE_EMPTY_YEAR : string

@@ -1,7 +1,6 @@
 !include ../interfaces/saga.iuml
 !include ../ducks/Evaluator.iuml
 class EvaluatorSaga{
-  + handler(): void
   == types ==
   - GET_LIST: string
   - ASSIGN_VOTE: string
