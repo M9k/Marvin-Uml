@@ -4,7 +4,9 @@ class PageContainer{
         + isLoading(bool)
         + children(nodes)
     --render--
-        render navbar and footer with inside his children when page is not loading
+        render the whole content of the page in a panel
+         It shows a progressbar or spinner when the data of the page is loading
+         At the bottom it renders the footer too
 }
 PageContainer ..> Panel
 PageContainer ..> Footer
