@@ -19,4 +19,4 @@ class CourseSaga{
   * *associateProfessorAction(string, string) : void
 }
 CourseSaga --|> marvin.Saga
-CourseSaga ..> marvin.Session : <<use>>
+CourseSaga ..> marvin.Course : <<use>>

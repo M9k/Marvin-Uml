@@ -16,4 +16,4 @@ class ManageExamsSaga{
   + getExamsByCourse(string) : object
 }
 ManageExamsSaga --|> marvin.Saga
-ManageExamsSaga ..> marvin.Session : <<use>>
+ManageExamsSaga ..> marvin.ManageExams : <<use>>

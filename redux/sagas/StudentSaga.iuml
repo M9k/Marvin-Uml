@@ -19,4 +19,4 @@ class StudentSaga{
   + subscribeOptionalExamAction(string) : object
 }
 StudentSaga --|> marvin.Saga
-StudentSaga ..> marvin.Session : <<use>>
+StudentSaga ..> marvin.Student : <<use>>

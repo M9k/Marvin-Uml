@@ -14,3 +14,4 @@ class SessionSaga{
 }
 SessionSaga --|> marvin.Saga
 SessionSaga ..> marvin.Session : <<use>>
+SessionSaga ..> marvin.StudentSaga: <<use>>
