@@ -1,7 +1,6 @@
 class Reducers{
   + {static} combine(): object
 }
-Admin
 note right of Reducers
 {
   academicYears: ManageYears,
