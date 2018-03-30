@@ -1,12 +1,18 @@
 class Reducers{
   + {static} combine(): object
 }
+Admin
 note right of Reducers
 {
+  academicYears: ManageYears,
+  accounts: Admin,
+  admins: AdminEmployer,
+  courses: Course,
   currentUser: Session
-  admins: University
+  exams: ManageExams,
+  selectedExam: Evaluator,
   signup: Booking,
-  exams: TeacherExams,
-  selectedExam: Evaluator
+  studentData: Student,
+  teacherData: TeacherExams
 }
 end note
