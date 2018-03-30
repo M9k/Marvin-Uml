@@ -14,9 +14,6 @@ class UniversityAcademicYears {
         + addAcademicYear(function)
         + validAcademicYear(function)
         + deleteAcademicYear(function)
-        + getSolarYears(function)
-        + addSolarYear(function)
-        + validSolarYear(function)
     --render--
     table with academic years list,
      one button for each row to delete
