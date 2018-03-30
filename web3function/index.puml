@@ -14,11 +14,11 @@
     !include file/User.iuml
     !include file/Year.iuml
 
-University --> UniversityContractSupplier
-UniversityExam --> UniversityContractSupplier
-UniversityStudent --> UniversityContractSupplier
-UniversityTeacher --> UniversityContractSupplier
-UniversityYear --> UniversityContractSupplier
-UniversityAdmin --> UniversityContractSupplier
+University ..> UniversityContractSupplier : <<use>>
+UniversityExam ..> UniversityContractSupplier : <<use>>
+UniversityStudent ..> UniversityContractSupplier : <<use>>
+UniversityTeacher ..> UniversityContractSupplier : <<use>>
+UniversityYear ..> UniversityContractSupplier : <<use>>
+UniversityAdmin ..> UniversityContractSupplier : <<use>>
 
 @enduml
