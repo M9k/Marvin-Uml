@@ -21,10 +21,10 @@ package PublicPages {
 
   class SubmissionPage <<UC 13>> {
     --props--
-    + currentAddr(addr)
-    + courses(List[])
-    + submitStudent()
-    + submitTeacher()
+    currentAddr: object
+    courses: List[]
+    submitStudent: function
+    submitTeacher: function
     --render--
     show a form with name,surname
     and two selectbox to choose type of user

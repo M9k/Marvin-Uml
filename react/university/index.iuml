@@ -15,10 +15,10 @@ UniversityIndex ..> CardWithIcon
 
 class UniversityAcademicYears {
     --props--
-        + getAcademicYears(function)
-        + addAcademicYear(function)
-        + validAcademicYear(function)
-        + deleteAcademicYear(function)
+        getAcademicYears: function
+        addAcademicYear: function
+        validAcademicYear: function
+        deleteAcademicYear: function
     --render--
     table with academic years list,
      one button for each row to delete
@@ -30,10 +30,10 @@ UniversityAcademicYears ..> PageTableForm
 
 class UniversityAdmins {
     --props--
-        + addAdmin(function)
-        + getAdmins(function)
-        + validAdmin(function)
-        + deleteAdmin(function)
+        addAdmin: function
+        getAdmins: function
+        validAdmin: function
+        deleteAdmin: function
     --render--
     table with admins list, one
     button for each row to delete
