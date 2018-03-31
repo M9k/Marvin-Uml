@@ -2,7 +2,7 @@ class PageContainer{
     Base Component for all the routes
     --props--
         loggedIn: bool
-        links: object[]
+        links: object[0...*]
         isLoading: bool
         children: nodes
     --render--
@@ -16,3 +16,4 @@ PageContainer ..> Panel
 PageContainer ..> Footer
 PageContainer ..> Navbar
 PageContainer ..> ProgressBar
+PageContainer ..> MessageBox

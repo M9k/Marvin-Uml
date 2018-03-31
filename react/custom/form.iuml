@@ -1,6 +1,6 @@
 class Form{
     --props--
-        fields: Field[]
+        fields: object[0..*]
         submitFunction: function
 }
 Form ..> Button

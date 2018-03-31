@@ -22,7 +22,7 @@ package PublicPages {
   class SubmissionPage <<UC 13>> {
     --props--
     currentAddr: object
-    courses: List[]
+    courses: object[0..]
     submitStudent: function
     submitTeacher: function
     --render--
