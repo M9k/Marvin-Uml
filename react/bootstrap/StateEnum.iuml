@@ -1,0 +1,6 @@
+enum StateEnum {
+success
+warning
+error
+null
+}

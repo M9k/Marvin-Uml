@@ -3,7 +3,8 @@ class Radio{
       + inline : boolean
       + disabled : boolean
       + title : string
-      + validationState('success', 'warning', 'error', null)
+      + validationState : StateEnum
       + inputRef()
 }
+Radio ..> StateEnum
 /'Radio button'/

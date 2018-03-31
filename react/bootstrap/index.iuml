@@ -20,4 +20,5 @@ package Bootstrap-React as BR <<npm module components>> {
 !include menuitem.iuml
 !include modal.iuml
 !include progressbar.iuml
+!include StateEnum.iuml
 }
