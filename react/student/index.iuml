@@ -8,7 +8,7 @@ class StudentIndex{
     --render--
         cardWithIcon to go ExamsList -> Exams
         cardWithIcon to go OptionalExamsList -> OptionalExams
-        cardWi5thIcon togo credits summary -> Summary
+        cardWi5thIcon to go credits summary -> Summary
 }
 StudentIndex ..> CardWithIcon
 
