@@ -13,7 +13,7 @@ TeacherIndex ..> CardWithIcon
 
 class TeacherExams {
     --props--
-        + getExams(function)
+        getExams: function
     --render--
     table with exams list and one
     button to see the students
@@ -23,8 +23,8 @@ TeacherExams ..> PageTableForm
 
 class TeacherExamStudents {
     --props--
-        + getStudents(function)
-        + addGrade(function)
+        getStudents: function
+        addGrade: function
     --render--
     table with the students list
     of the seleted exam
