@@ -1,8 +1,8 @@
 class CardWithIcon{
     --props--
-        + title(string)
-        + icon(string)
-        + link(string)
+        title: string
+        icon: string
+        link: string
     --render--
         card with icon and description
         plus a link button to go to a specific page

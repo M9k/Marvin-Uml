@@ -19,9 +19,9 @@ AdminIndex ..> CardWithIcon
 
 class AdminUsersConfirmed{
     --props--
-        + userType(string)
-        + getUsers(function)
-        + functionDeleteUser(function)
+        userType: string
+        getUsers: function
+        functionDeleteUser: function
     --render--
         table with user list and one button
         for each row to delete
@@ -30,10 +30,10 @@ AdminUsersConfirmed ..> PageTableForm
 
 class AdminUsersNotConfirmed{
     --props--
-        + userType(string)
-        + getUsers(function)
-        + functionConfirmUser(function)
-        + functionDeleteUser(function)
+        userType: string
+        getUsers: function
+        functionConfirmUser: function
+        functionDeleteUser: function
     --render--
         table with user list and two button
         for each row to confirm or delete
@@ -42,9 +42,9 @@ AdminUsersNotConfirmed ..> PageTableForm
 
 class AdminCourses{
     --props--
-        + getCourses(function)
-        + addCourse(function)
-        + validCourse(function)
+        getCourses: function
+        addCourse: function
+        validCourse: function
     --render--
         table with courses list and form to
         add a new one from specific year
@@ -53,10 +53,10 @@ AdminCourses ..> PageTableForm
 
 class AdminCourseExams{
     --props--
-        + course(Course)
-        + getExams(function)
-        + addExam(function)
-        + validExam(function)
+        course: object
+        getExams: function
+        addExam: function
+        validExam: function
     --render--
         table with exams list from specific course
         with a form to add a new one to the current

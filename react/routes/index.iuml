@@ -1,5 +1,30 @@
-
 package Routes{
+
+class RouterFactory <<I'm the Father of all components>>{
+    Factory to create Router and the pageContainer
+    where every page with navbar and footer will be born
+    --props--
+        userType: number
+}
+
+Index ..> RouterFactory
+
+RouterFactory ..>UniversityRoutes
+RouterFactory ..>AdminRoutes
+RouterFactory ..>TeacherRoutes
+RouterFactory ..>StudentRoutes
+RouterFactory ..>PublicRoutes
+
+RouterFactory ..> Router
+RouterFactory ..> PageContainer
+
+note top of RouterFactory
+        React App from here!!
+end note
+
+class Router <<created by react-router>>{
+
+}
 
 class UniversityRoutes {
     --routes--

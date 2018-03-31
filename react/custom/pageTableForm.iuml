@@ -1,9 +1,9 @@
 class PageTableForm{
     --props--
-        + getTableData(function)
-        + editTableData(function)
-        + deleteTableData(function)
-        + addTableData(function)
+        getTableData: function
+        editTableData: function
+        deleteTableData: function
+        addTableData: function
     --render--
         render table with custom row with buttons
         and a form to add some data related to that table

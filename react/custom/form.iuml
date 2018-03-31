@@ -1,7 +1,7 @@
 class Form{
     --props--
-        + fields(Field[])
-        + submitFunction(function)
+        fields: Field[]
+        submitFunction: function
 }
 Form ..> Button
 Form ..> Field

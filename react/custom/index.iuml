@@ -21,7 +21,7 @@ package custom-components as CustomComponents <<components created by us>>{
 
 !include deleteButton.iuml
 
-!include appRouting.iuml
+!include messageBox.iuml
 
 !include pageTableForm.iuml
 

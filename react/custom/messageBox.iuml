@@ -1,0 +1,7 @@
+class MessageBox {
+    --props--
+       + isError(boolean)
+       + description(string)
+    --render--
+    modal with positive or failure icon with description
+}

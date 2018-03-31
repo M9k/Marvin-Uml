@@ -1,10 +1,10 @@
 class PageContainer{
     Base Component for all the routes
     --props--
-        + loggedIn(bool)
-        + links(Links[])
-        + isLoading(bool)
-        + children(nodes)
+        loggedIn: bool
+        links: object[]
+        isLoading: bool
+        children: nodes
     --render--
         render on the top the navbar
         in the middle the whole content of the page inside a panel

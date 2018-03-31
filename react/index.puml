@@ -6,7 +6,11 @@ skinparam classAttributeIconSize 0
 
 skinparam linetype ortho
 
+skinparam hide circle
+
 left to right direction
+
+   !include app/index.iuml
 
 /' Base Bootstrap elements and Custom one '/
     !include bootstrap/index.iuml
@@ -23,16 +27,15 @@ left to right direction
 
     !include routes/index.iuml
 
-UniversityPages -[hidden]left- CustomComponents
-AdminPages -[hidden]left- CustomComponents
-TeacherPages -[hidden]right- CustomComponents
-HelpPage -[hidden]right- CustomComponents
 
-CustomComponents -[hidden]left-  PricePage
-SubmissionPage -[hidden]left- CustomComponents
-
-TeacherPages -[hidden]left- CustomComponents
-
-CustomComponents -[hidden]- BR
+/' layout position packages '/
+    UniversityPages -[hidden]left- CustomComponents
+    AdminPages -[hidden]left- CustomComponents
+    TeacherPages -[hidden]right- CustomComponents
+    HelpPage -[hidden]right- CustomComponents
+    CustomComponents -[hidden]left-  PricePage
+    SubmissionPage -[hidden]left- CustomComponents
+    TeacherPages -[hidden]left- CustomComponents
+    CustomComponents -[hidden]- BR
 
 @enduml

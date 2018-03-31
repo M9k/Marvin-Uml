@@ -1,7 +1,7 @@
 class Navbar{
   --props--
-    + loggedIn(bool)
-    + links(Links[])
+    loggedIn: boolean
+    links: objects[]
   --render--
     list of link-logo to index
     link to price page

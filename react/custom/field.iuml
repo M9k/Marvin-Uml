@@ -1,12 +1,12 @@
 class Field{
     --props--
-        id(int)
-        name(str)
-        label(string)
-        help(string)
-        type(string)
-        values(array json?)
-        validateFunction(function)
+        id: number
+        name: string
+        label: string
+        help: string
+        type: string
+        values: object
+        validateFunction: function
     ----
         - changeState()
     --render--
