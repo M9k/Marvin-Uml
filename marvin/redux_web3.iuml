@@ -1,0 +1,5 @@
+!include ../web3function/index.puml
+!include ../redux/index.puml
+
+marvin.SessionSaga ..> web3.UserData: <<use>>
+marvin.ManageYearsSaga ..> web3.UniversityYear: <<use>>
