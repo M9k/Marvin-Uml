@@ -1,8 +1,8 @@
 class Radio{
   --props--
-      + inline(bool)
-      + disabled(bool)
-      + title(str)
+      + inline : boolean
+      + disabled : boolean
+      + title : string
       + validationState('success', 'warning', 'error', null)
       + inputRef()
 }
