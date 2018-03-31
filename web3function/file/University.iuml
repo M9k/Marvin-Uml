@@ -2,7 +2,7 @@
 skinparam classAttributeIconSize 0
 class University{
 + isUniversityFounder(_address: address): bool
-+ getRoleByAddress(_address: address): uint8
-+ login(): uint8
++ getRoleByAddress(_address: address): number
++ login(): number
 }
 @enduml

@@ -2,11 +2,11 @@
 skinparam classAttributeIconSize 0
 class Student {
 + getCourseContract(contract: address): address
-+ getExamNumber(contract: address): uint
-+ getExamContractAt(contract: address, _index: uint): address
-+ getExamSubscriptionAt(contract: address, _index: uint): bool
-+ getExamValuationAt(contract: address, _index: uint): uint8
-+ enrollToOptionalExam(contract: address, _index: uint)
-+ getIndexOfExam(contract: address, exam: address): uint
++ getExamNumber(contract: address): number
++ getExamContractAt(contract: address, _index: number): address
++ getExamSubscriptionAt(contract: address, _index: number): bool
++ getExamValuationAt(contract: address, _index: number): number
++ enrollToOptionalExam(contract: address, _index: number)
++ getIndexOfExam(contract: address, exam: address): number
 }
 @enduml

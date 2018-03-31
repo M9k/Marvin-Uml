@@ -2,12 +2,12 @@
 skinparam classAttributeIconSize 0
 class Migrations {
 + owner: address
-+ last_completed_migration: uint
++ last_completed_migration: number
 __
 restricted
 __
 + Migrations()
-+ setCompleted(completed: uint) {restricted}
++ setCompleted(completed: number) {restricted}
 + upgrade(new_address: address) {restricted}
 }
 

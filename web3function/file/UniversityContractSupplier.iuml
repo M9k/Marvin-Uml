@@ -1,7 +1,7 @@
 @startuml
 skinparam classAttributeIconSize 0
 class UniversityContractSupplier << Singleton >> {
-{static} - contractUniversityInstance: contract
+{static} - contractUniversityInstance: promise
 __
 {static} + getUniversityInstance(): object
 }

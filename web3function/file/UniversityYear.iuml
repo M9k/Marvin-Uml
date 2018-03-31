@@ -1,10 +1,10 @@
 @startuml
 skinparam classAttributeIconSize 0
 class UniversityYear {
-+ getAcademicYearNumber(): uint
-+ getAcademicYearContractAt(_index: uint): address
-+ getAcademicYearContractByYear(_year:uint16): address
-+ addNewAcademicYear(_year: uint16)
-+ removeAcademicYear(_year: uint16)
++ getAcademicYearNumber(): number
++ getAcademicYearContractAt(_index: number): address
++ getAcademicYearContractByYear(_year:number): address
++ addNewAcademicYear(_year: number)
++ removeAcademicYear(_year: number)
 }
 @enduml

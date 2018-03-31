@@ -1,13 +1,13 @@
 @startuml
 skinparam classAttributeIconSize 0
 class Exam{
-+ getEnrolledNumber(contract: address): uint
-+ getEnrolledContractAt(contract: address, _index:uint): address
++ getEnrolledNumber(contract: address): number
++ getEnrolledContractAt(contract: address, _index:number): address
 + getCourse(contract: address): address
-+ getName(contract: address): bytes32
++ getName(contract: address): number
 + getTeacherContract(contract: address): address
 + getObligatoriness(contract: address): bool
-+ getCredits(contract: address): uint8
++ getCredits(contract: address): number
 + addMeAsSubscriber(contract: address)
 }
 @enduml

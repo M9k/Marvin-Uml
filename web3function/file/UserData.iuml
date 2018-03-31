@@ -4,7 +4,7 @@
 class UserData << facade >>{
   - getStudentData(): object
   - getTeacherData(): object
-  + getData(int): object
+  + getData(number): object
 }
 UserData ..> UniversityStudent: <<use>>
 UserData ..> UniversityTeacher: <<use>>

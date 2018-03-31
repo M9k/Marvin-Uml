@@ -2,9 +2,9 @@
 skinparam classAttributeIconSize 0
 class UniversityAdmin {
 + isAdmin(_adminAddress: address): bool
-+ getAdminNumber(): uint
-+ getAdminAt(_index: uint): address
-+ getRoleByAddress(_address: address): uint8
++ getAdminNumber(): number
++ getAdminAt(_index: number): address
++ getRoleByAddress(_address: address): number
 + addNewAdmin(_adminAddress: address)
 + removeAdmin(_address: address)
 }
