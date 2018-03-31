@@ -1,4 +1,5 @@
 @startuml
+hide circle
 namespace web3{
     !include file/Course.iuml
     !include file/Exam.iuml
