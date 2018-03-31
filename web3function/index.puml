@@ -1,5 +1,5 @@
 @startuml
-
+namespace web3{
     !include file/Course.iuml
     !include file/Exam.iuml
     !include file/Student.iuml
@@ -14,11 +14,13 @@
     !include file/User.iuml
     !include file/Year.iuml
 
+    !include file/UserData.iuml
+
 University ..> UniversityContractSupplier : <<use>>
 UniversityExam ..> UniversityContractSupplier : <<use>>
 UniversityStudent ..> UniversityContractSupplier : <<use>>
 UniversityTeacher ..> UniversityContractSupplier : <<use>>
 UniversityYear ..> UniversityContractSupplier : <<use>>
 UniversityAdmin ..> UniversityContractSupplier : <<use>>
-
+}
 @enduml
