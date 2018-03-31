@@ -1,7 +1,7 @@
 class Panel{
   --props--
-      + active(bool)
-      + disabled(bool)
-      + onClick(function)
+      + active : boolean
+      + disabled : boolean
+      + onClick : function
 }
 /'Questa è una prova 3'/

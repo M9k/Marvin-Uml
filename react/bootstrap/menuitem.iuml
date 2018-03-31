@@ -1,5 +1,5 @@
 class MenuItem {
     --props--
-        + active(bool)
-        + disabled(bool)
+        + active : boolean
+        + disabled : boolean
 }

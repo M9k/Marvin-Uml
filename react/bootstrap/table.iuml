@@ -1,6 +1,6 @@
 class Table{
     --props--
-        + striped(bool) row colour
-        + bordered(bool) border outside
-        + hover(bool) hover row change bg
+        + striped : boolean
+        + bordered : boolean
+        + hover : boolean
 }

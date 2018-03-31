@@ -1,5 +1,5 @@
 class Modal {
     --props--
-       + show(boolean)
-       + onHide(function)
+       + show : boolean
+       + onHide : function
 }

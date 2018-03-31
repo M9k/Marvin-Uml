@@ -1,13 +1,10 @@
 class ProgressBar{
     --props--
-        + min(number)
-        + now(number)
-        + max(number)
-        + label(node)
-        + srOnly(bool)
-        + striped(bool)
-        + active(bool)
-        + children(onlyProgressBar)
-        + isChild(bool)
-        + bsClass(string)
+        + min : number
+        + now : number
+        + max : number
+        + label : node
+        + srOnly : boolean
+        + striped : boolean
+        + active : boolean
 }
