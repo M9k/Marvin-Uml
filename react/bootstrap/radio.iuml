@@ -1,10 +1,10 @@
 class Radio{
   --props--
-      + inline : boolean
-      + disabled : boolean
-      + title : string
-      + validationState : StateEnum
-      + inputRef()
+       inline : boolean
+       disabled : boolean
+       title : string
+       validationState : StateEnum
+       inputRef : function
 }
 Radio ..> StateEnum
 /'Radio button'/

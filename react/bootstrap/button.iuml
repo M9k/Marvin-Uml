@@ -1,9 +1,9 @@
 class Button{
   --props--
-      + active : boolean
-      + disabled : boolean
-      + href : string
-      + onClick : function
+       active : boolean
+       disabled : boolean
+       href : string
+       onClick : function
   --render--
       passing href will use <a>
       wihtout href will use <button/>

@@ -1,6 +1,6 @@
 class Table{
     --props--
-        + striped : boolean
-        + bordered : boolean
-        + hover : boolean
+         striped : boolean
+         bordered : boolean
+         hover : boolean
 }

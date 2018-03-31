@@ -1,7 +1,7 @@
 class FormGroup{
     --props--
-        + controlId :string
-        + validationState : StateEnum
+         controlId :string
+         validationState : StateEnum
 }
 
 FormGroup ..> StateEnum

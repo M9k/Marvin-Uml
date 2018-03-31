@@ -1,10 +1,10 @@
 class ProgressBar{
     --props--
-        + min : number
-        + now : number
-        + max : number
-        + label : node
-        + srOnly : boolean
-        + striped : boolean
-        + active : boolean
+         min : number
+         now : number
+         max : number
+         label : node
+         srOnly : boolean
+         striped : boolean
+         active : boolean
 }
