@@ -13,10 +13,6 @@ package custom-components as CustomComponents {
 
 !include footer.iuml
 
-!include login.iuml
-
-!include logout.iuml
-
 !include cardWithIcon.iuml
 
 !include deleteButton.iuml

@@ -1,4 +1,0 @@
-class Login <<UC 2>>{
-  --props--
-    login: function
-}

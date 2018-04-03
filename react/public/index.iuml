@@ -4,12 +4,25 @@ package PublicPages #D6C544 {
     --render--
     describes marvin system with images, logo and text
   }
+	PublicIndex ..> MessageBox
 
   class HelpPage {
     --render--
     show list of paragraphs and videos/images to help user
     with common problem or questions
   }
+
+  class LoginPage {
+    --render--
+    show loging process
+  }
+	LoginPage ..> MessageBox
+
+  class LogoutPage {
+    --render--
+    show logout process
+  }
+	LogoutPage ..> MessageBox
 
   class PricePage {
     ----
@@ -29,8 +42,6 @@ package PublicPages #D6C544 {
     show a form with name,surname
     and two selectbox to choose type of user
   }
-
-	PublicIndex ..> MessageBox
 	SubmissionPage ..> MessageBox
 }
 

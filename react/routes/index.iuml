@@ -78,14 +78,15 @@ StudentRoutes ..> StudentSummary
 
 class PublicRoutes{
     --routes--
+        + login -> LoginPage
+        + logout -> LogoutPage
         + index -> PublicIndex
         + help -> HelpPage
         + price -> PricePage
         + request -> SubmissionPage
 }
-/'
-PublicRoutes ..> PublicPages
-'/
+PublicRoutes ..> LoginPage
+PublicRoutes ..> LogoutPage
 PublicRoutes ..> PublicIndex
 PublicRoutes ..> HelpPage
 PublicRoutes ..> PricePage
