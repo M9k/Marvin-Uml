@@ -7,10 +7,12 @@ package App {
         the page
     } 
     class Page {
-    --description--
+	--props--
+	store: object
+	--description--
         Create the container and use the Route to get the content
     } 
-	Index --> Page
+	Index ..> Page
 
 note bottom of Index : index.js
 }
