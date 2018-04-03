@@ -5,6 +5,5 @@ package App {
         Require the initialization for Redux
         and Web3 and call the creation of
         the page
-    }
-
+    } 
 }

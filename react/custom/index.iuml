@@ -28,3 +28,5 @@ package custom-components as CustomComponents <<components created by us>>{
 !include pageContainer.iuml
 
 }
+
+Index ..> PageContainer
