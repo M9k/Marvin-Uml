@@ -29,4 +29,4 @@ package custom-components as CustomComponents <<components created by us>>{
 
 }
 
-Index ..> PageContainer
+Page ..> PageContainer

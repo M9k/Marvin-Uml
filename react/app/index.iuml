@@ -6,4 +6,9 @@ package App {
         and Web3 and call the creation of
         the page
     } 
+    class Page {
+    --description--
+        Create the container and use the Route to get the content
+    } 
+	Index --> Page
 }

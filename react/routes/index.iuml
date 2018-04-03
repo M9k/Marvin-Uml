@@ -4,7 +4,7 @@ class RoutesFactory {
    {static} + createRoutes(userType: number): object
 }
 
-Index ..> Router
+Page ..> Router
 
 Router --> RoutesFactory
 
