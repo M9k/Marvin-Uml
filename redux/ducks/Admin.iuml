@@ -13,12 +13,21 @@ class Admin{
 
 note right of Admin
 initialState: {
-  errored: false,
-  loading: true,
-  role: 2,
-  StudentsList: array<{name, surname, address, courses}> = [],
-  TeachersList: array<name, surname, address> = [],
-  PendingList: array<name, surname, address, role, courses> = []
+  StudentsList:{
+    errored: false,
+    loading: false,
+    list: array<{name, surname, address}> = []
+  }
+  TeachersList:{
+    errored: false,
+    loading: false,
+    list: array<name, surname, address> = []
+  }
+  PendingList:{
+    errored: false,
+    loading: false,
+    list: array<name, surname, address, role> = []
+  }
 }
 end note
 Admin --|>marvin.Duck
