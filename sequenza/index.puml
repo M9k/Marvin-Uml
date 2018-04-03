@@ -1,0 +1,21 @@
+@startuml
+
+title "Sequence Diagram Marvin - Login"
+
+actor User
+boundary "React Frontend" as React
+control "Redux" as Redux
+control "Metamask Web3" as Meta
+database "Solidity Eth" as Eth
+
+User -> React : chiamata http
+React -> Redux : richiesta tipo utente
+Redux -> Meta : richiesta indirizzo utente
+Meta -> Eth : richiesta se indirizzo registrato su contratto
+
+Meta <- Eth : ritorno intero ENUM tipo utente
+Redux <- Meta : salvataggio su store tipo utente
+React <- Redux : trigger nuovo stato
+User <- React : componenti grafici aggiornati
+
+@enduml
