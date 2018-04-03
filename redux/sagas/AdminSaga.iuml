@@ -3,6 +3,7 @@
 
 class AdminSaga {
     ==types==
+    - GET_LISTS: string
     - GET_STUDENT_LIST: string
     - GET_TEACHERS_LIST: string
     - GET_PENDING_USERS_LIST: string
@@ -11,6 +12,7 @@ class AdminSaga {
     - REMOVE_STUDENT: string
     - REMOVE_TEACHER: string
     ==sagas==
+    - *getLists(): void
     - *getStudentList(): void
     - *getTeacherList(): void
     - *getPendingUsersList(): void
@@ -19,6 +21,7 @@ class AdminSaga {
     - *removeStudent(action): void
     - *removeTeacher(action): void
     ==actions==
+    + getLists(): object
     + getStudentsListAction(): object
     + getTeachersListActiob(): object
     + getPendingUsersListAction(): object
