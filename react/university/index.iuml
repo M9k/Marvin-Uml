@@ -21,6 +21,7 @@ class UniversityAcademicYears {
      new academic years
 }
 UniversityAcademicYears ..> PageTableForm
+UniversityAcademicYears ..> MessageBox
 
 class UniversityAdmins {
     --props--
@@ -35,6 +36,7 @@ class UniversityAdmins {
     a new admin
 }
 UniversityAdmins ..> PageTableForm
+UniversityAdmins ..> MessageBox
 
 }
 

@@ -15,6 +15,7 @@ class StudentExams{
         table with list of all exams
 }
 StudentExams ..> PageTableForm
+StudentExams ..> MessageBox
 
 class StudentOptionalExams{
     --props--
@@ -24,6 +25,7 @@ class StudentOptionalExams{
         table with list of all optional exams
 }
 StudentOptionalExams ..> PageTableForm
+StudentOptionalExams ..> MessageBox
 
 class StudentSummary{
     --props--
@@ -31,6 +33,7 @@ class StudentSummary{
     --render--
         show all credits and credits to end
 }
+StudentSummary ..> MessageBox
 
 }
 

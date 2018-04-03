@@ -1,20 +1,13 @@
-class PageContainer{
-    Base Component for all the routes
+class PageContainer {
     --props--
         loggedIn: bool
         links: object[0...*]
-        isLoading: bool
         children: nodes
     --render--
-        render on the top the navbar
-        in the middle the whole content of the page inside a panel
-         It shows a progressbar or spinner when the data of the page is loading
-         At the bottom it renders the footer too
+        render the navbar and the footer
 }
 
 PageContainer ..> Panel
 PageContainer ..> Footer
 PageContainer ..> Navbar
-PageContainer ..> ProgressBar
-PageContainer ..> MessageBox
 

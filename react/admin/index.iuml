@@ -23,6 +23,7 @@ class AdminUsersConfirmed{
         for each row to delete
 }
 AdminUsersConfirmed ..> PageTableForm
+AdminUsersConfirmed ..> MessageBox
 
 class AdminUsersNotConfirmed{
     --props--
@@ -35,6 +36,7 @@ class AdminUsersNotConfirmed{
         for each row to confirm or delete
 }
 AdminUsersNotConfirmed ..> PageTableForm
+AdminUsersNotConfirmed ..> MessageBox
 
 class AdminCourses{
     --props--
@@ -46,6 +48,7 @@ class AdminCourses{
         add a new one from specific year
 }
 AdminCourses ..> PageTableForm
+AdminCourses ..> MessageBox
 
 class AdminCourseExams{
     --props--
@@ -59,6 +62,7 @@ class AdminCourseExams{
         course
 }
 AdminCourseExams ..> PageTableForm
+AdminCourseExams ..> MessageBox
 
 }
 

@@ -30,6 +30,8 @@ package PublicPages #D6C544 {
     and two selectbox to choose type of user
   }
 
+	PublicIndex ..> MessageBox
+	SubmissionPage ..> MessageBox
 }
 
 note left of PublicPages: UC1 & UC3 & UC11
