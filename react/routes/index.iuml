@@ -1,22 +1,18 @@
 package Routes{
 
-class RouterFactory {
+class RoutesFactory {
    {static} + createRoutes(userType: number): object
 }
 
 Index ..> Router
 
-Router --> RouterFactory
+Router --> RoutesFactory
 
-RouterFactory ..>UniversityRoutes
-RouterFactory ..>AdminRoutes
-RouterFactory ..>TeacherRoutes
-RouterFactory ..>StudentRoutes
-RouterFactory ..>PublicRoutes
-
-note top of RouterFactory
-        React App from here!!
-end note
+RoutesFactory ..>UniversityRoutes
+RoutesFactory ..>AdminRoutes
+RoutesFactory ..>TeacherRoutes
+RoutesFactory ..>StudentRoutes
+RoutesFactory ..>PublicRoutes
 
 class Router <<created by react-router>>{
 
