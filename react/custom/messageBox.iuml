@@ -2,8 +2,10 @@ class MessageBox {
     --props--
        isError: boolean
        description: string
+	   isWaiting: boolean
     --render--
     modal with positive or failure icon with description
 }
 
 MessageBox ..> Modal
+MessageBox ..> ProgressBar

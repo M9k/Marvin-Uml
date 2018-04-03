@@ -1,5 +1,7 @@
 @startuml
 
+hide circle
+
 title Relationships - Class Diagram for Marvin Frontend
 
 skinparam classAttributeIconSize 0

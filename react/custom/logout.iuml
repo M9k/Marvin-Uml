@@ -1,4 +1,0 @@
-class Logout <<UC 4>>{
-  --props--
-      logout: function
-}

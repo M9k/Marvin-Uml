@@ -1,26 +1,18 @@
 package Routes{
 
-class RouterFactory <<I'm the Father of all components>>{
-    Factory to create Router and the pageContainer
-    where every page with navbar and footer will be born
-    --props--
-        userType: number
+class RoutesFactory {
+   {static} + createRoutes(userType: number): object
 }
 
-Index ..> RouterFactory
+Page ..> Router
 
-RouterFactory ..>UniversityRoutes
-RouterFactory ..>AdminRoutes
-RouterFactory ..>TeacherRoutes
-RouterFactory ..>StudentRoutes
-RouterFactory ..>PublicRoutes
+Router --> RoutesFactory
 
-RouterFactory ..> Router
-RouterFactory ..> PageContainer
-
-note top of RouterFactory
-        React App from here!!
-end note
+RoutesFactory ..>UniversityRoutes
+RoutesFactory ..>AdminRoutes
+RoutesFactory ..>TeacherRoutes
+RoutesFactory ..>StudentRoutes
+RoutesFactory ..>PublicRoutes
 
 class Router <<created by react-router>>{
 
@@ -28,9 +20,12 @@ class Router <<created by react-router>>{
 
 class UniversityRoutes {
     --routes--
-        + index -> UniversityIndex
-        + academicyears -> UniversityAcademicYears
-        + admins -> UniversityAdmins
+        index -> UniversityIndex
+        academicyears -> UniversityAcademicYears
+        admins -> UniversityAdmins
+        logout -> LogoutPage
+        help -> HelpPage
+        price -> PricePage
 }
 /'
 UniversityRoutes ..> UniversityPages
@@ -38,16 +33,22 @@ UniversityRoutes ..> UniversityPages
 UniversityRoutes ..> UniversityIndex
 UniversityRoutes ..> UniversityAcademicYears
 UniversityRoutes ..> UniversityAdmins
+UniversityRoutes ..> LogoutPage
+UniversityRoutes ..> HelpPage
+UniversityRoutes ..> PricePage
 
 class AdminRoutes{
     --routes--
-        + index -> AdminIndex
-        + confirm/teacher -> AdminUsersNotConfirmed
-        + confirm/students -> AdminUsersNotConfirmed
-        + user/teacher -> AdminUserConfirmed
-        + user/students -> AdminUserConfirmed
-        + courses -> AdminCourses
-        + courses/:examId -> AdminCourseExams
+        index -> AdminIndex
+        confirm/teacher -> AdminUsersNotConfirmed
+        confirm/students -> AdminUsersNotConfirmed
+        user/teacher -> AdminUserConfirmed
+        user/students -> AdminUserConfirmed
+        courses -> AdminCourses
+        courses/:examId -> AdminCourseExams
+        logout -> LogoutPage
+        help -> HelpPage
+        price -> PricePage
 }
 /'
 AdminRoutes ..> AdminPages
@@ -57,12 +58,18 @@ AdminRoutes ..> AdminUsersConfirmed
 AdminRoutes ..> AdminUsersNotConfirmed
 AdminRoutes ..> AdminCourses
 AdminRoutes ..> AdminCourseExams
+AdminRoutes ..> LogoutPage
+AdminRoutes ..> HelpPage
+AdminRoutes ..> PricePage
 
 class TeacherRoutes {
     --routes--
-        + index -> TeacherIndex
-        + exams -> TeacherExams
-        + exams/:examid -> TeacherExamStudents
+        index -> TeacherIndex
+        exams -> TeacherExams
+        exams/:examid -> TeacherExamStudents
+        logout -> LogoutPage
+        help -> HelpPage
+        price -> PricePage
 }
 /'
 TeacherRoutes ..> TeacherPages
@@ -70,11 +77,17 @@ TeacherRoutes ..> TeacherPages
 TeacherRoutes ..> TeacherIndex
 TeacherRoutes ..> TeacherExams
 TeacherRoutes ..> TeacherExamStudents
+TeacherRoutes ..> LogoutPage
+TeacherRoutes ..> HelpPage
+TeacherRoutes ..> PricePage
 
 class StudentRoutes{
-    --render--
+    --routes--
          index -> StudentIndex
          other exams -> OptionalExams
+        logout -> LogoutPage
+        help -> HelpPage
+        price -> PricePage
 }
 /'
 StudentRoutes ..> StudentPages
@@ -83,17 +96,19 @@ StudentRoutes ..> StudentIndex
 StudentRoutes ..> StudentExams
 StudentRoutes ..> StudentOptionalExams
 StudentRoutes ..> StudentSummary
+StudentRoutes ..> LogoutPage
+StudentRoutes ..> HelpPage
+StudentRoutes ..> PricePage
 
 class PublicRoutes{
     --routes--
-        + index -> PublicIndex
-        + help -> HelpPage
-        + price -> PricePage
-        + request -> SubmissionPage
+        login -> LoginPage
+        index -> PublicIndex
+        help -> HelpPage
+        price -> PricePage
+        request -> SubmissionPage
 }
-/'
-PublicRoutes ..> PublicPages
-'/
+PublicRoutes ..> LoginPage
 PublicRoutes ..> PublicIndex
 PublicRoutes ..> HelpPage
 PublicRoutes ..> PricePage

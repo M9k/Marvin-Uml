@@ -1,10 +1,19 @@
 package App {
 
-    class Index <<index.js>> {
+    class Index {
     --description--
         Require the initialization for Redux
         and Web3 and call the creation of
         the page
-    }
+    } 
+    class Page {
+	--props--
+	store: object
+	--description--
+        Create the container and use the Route to get the content
+    } 
+	Index ..> Page
 
+note bottom of Index : index.js
 }
+

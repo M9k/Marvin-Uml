@@ -1,8 +1,4 @@
-skinparam package<<UC 8>> {
-    backgroundColor #d4e8d5
-}
-
-package TeacherPages <<UC 8>>{
+package TeacherPages #D4E8D5 {
 
 class TeacherIndex {
     --render--
@@ -20,6 +16,7 @@ class TeacherExams {
     list of the selected exam
 }
 TeacherExams ..> PageTableForm
+TeacherExams ..> MessageBox
 
 class TeacherExamStudents {
     --props--
@@ -30,7 +27,9 @@ class TeacherExamStudents {
     of the seleted exam
 }
 TeacherExamStudents ..> PageTableForm
+TeacherExamStudents ..> MessageBox
 
 }
 
+note left of TeacherPages: UC8
 

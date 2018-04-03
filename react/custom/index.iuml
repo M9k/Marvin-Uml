@@ -3,7 +3,7 @@ Custom components
 created by 353 group
 '/
 
-package custom-components as CustomComponents <<components created by us>>{
+package custom-components as CustomComponents {
 
 !include navbar.iuml
 
@@ -12,10 +12,6 @@ package custom-components as CustomComponents <<components created by us>>{
 !include form.iuml
 
 !include footer.iuml
-
-!include login.iuml
-
-!include logout.iuml
 
 !include cardWithIcon.iuml
 
@@ -28,3 +24,8 @@ package custom-components as CustomComponents <<components created by us>>{
 !include pageContainer.iuml
 
 }
+
+Page ..> PageContainer
+
+note bottom of CustomComponents: components created by us
+
