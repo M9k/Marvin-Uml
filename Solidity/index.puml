@@ -2,38 +2,40 @@
 
     !include Contracts/Course.iuml
     !include Contracts/Exam.iuml
+    !include Contracts/User.iuml
     !include Contracts/Student.iuml
     !include Contracts/Teacher.iuml
+package "UniversityHierarchy" #DDDDDD {
     !include Contracts/University.iuml
     !include Contracts/UniversityExam.iuml
     !include Contracts/UniversityStudent.iuml
     !include Contracts/UniversityTeacher.iuml
     !include Contracts/UniversityYear.iuml
     !include Contracts/UniversityAdmin.iuml
-    !include Contracts/User.iuml
+}
     !include Contracts/Year.iuml
 
-Teacher --|> User
-Student --|> User
+Teacher -u-|> User
+Student -u-|> User
 
-UniversityAdmin --|> University
-UniversityTeacher --|> UniversityAdmin
-UniversityStudent --|> UniversityTeacher
-UniversityYear --|> UniversityStudent
-UniversityExam --|> UniversityYear
+UniversityAdmin -u-|> University
+UniversityTeacher -u-|> UniversityAdmin
+UniversityStudent -u-|> UniversityTeacher
+UniversityYear -u-|> UniversityStudent
+UniversityExam -u-|> UniversityYear
 
 UniversityYear *-- Year
 Year *-- Course
 Course *-- Exam
 UniversityExam --> Exam
 UniversityExam --> Teacher
-UniversityTeacher *-- Teacher
+UniversityTeacher *-r- Teacher
 note on link: confirmed
-UniversityTeacher *-- Teacher
+UniversityTeacher *-r- Teacher
 note on link: unconfirmed
-UniversityStudent *-- Student
+UniversityStudent *-r- Student
 note on link: confirmed
-UniversityStudent *-- Student
+UniversityStudent *-r- Student
 note on link: unconfirmed
 
 @enduml

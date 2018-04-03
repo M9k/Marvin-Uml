@@ -1,6 +1,6 @@
 @startuml
 skinparam classAttributeIconSize 0
-class UniversityExam {
+class UniversityExam #AquaMarine {
 __
 __
 + associateTeacherToExam (_teacher: Teacher, _exam: Exam) {onlyAdmin}

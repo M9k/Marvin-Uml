@@ -1,6 +1,6 @@
 @startuml
 skinparam classAttributeIconSize 0
-class UniversityTeacher{
+class UniversityTeacher #AquaMarine {
 __
 isValidContractUnconfirmedTeacher(_teacher: Teacher)
 isValidContractTeacher(_teacher: Teacher)

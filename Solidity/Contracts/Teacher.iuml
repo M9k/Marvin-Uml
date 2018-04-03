@@ -1,6 +1,6 @@
 @startuml
 skinparam classAttributeIconSize 0
-class Teacher {
+class Teacher #LightGreen {
 - examList: Exam [0...*]
 __
 onlyUniversity

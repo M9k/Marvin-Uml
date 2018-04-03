@@ -1,6 +1,6 @@
 @startuml
 skinparam classAttributeIconSize 0
-class University{
+class University #AquaMarine {
 #universityAddress: address
 __
 onlyFounder
