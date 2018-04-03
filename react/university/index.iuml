@@ -1,8 +1,4 @@
-skinparam package<<UC 6 & UC10  >> {
-    backgroundColor #DAE8FC
-}
-
-package UniversityPages <<UC 6 & UC10>> {
+package UniversityPages #DAE8FC {
 
 class UniversityIndex {
     --render--
@@ -26,7 +22,6 @@ class UniversityAcademicYears {
 }
 UniversityAcademicYears ..> PageTableForm
 
-
 class UniversityAdmins {
     --props--
         addAdmin: function
@@ -41,5 +36,7 @@ class UniversityAdmins {
 }
 UniversityAdmins ..> PageTableForm
 
-
 }
+
+note left of UniversityPages: UC6 & UC10
+

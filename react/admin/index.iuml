@@ -1,8 +1,4 @@
-skinparam package<<UC 5 & UC7>> {
-    backgroundColor #ffbd9d
-}
-
-package AdminPages <<UC 5 & UC7>> {
+package AdminPages #FFBD9D {
 
 class AdminIndex{
 --render--
@@ -65,3 +61,6 @@ class AdminCourseExams{
 AdminCourseExams ..> PageTableForm
 
 }
+
+note left of AdminPages: UC5 & UC10
+

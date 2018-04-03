@@ -2,7 +2,7 @@
 Bootstrap components
 from https://react-bootstrap.github.io/components/alerts/
 '/
-package Bootstrap-React as BR <<npm module components>> {
+package Bootstrap-React as BR {
 
 /'BEGIN Form'/
 !include formgroup.iuml
@@ -22,3 +22,6 @@ package Bootstrap-React as BR <<npm module components>> {
 !include progressbar.iuml
 !include StateEnum.iuml
 }
+
+note bottom of BR: npm module components
+

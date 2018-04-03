@@ -1,8 +1,4 @@
-skinparam package<<UC 9>> {
-    backgroundColor #beafca
-}
-
-package StudentPages <<UC 9>> {
+package StudentPages #BEAFCA {
 
 class StudentIndex{
     --render--
@@ -37,3 +33,6 @@ class StudentSummary{
 }
 
 }
+
+note left of StudentPages: UC9
+

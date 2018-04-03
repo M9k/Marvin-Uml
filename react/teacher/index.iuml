@@ -1,8 +1,4 @@
-skinparam package<<UC 8>> {
-    backgroundColor #d4e8d5
-}
-
-package TeacherPages <<UC 8>>{
+package TeacherPages #D4E8D5 {
 
 class TeacherIndex {
     --render--
@@ -33,4 +29,5 @@ TeacherExamStudents ..> PageTableForm
 
 }
 
+note left of TeacherPages: UC8
 

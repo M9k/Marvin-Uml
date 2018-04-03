@@ -1,21 +1,17 @@
-skinparam package<<UC1 & UC3 & UC11>>{
-    backgroundColor #d6c544
-}
-
-package PublicPages <<UC1 & UC3 & UC11>> {
+package PublicPages #D6C544 {
 
   class PublicIndex {
     --render--
     describes marvin system with images, logo and text
   }
 
-  class HelpPage <<UC 1>>{
+  class HelpPage {
     --render--
     show list of paragraphs and videos/images to help user
     with common problem or questions
   }
 
-  class PricePage <<UC 11>> {
+  class PricePage {
     ----
     - currentEthPrice()
     - currentGasPrice()
@@ -23,7 +19,7 @@ package PublicPages <<UC1 & UC3 & UC11>> {
     show list of actions and related price with table
   }
 
-  class SubmissionPage <<UC 13>> {
+  class SubmissionPage {
     --props--
     currentAddr: object
     courses: object[0..*]
@@ -35,3 +31,6 @@ package PublicPages <<UC1 & UC3 & UC11>> {
   }
 
 }
+
+note left of PublicPages: UC1 & UC3 & UC11
+
