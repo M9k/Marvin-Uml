@@ -1,13 +1,16 @@
 @startuml
 !include UniversityStudent.iuml
 !include UniversityTeacher.iuml
-class UserData << facade >>{
+class User{
   - getStudentData(): object
   - getTeacherData(): object
+  + getRole(): number
   + getData(number): object
+  + create(string, string, address): bool
 }
 UserData ..> UniversityStudent: <<use>>
 UserData ..> UniversityTeacher: <<use>>
+UserData ..> University: <<use>>
 note right of UserData
   Facade for the login feature:
   SessionSaga is not aware of the different way
