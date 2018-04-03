@@ -1,5 +1,46 @@
 !include ../web3function/index.puml
 !include ../redux/index.puml
 
-marvin.SessionSaga ..> web3.UserData: <<use>>
+marvin.SessionSaga ..> web3.Session: <<use>>
+'getData, getRole'
+
+
+marvin.BookingSaga ..> web3.Session: <<use>>
+'create'
+''''''''''''''''''
+marvin.BookingSaga ..> web3.Year: <<use>>
+'getAcademicYearContractByYear
+marvin.BookingSaga ..> web3.UniversityYear: <<use>>
+'getCourseNumber, getCourseContractAt
+marvin.BookingSaga ..> web3.Course: <<use>>
+'getName
+
+marvin.AdminEmployerSaga ..> web3.UniversityAdmin: <<use>>
+'getAdminNumber, getAdminAt, addAdmin, removeAdmin'
+
+marvin.AdminSaga ..> web3.UniversityStudent: <<use>>
+'getStudent*, getNonApprovedStudent*'
+marvin.AdminSaga ..> web3.UniversityTeacher: <<use>>
+'getTeacher*, getNonApprovedTeacher*'
+marvin.AdminSaga ..> web3.User: <<use>>
+
 marvin.ManageYearsSaga ..> web3.UniversityYear: <<use>>
+'getAcademicYerNumber, getAcademicYearContractAt,''
+''''''''''''''''''''addAdmin, removeAdmin
+marvin.ManageYearsSaga ..> web3.Year: <<use>>
+'getSolarYear'
+
+marvin.EvaluatorSaga ..> web3.Exam: <<use>>
+'getEnrolled*'
+marvin.EvaluatorSaga ..> web3.User: <<use>>
+'getName, getSurname'
+'''''''''''''
+marvin.EvaluatorSaga ..> web3.Teacher: <<use>>
+'registerNewVoteStudentExam'
+
+marvin.TeacherExamsSaga ..> web3.Teacher: <<use>>
+'getExam*'
+marvin.TeacherExamsSaga ..> web3.Exam: <<use>>
+'getName, getCourse'
+marvin.TeacherExamsSaga ..> web3.Course: <<use>>
+'getName'
