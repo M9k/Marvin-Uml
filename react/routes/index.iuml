@@ -20,9 +20,12 @@ class Router <<created by react-router>>{
 
 class UniversityRoutes {
     --routes--
-        + index -> UniversityIndex
-        + academicyears -> UniversityAcademicYears
-        + admins -> UniversityAdmins
+        index -> UniversityIndex
+        academicyears -> UniversityAcademicYears
+        admins -> UniversityAdmins
+        logout -> LogoutPage
+        help -> HelpPage
+        price -> PricePage
 }
 /'
 UniversityRoutes ..> UniversityPages
@@ -30,16 +33,22 @@ UniversityRoutes ..> UniversityPages
 UniversityRoutes ..> UniversityIndex
 UniversityRoutes ..> UniversityAcademicYears
 UniversityRoutes ..> UniversityAdmins
+UniversityRoutes ..> LogoutPage
+UniversityRoutes ..> HelpPage
+UniversityRoutes ..> PricePage
 
 class AdminRoutes{
     --routes--
-        + index -> AdminIndex
-        + confirm/teacher -> AdminUsersNotConfirmed
-        + confirm/students -> AdminUsersNotConfirmed
-        + user/teacher -> AdminUserConfirmed
-        + user/students -> AdminUserConfirmed
-        + courses -> AdminCourses
-        + courses/:examId -> AdminCourseExams
+        index -> AdminIndex
+        confirm/teacher -> AdminUsersNotConfirmed
+        confirm/students -> AdminUsersNotConfirmed
+        user/teacher -> AdminUserConfirmed
+        user/students -> AdminUserConfirmed
+        courses -> AdminCourses
+        courses/:examId -> AdminCourseExams
+        logout -> LogoutPage
+        help -> HelpPage
+        price -> PricePage
 }
 /'
 AdminRoutes ..> AdminPages
@@ -49,12 +58,18 @@ AdminRoutes ..> AdminUsersConfirmed
 AdminRoutes ..> AdminUsersNotConfirmed
 AdminRoutes ..> AdminCourses
 AdminRoutes ..> AdminCourseExams
+AdminRoutes ..> LogoutPage
+AdminRoutes ..> HelpPage
+AdminRoutes ..> PricePage
 
 class TeacherRoutes {
     --routes--
-        + index -> TeacherIndex
-        + exams -> TeacherExams
-        + exams/:examid -> TeacherExamStudents
+        index -> TeacherIndex
+        exams -> TeacherExams
+        exams/:examid -> TeacherExamStudents
+        logout -> LogoutPage
+        help -> HelpPage
+        price -> PricePage
 }
 /'
 TeacherRoutes ..> TeacherPages
@@ -62,11 +77,17 @@ TeacherRoutes ..> TeacherPages
 TeacherRoutes ..> TeacherIndex
 TeacherRoutes ..> TeacherExams
 TeacherRoutes ..> TeacherExamStudents
+TeacherRoutes ..> LogoutPage
+TeacherRoutes ..> HelpPage
+TeacherRoutes ..> PricePage
 
 class StudentRoutes{
     --render--
          index -> StudentIndex
          other exams -> OptionalExams
+        logout -> LogoutPage
+        help -> HelpPage
+        price -> PricePage
 }
 /'
 StudentRoutes ..> StudentPages
@@ -75,18 +96,19 @@ StudentRoutes ..> StudentIndex
 StudentRoutes ..> StudentExams
 StudentRoutes ..> StudentOptionalExams
 StudentRoutes ..> StudentSummary
+StudentRoutes ..> LogoutPage
+StudentRoutes ..> HelpPage
+StudentRoutes ..> PricePage
 
 class PublicRoutes{
     --routes--
-        + login -> LoginPage
-        + logout -> LogoutPage
-        + index -> PublicIndex
-        + help -> HelpPage
-        + price -> PricePage
-        + request -> SubmissionPage
+        login -> LoginPage
+        index -> PublicIndex
+        help -> HelpPage
+        price -> PricePage
+        request -> SubmissionPage
 }
 PublicRoutes ..> LoginPage
-PublicRoutes ..> LogoutPage
 PublicRoutes ..> PublicIndex
 PublicRoutes ..> HelpPage
 PublicRoutes ..> PricePage
