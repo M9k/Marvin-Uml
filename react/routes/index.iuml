@@ -82,7 +82,7 @@ TeacherRoutes ..> HelpPage
 TeacherRoutes ..> PricePage
 
 class StudentRoutes{
-    --render--
+    --routes--
          index -> StudentIndex
          other exams -> OptionalExams
         logout -> LogoutPage
