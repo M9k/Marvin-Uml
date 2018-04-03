@@ -1,6 +1,6 @@
 @startuml
 skinparam classAttributeIconSize 0
-class GenericUser{
+class User{
 + getPublicAddress(contract: address): address
 + getName(contract: address): number
 + getSurname(contract: address): number

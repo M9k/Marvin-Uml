@@ -1,7 +1,7 @@
 @startuml
 !include UniversityStudent.iuml
 !include UniversityTeacher.iuml
-class User{
+class Session{
   - getStudentData(): object
   - getTeacherData(): object
   + getRole(): number
@@ -11,7 +11,7 @@ class User{
 UserData ..> UniversityStudent: <<use>>
 UserData ..> UniversityTeacher: <<use>>
 UserData ..> University: <<use>>
-note right of UserData
+note right of Session
   Facade for the login feature:
   SessionSaga is not aware of the different way
   to retrive student or teacher data
