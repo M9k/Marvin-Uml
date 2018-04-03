@@ -1,6 +1,6 @@
 @startuml
 !include redux.iuml
-!include react.iuml
+'!include react.iuml
 !include reactRedux.iuml
 !include aggregators.iuml
 skinparam linetype ortho

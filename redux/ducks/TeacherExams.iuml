@@ -20,7 +20,7 @@ note right of TeacherExams
 initialState = {
   loading: false,
   errored: false,
-  list: array<{code, courseName}>
+  list: array<{code, courseName, address}>
 }
 end note
 TeacherExams --|> marvin.Duck

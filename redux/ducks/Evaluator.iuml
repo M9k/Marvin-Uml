@@ -30,6 +30,7 @@ note right of Evaluator
 initialState = {
   loading: false,
   errored: false,
+  address: string = null //exam contract
   code: string = null,
   course: string = null,
   studentList: array<{name, surname, address, vote}> = []
