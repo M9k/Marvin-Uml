@@ -6,5 +6,5 @@ class Radio{
        validationState : StateEnum
        inputRef : function
 }
-Radio ..> StateEnum
+Radio --> StateEnum
 /'Radio button'/

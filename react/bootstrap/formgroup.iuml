@@ -4,4 +4,4 @@ class FormGroup{
          validationState : StateEnum
 }
 
-FormGroup ..> StateEnum
+FormGroup --> StateEnum
