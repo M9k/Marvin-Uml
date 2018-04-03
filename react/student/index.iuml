@@ -12,24 +12,24 @@ class StudentIndex{
 }
 StudentIndex ..> CardWithIcon
 
-class Exams{
+class StudentExams{
     --props--
         getExams : function
     --render--
         table with list of all exams
 }
-Exams ..> PageTableForm
+StudentExams ..> PageTableForm
 
-class OptionalExams{
+class StudentOptionalExams{
     --props--
         getOptionalExams : function
         selectExam : function
     --render--
         table with list of all optional exams
 }
-OptionalExams ..> PageTableForm
+StudentOptionalExams ..> PageTableForm
 
-class Summary{
+class StudentSummary{
     --props--
         getStudentCredits : function
     --render--

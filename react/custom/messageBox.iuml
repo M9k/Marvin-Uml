@@ -5,3 +5,5 @@ class MessageBox {
     --render--
     modal with positive or failure icon with description
 }
+
+MessageBox ..> Modal

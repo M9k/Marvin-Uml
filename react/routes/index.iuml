@@ -32,7 +32,12 @@ class UniversityRoutes {
         + academicyears -> UniversityAcademicYears
         + admins -> UniversityAdmins
 }
+/'
 UniversityRoutes ..> UniversityPages
+'/
+UniversityRoutes ..> UniversityIndex
+UniversityRoutes ..> UniversityAcademicYears
+UniversityRoutes ..> UniversityAdmins
 
 class AdminRoutes{
     --routes--
@@ -44,7 +49,14 @@ class AdminRoutes{
         + courses -> AdminCourses
         + courses/:examId -> AdminCourseExams
 }
+/'
 AdminRoutes ..> AdminPages
+'/
+AdminRoutes ..> AdminIndex
+AdminRoutes ..> AdminUsersConfirmed
+AdminRoutes ..> AdminUsersNotConfirmed
+AdminRoutes ..> AdminCourses
+AdminRoutes ..> AdminCourseExams
 
 class TeacherRoutes {
     --routes--
@@ -52,14 +64,25 @@ class TeacherRoutes {
         + exams -> TeacherExams
         + exams/:examid -> TeacherExamStudents
 }
+/'
 TeacherRoutes ..> TeacherPages
+'/
+TeacherRoutes ..> TeacherIndex
+TeacherRoutes ..> TeacherExams
+TeacherRoutes ..> TeacherExamStudents
 
 class StudentRoutes{
     --render--
          index -> StudentIndex
          other exams -> OptionalExams
 }
+/'
 StudentRoutes ..> StudentPages
+'/
+StudentRoutes ..> StudentIndex
+StudentRoutes ..> StudentExams
+StudentRoutes ..> StudentOptionalExams
+StudentRoutes ..> StudentSummary
 
 class PublicRoutes{
     --routes--
@@ -68,7 +91,12 @@ class PublicRoutes{
         + price -> PricePage
         + request -> SubmissionPage
 }
-PublicRoutes .> PublicPages
-
+/'
+PublicRoutes ..> PublicPages
+'/
+PublicRoutes ..> PublicIndex
+PublicRoutes ..> HelpPage
+PublicRoutes ..> PricePage
+PublicRoutes ..> SubmissionPage
 
 }

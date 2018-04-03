@@ -29,13 +29,10 @@ left to right direction
 
 
 /' layout position packages '/
-    UniversityPages -[hidden]left- CustomComponents
-    AdminPages -[hidden]left- CustomComponents
-    TeacherPages -[hidden]right- CustomComponents
-    HelpPage -[hidden]right- CustomComponents
-    CustomComponents -[hidden]left-  PricePage
-    SubmissionPage -[hidden]left- CustomComponents
-    TeacherPages -[hidden]left- CustomComponents
+    UniversityPages -[hidden]- CustomComponents
+    AdminPages -[hidden]- CustomComponents
+    TeacherPages -[hidden]- CustomComponents
+    PublicPages -[hidden]- CustomComponents
     CustomComponents -[hidden]- BR
 
 @enduml

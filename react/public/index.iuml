@@ -1,4 +1,8 @@
-package PublicPages {
+skinparam package<<UC1 & UC3 & UC11>>{
+    backgroundColor #d6c544
+}
+
+package PublicPages <<UC1 & UC3 & UC11>> {
 
   class PublicIndex {
     --render--
