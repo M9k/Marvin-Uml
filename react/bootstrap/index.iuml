@@ -23,5 +23,5 @@ package Bootstrap-React as BR {
 !include StateEnum.iuml
 }
 
-note bottom of BR: npm module components
+note bottom of BR: JavaScript package
 
