@@ -1,14 +1,12 @@
 package Routes{
 
 class RouterFactory {
-    Factory to create Routes
-    --props--
-        userType: number
+   {static} + createRoutes(userType: number): object
 }
 
 Index ..> Router
 
-Router ..> RouterFactory
+Router --> RouterFactory
 
 RouterFactory ..>UniversityRoutes
 RouterFactory ..>AdminRoutes
