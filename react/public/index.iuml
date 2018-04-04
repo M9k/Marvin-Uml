@@ -13,6 +13,8 @@ package PublicPages #D6C544 {
   }
 
   class LoginPage {
+    --props--
+    login: function
     --render--
     show loging process
   }
@@ -36,8 +38,7 @@ package PublicPages #D6C544 {
     --props--
     currentAddr: object
     courses: object[0..*]
-    submitStudent: function
-    submitTeacher: function
+    signUp: function
     --render--
     show a form with name,surname
     and two selectbox to choose type of user
@@ -46,4 +47,3 @@ package PublicPages #D6C544 {
 }
 
 note left of PublicPages: UC1 & UC3 & UC11
-
