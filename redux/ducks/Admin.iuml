@@ -7,10 +7,12 @@ class Admin{
   - SET_PENDING_LIST: string
   - LIST_ERRORED: string
   - LIST_LOADING: string
+  - SWITCH_USER : string
   ==actions==
   + setStudentsList(array<Object>): object
   + setTeachersList(array<Object>): object
   + setPendingList(array<Object>): object
+  + switchUser(string) : string
   + listIsLoading(): object
   + listHasErrored(): object
 }
