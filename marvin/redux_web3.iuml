@@ -50,14 +50,14 @@ marvin.CourseSaga ..>web3.Year: <<use>>
 marvin.CourseSaga ..>web3.Course: <<use>>
 'getName, getSolarYear'
 
-marvin.ManageExamSaga ..>web3.Course: <<use>>
+marvin.ManageExamsSaga ..>web3.Course: <<use>>
 'addNewExam, getName, getExamContractAt'
-marvin.ManageExamSaga ..>web3.Exam: <<use>>
+marvin.ManageExamsSaga ..>web3.Exam: <<use>>
 'getName, getCredits, getTeacherContract'
-marvin.ManageExamSaga ..>web3.Teacher: <<use>>
+marvin.ManageExamsSaga ..>web3.Teacher: <<use>>
 'getName, getSurname, getAddress'
-marvin.ManageExamSaga ..>web3.UniversityExam: <<use>>
+marvin.ManageExamsSaga ..>web3.UniversityExam: <<use>>
 'associateTeacherToExam'
 
-marvin.manageYearsSaga ..>web3.UniversityYear: <<use>>
+marvin.ManageYearsSaga ..>web3.UniversityYear: <<use>>
 'addNewYear, removeAcademicYear, getAcademicYear*'
