@@ -11,6 +11,7 @@ class ManageYearsSaga{
   - *removeEmptyYear() : void
   - *getAllYears() : void
   == actions ==
+  + getSolarYearAction(string): void
   + addYearAction(uint): object
   + removeEmptyYearAction(uint): object
   + getAllYearsAction() : object

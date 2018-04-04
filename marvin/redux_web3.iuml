@@ -44,3 +44,20 @@ marvin.TeacherExamsSaga ..> web3.Exam: <<use>>
 'getName, getCourse'
 marvin.TeacherExamsSaga ..> web3.Course: <<use>>
 'getName'
+
+marvin.CourseSaga ..>web3.Year: <<use>>
+'addNewCourse, getSolarYear'
+marvin.CourseSaga ..>web3.Course: <<use>>
+'getName, getSolarYear'
+
+marvin.ManageExamSaga ..>web3.Course: <<use>>
+'addNewExam, getName, getExamContractAt'
+marvin.ManageExamSaga ..>web3.Exam: <<use>>
+'getName, getCredits, getTeacherContract'
+marvin.ManageExamSaga ..>web3.Teacher: <<use>>
+'getName, getSurname, getAddress'
+marvin.ManageExamSaga ..>web3.UniversityExam: <<use>>
+'associateTeacherToExam'
+
+marvin.manageYearsSaga ..>web3.UniversityYear: <<use>>
+'addNewYear, removeAcademicYear, getAcademicYear*'
