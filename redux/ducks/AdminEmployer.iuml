@@ -4,10 +4,14 @@ class AdminEmployer{
   - SET_ADMINS_LIST : string
   - POP_ADMIN : string
   - PUSH_ADMIN : string
+  - LIST_ERRORED: string
+  - LIST_LOADING: string
   == actions ==
   + setAdminList(array<Object>): object
   + pushAdmin(string): object
   + popAdmin(string): object
+  + listIsLoading(): object
+  + listHasErrored(): object
 }
 note right of AdminEmployer
 initialState = {

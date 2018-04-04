@@ -35,7 +35,5 @@ initialState = {
   course: string = null,
   studentList: array<{name, surname, address, vote}> = []
 }
-Da valutare se spezzare in due, ma è difficile
-che il modulo non venga usato tutto insieme
 end note
 Evaluator --|> marvin.Duck
