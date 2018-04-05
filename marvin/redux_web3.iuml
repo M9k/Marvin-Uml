@@ -1,6 +1,3 @@
-!include ../web3function/index.puml
-!include ../redux/index.puml
-
 marvin.SessionSaga ..> web3.Session: <<use>>
 'getData, getRole'
 

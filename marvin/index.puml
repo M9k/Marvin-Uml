@@ -1,5 +1,6 @@
 @startuml
-left to right direction
+skinparam linetype ortho
+skinparam classAttributeIconSize 0
 !include react_redux.iuml
 !include redux_web3.iuml
 @enduml
