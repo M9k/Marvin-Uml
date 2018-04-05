@@ -1,0 +1,38 @@
+@startuml
+
+hide circle
+
+skinparam classAttributeIconSize 0
+
+skinparam linetype ortho
+
+skinparam hide circle
+
+/'
+Bootstrap components
+from https://react-bootstrap.github.io/components/alerts/
+'/
+package Bootstrap-React as BR {
+
+/'BEGIN Form'/
+!include formgroup.iuml
+!include formcontrol.iuml
+!include controllabel.iuml
+
+!include radio.iuml
+/'END Form'/
+
+!include panel.iuml
+!include table.iuml
+!include button.iuml
+
+!include dropdownbutton.iuml
+!include menuitem.iuml
+!include modal.iuml
+!include progressbar.iuml
+!include StateEnum.iuml
+}
+
+
+@enduml
+
