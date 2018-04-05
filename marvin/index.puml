@@ -2,7 +2,12 @@
 skinparam linetype ortho
 skinparam classAttributeIconSize 0
 skinparam ranksep 200
-legend right
+skinparam titleBorderRoundCorner 15
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+skinparam titleBackgroundColor Aqua-CadetBlue
+title Marvin layers relationship dependecies
+legend top left
   Every dependency relationship has the <<use>> tag
 end legend
 !include react_redux.iuml
