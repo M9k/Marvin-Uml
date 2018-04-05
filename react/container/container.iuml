@@ -6,7 +6,7 @@
 interface Container{
   - mapStateToProps(): object
   - mapDispatchToProps(): object
-  + connect(): object
+  + Container(): object
 }
 
 Container ..> reactRedux.Connect: <<use>>
