@@ -1,9 +1,9 @@
 @startuml
-skinparam classAttributeIconSize 0
+
 class Migrations {
 + owner: address
 + last_completed_migration: uint
-__
+__modifiers__
 restricted
 __
 + Migrations()

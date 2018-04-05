@@ -1,9 +1,9 @@
 @startuml
-skinparam classAttributeIconSize 0
+
 class Year {
 - university: Univeristy
 - solarYear: uint16
-__
+__modifiers__
 onlyAdmin
 __
 + Year(_solarYear: uint16)

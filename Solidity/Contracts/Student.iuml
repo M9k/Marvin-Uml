@@ -1,9 +1,9 @@
 @startuml
-skinparam classAttributeIconSize 0
+
 class Student #LightGreen {
 - course: Course
 - examList: Exam [0...*]
-__
+__modifiers__
 confirmedStudent
 byCorrectProfessor(_ofExam: uint)
 notEnrolled(_index: uint)

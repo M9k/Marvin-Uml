@@ -1,11 +1,11 @@
 @startuml
-skinparam classAttributeIconSize 0
+
 class Course{
 - name: bytes32
 - creditsToGraduation: uint16
 - year: Year
 - university: UniversityAdmin
-__
+__modifiers__
 onlyAdmin
 __
 + Course(_name: bytes32, _creditsForGraduation: uint16, _university: University)

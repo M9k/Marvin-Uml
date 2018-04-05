@@ -1,7 +1,7 @@
 @startuml
-skinparam classAttributeIconSize 0
+
 class UniversityYear #AquaMarine {
-__
+__modifiers__
 yearNotFound(_year: uint16)
 yearFound(_year: uint16)
 yearEmpty(_year: uint16)

@@ -1,5 +1,5 @@
 @startuml
-
+skinparam classAttributeIconSize 0
     !include Contracts/Course.iuml
     !include Contracts/Exam.iuml
     !include Contracts/User.iuml

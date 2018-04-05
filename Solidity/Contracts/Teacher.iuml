@@ -1,8 +1,8 @@
 @startuml
-skinparam classAttributeIconSize 0
+
 class Teacher #LightGreen {
 - examList: Exam [0...*]
-__
+__modifiers__
 onlyUniversity
 notAssigned(Exam _exam)
 validExamIndex(uint _index)

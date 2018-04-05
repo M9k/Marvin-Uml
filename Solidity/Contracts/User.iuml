@@ -1,11 +1,11 @@
 @startuml
-skinparam classAttributeIconSize 0
+
 class User #LightGreen {
 # publicAddress: address
 # name: bytes32
 # surname: bytes32
 # university: University
-__
+__modifiers__
 onlySubject
 __
 + User(_name: bytes32, _surname: bytes32, _publicAddress: address)

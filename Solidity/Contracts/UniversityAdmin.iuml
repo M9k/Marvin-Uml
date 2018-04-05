@@ -1,8 +1,8 @@
 @startuml
-skinparam classAttributeIconSize 0
+
 class UniversityAdmin #AquaMarine {
 - adminList: address [0...*]
-__
+__modifiers__
 validAdminAddress( _address:address)
 onlyAdmin
 __

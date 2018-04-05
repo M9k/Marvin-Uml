@@ -1,5 +1,5 @@
 @startuml
-skinparam classAttributeIconSize 0
+
 class Exam{
 - name: bytes32
 - credits: uint8
@@ -9,7 +9,7 @@ class Exam{
 - course: Course
 - year: Year
 - university: University
-__
+__modifiers__
 onlyFromUniversityContract
 onlyNotSubscribe
 __
