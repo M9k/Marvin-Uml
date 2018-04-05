@@ -1,0 +1,20 @@
+!include ../react/index.puml
+!include ../redux/index.puml
+
+LoginPage ..> marvin.SessionSaga: <<use>>
+SubmissionPage ..> marvin.BookingSaga: <<use>>
+
+AdminCourseExams ..> marvin.ManageExamsSaga: <<use>>
+AdminUsersConfirmed ..> marvin.AdminSaga: <<use>>
+AdminUsersNotConfirmed ..> marvin.AdminSaga: <<use>>
+AdminCourses ..> marvin.CourseSaga: <<use>>
+
+StudentSummary ..> marvin.StudentSaga: <<use>>
+StudentOptionalExam ..> marvin.StudentSaga: <<use>>
+StudentExams ..> marvin.StudentSaga: <<use>>
+
+UniversityAdmins ..> marvin.AdminEmployerSaga: <<use>>
+UniversityAcademicYears ..> marvin.ManageYearsSaga: <<use>>
+
+TeacherExamStudents ..> marvin.EvaluatorSaga: <<use>>
+TeacherExams ..> marvin.TeacherExamsSaga: <<use>>

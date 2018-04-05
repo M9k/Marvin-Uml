@@ -36,5 +36,5 @@ left to right direction
     TeacherPages -[hidden]- CustomComponents
     PublicPages -[hidden]- CustomComponents
     CustomComponents -[hidden]- BR
-
+    
 @enduml

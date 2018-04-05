@@ -1,3 +1,5 @@
 @startuml
+left to right direction
+!include react_redux.iuml
 !include redux_web3.iuml
 @enduml
