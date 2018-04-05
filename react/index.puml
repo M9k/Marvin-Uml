@@ -29,6 +29,9 @@ left to right direction
 
     !include routes/index.iuml
 
+/' Containers  '/
+    !include container/container.iuml
+
 
 /' layout position packages '/
     UniversityPages -[hidden]- CustomComponents
@@ -36,5 +39,5 @@ left to right direction
     TeacherPages -[hidden]- CustomComponents
     PublicPages -[hidden]- CustomComponents
     CustomComponents -[hidden]- BR
-    
+
 @enduml

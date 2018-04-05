@@ -1,0 +1,35 @@
+!include ../student/index.iuml
+!include ../teacher/index.iuml
+!include ../university/index.iuml
+!include ../public/index.iuml
+!include ../admin/index.iuml
+interface Container{
+  - mapStateToProps(): object
+  - mapDispatchToProps(): object
+  + connect(): object
+}
+
+Container ..> reactRedux.Connect: <<use>>
+note top of reactRedux.Connect
+  Connect react components
+  to the redux store
+end note
+
+StudentOptionalExams --|> Container
+StudentSummary --|> Container
+StudentExams --|> Container
+
+UniversityAdmins --|> Container
+UniversityAcademicYears --|> Container
+
+TeacherExamStudents --|> Container
+TeacherExams --|> Container
+
+AdminUsersNotConfirmed --|> Container
+AdminCourses --|> Container
+AdminCourseExams --|> Container
+AdminUsersConfirmed --|> Container
+AdminUsersNotConfirmed --|> Container
+
+LoginPage --|> Container
+SubmissionPage --|> Container

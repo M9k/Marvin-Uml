@@ -1,5 +1,0 @@
-!include redux.iuml
-namespace reactRedux{
- !include reactRedux/connect.iuml
- Connect ..> redux.Store : <<use>>
-}
