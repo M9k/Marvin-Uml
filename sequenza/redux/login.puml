@@ -1,0 +1,37 @@
+@startuml
+title "Redux Login Sequence Diagram"
+
+actor User
+participant react.LoginPage
+participant redux.Store
+participant redux.SessionSaga
+participant web3.Session
+participant redux.Session
+
+activate react.LoginPage
+react.LoginPage ->> redux.Store: dispatch(loginAction())
+activate redux.Store
+redux.Store ->> redux.SessionSaga: handler(loginAction())
+activate redux.SessionSaga
+redux.SessionSaga -> web3.Session: getRole()
+activate web3.Session
+web3.Session --> redux.SessionSaga: number
+deactivate web3.Session
+redux.SessionSaga ->> redux.Store: dispatch(setRole(number))
+redux.Store -> redux.Session: reducer(state, setRole(number))
+activate redux.Session
+redux.Session --> redux.Store: object
+deactivate redux.Session
+redux.Store ->> react.LoginPage: update()
+redux.SessionSaga -> web3.Session: retrieveData(number)
+activate web3.Session
+web3.Session --> redux.SessionSaga: object
+deactivate web3.Session
+redux.SessionSaga ->> redux.Store: dispatch(setData(object))
+deactivate redux.SessionSaga
+redux.Store -> redux.Session: reducer(state, setData(object))
+activate redux.Session
+redux.Session --> redux.Store: object
+deactivate redux.Session
+redux.Store ->> react.LoginPage: update()
+@enduml
