@@ -2,13 +2,13 @@
 !include ../ducks/Booking.iuml
 !include ../ducks/Session.iuml
 class BookingSaga{
-  == types ==
+  -- types --
   - SIGN_UP: string
   - LOAD_COURSES: string
-  == sagas ==
+  -- sagas --
   - *signUp(string, string, object = null): void
   - *loadCourses(int = null): void
-  == actions ==
+  -- actions --
   + performSignUp(string, string, object = null): object
   + performLoad(int = null): void
 }

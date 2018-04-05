@@ -1,11 +1,11 @@
 !include ../interfaces/duck.iuml
 class ManageExams{
-  == types ==
+  -- types --
   - PUSH_NEW_EXAM : string
   - SET_ALL_EXAMS_LIST : string
   - SET_EXAMS_LIST_BY_COURSE : string
   - SET_PROFESSOR_LIST : string
-  == actions ==
+  -- actions --
   + pushNewExam(sting) : object
   + setAllExamsList(array<Object>) : object
   + setExamsListByCourse(array<Object>) : object

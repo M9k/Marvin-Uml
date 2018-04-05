@@ -1,13 +1,13 @@
 !include ../interfaces/saga.iuml
 !include ../ducks/Evaluator.iuml
 class EvaluatorSaga{
-  == types ==
+  -- types --
   - GET_LIST: string
   - ASSIGN_VOTE: string
-  == sagas ==
+  -- sagas --
   - *getList(string): void
   - *assignVote(string, int): void
-  == actions ==
+  -- actions --
   + getListAction(string): object
   + assignVoteAction(string, int): object
 }

@@ -1,19 +1,19 @@
 !include ../interfaces/saga.iuml
 !include ../ducks/ManageExams.iuml
 class ManageExamsSaga{
-  == types ==
+  -- types --
   - ADD_NEW_EXAM : string
   - GET_ALL_EXAMS : string
   - GET_EXAMS_BY_COURSE : string
   - GET_PROFESSOR_TO_ASSOCIATE : string
   - ASSOCIATE_PROFESSOR : string
-  == sagas ==
+  -- sagas --
   - *addNewExam(string, string, uint, bool) : void
   - *getAllExams() : void
   - *getExamsByCourse(string) : void
   - *getProfessorToAssociate(string) : void
   - *associateProfessor(string, string) : void
-  == actions ==
+  -- actions --
   + addNewExamAction(string, string, uint, bool) : object
   + getAllExamsAction() : object
   + getExamsByCourseAction(string) : object

@@ -1,12 +1,12 @@
 !include ../interfaces/duck.iuml
 class ManageYears{
-  == types ==
+  -- types --
   - SET_ACADEMIIC_YERS_LIST: string
   - POP_EMPTY_YEAR : string
   - PUSH_ACADEMIC_YEAR : string
   - LIST_ERRORED: string
   - LIST_LOADING: string
-  == actions ==
+  -- actions --
   + setAcademicYear(array<uint>): object
   + popEmptyYear(uint): object
   + pushAcademicYear(uint): object

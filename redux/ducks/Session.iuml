@@ -1,13 +1,13 @@
 !include ../interfaces/duck.iuml
 class Session{
   + ROLES: enum
-  == types ==
+  -- types --
   - SET_ROLE: string
   - SET_DATA: string
   - CLEAN_DATA: string
   - ROLE_LOADING: string
   - DATA_LOADING: string
-  == actions ==
+  -- actions --
   + setRole(int, bool=false): object
   + setData(object, bool=false): object
   + cleanData(): object

@@ -1,11 +1,11 @@
 !include ../interfaces/saga.iuml
 !include ../ducks/TeacherExams.iuml
 class TeacherExamsSaga{
-  == types ==
+  -- types --
   - GET_LIST: string
-  == sagas ==
+  -- sagas --
   - *getList(): void
-  == actions ==
+  -- actions --
   + getListAction(): object
 }
 TeacherExamsSaga --|> marvin.Saga

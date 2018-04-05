@@ -1,6 +1,6 @@
 !include ../interfaces/duck.iuml
 class Evaluator{
-  == types ==
+  -- types --
   - SET_EXAM_DATA: string
   - SET_STUDENTS_LIST: string
   - PUSH_STUDENT: string
@@ -10,12 +10,12 @@ class Evaluator{
   - VOTE_ERRORED: string
   - LIST_LOADING: string
   - LIST_ERRORED: string
-  == selectors ==
+  -- selectors --
   + studentByName(int): array<object>
   + studentBySurname(int): array<object>
   + studentByVote: array<object>
   + studentByVotePresence: array<object>
-  == actions ==
+  -- actions --
   + setExamData(string, string): object
   + setStudentsList(array<object>): object
   + pushStudent(object): object

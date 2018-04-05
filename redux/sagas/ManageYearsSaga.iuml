@@ -1,16 +1,16 @@
 !include ../interfaces/saga.iuml
 !include ../ducks/ManageYears.iuml
 class ManageYearsSaga{
-  == types ==
+  -- types --
   - ADD_NEW_YEAR : string
   - REMOVE_EMPTY_YEAR : string
   - GET_ALL_YEARS : string
-  == sagas ==
+  -- sagas --
   - *getSolarYear(string): void //senza facade
   - *addYear() : void
   - *removeEmptyYear() : void
   - *getAllYears() : void
-  == actions ==
+  -- actions --
   + getSolarYearAction(string): void
   + addYearAction(uint): object
   + removeEmptyYearAction(uint): object

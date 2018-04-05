@@ -1,13 +1,13 @@
 !include ../interfaces/saga.iuml
 !include ../ducks/Session.iuml
 class SessionSaga{
-  == types ==
+  -- types --
   - LOGIN: string
   - UPDATE: string
-  == sagas ==
+  -- sagas --
   - *performLogin(): void
   - *retrieveData(): void
-  == actions ==
+  -- actions --
   + loginAction(): object
   + updateData(): object
 }

@@ -1,17 +1,17 @@
 !include ../interfaces/saga.iuml
 !include ../ducks/Student.iuml
 class StudentSaga{
-  == types ==
+  -- types --
   - GET_SUBSCRIBED_EXAMS_LIST : string
   - GET_OPTIONAL_EXAMS_LIST : string
   - GET_ALL_CREDITS : string
   - SUBSCRIBE_OPTOINAL_EXAM : string
-  == sagas ==
+  -- sagas --
   - getSubscribedExamList() : void
   - getOptionalExamsList() : void
   - getAllCredits() : void
   - subscribeOptionalMessage(string) : void
-  == actions ==
+  -- actions --
   + getSubscribedExamListAction() : object
   + getOptionalExamsListAction() : object
   + getAllCreditsAction() : object

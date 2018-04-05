@@ -1,15 +1,15 @@
 !include ../interfaces/duck.iuml
 class Course{
-  == types ==
+  -- types --
   - PUSH_NEW_COURSE: string
   - SET_DEGREE_LIST : string
   - SET_ACADEMIC_YEARS_LIST : string
   - LIST_LOADING: string
   - LIST_ERRORED: string
-  == selectors ==
+  -- selectors --
   + degreeCourseBySign()
   + degreeCourseByAcademicYear()
-  ==actions==
+  -- actions --
   + pushNewCourse(string): object
   + setDegreeList(array<Object>): object
   + setAllExamsList(array<Object>): object

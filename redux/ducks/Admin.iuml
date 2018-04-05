@@ -1,14 +1,14 @@
 !include ../interfaces/duck.iuml
 
 class Admin{
-  ==types==
+  --types--
   - SET_STUDENTS_LIST: string
   - SET_TEACHERS_LIST: string
   - SET_PENDING_LIST: string
   - LIST_ERRORED: string
   - LIST_LOADING: string
   - SWITCH_USER : string
-  ==actions==
+  --actions--
   + setStudentsList(array<Object>): object
   + setTeachersList(array<Object>): object
   + setPendingList(array<Object>): object

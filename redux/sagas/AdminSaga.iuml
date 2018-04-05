@@ -2,21 +2,21 @@
 !include ../ducks/Admin.iuml
 
 class AdminSaga {
-    ==types==
+    -- types --
     - GET_LISTS: string
     - GET_STUDENT_LIST: string
     - GET_TEACHERS_LIST: string
     - GET_PENDING_USERS_LIST: string
     - APPROVE_USER: string
     - REMOVE_USER: string
-    ==sagas==
+    -- sagas --
     - *getLists(): void
     - *getStudentList(): void
     - *getTeacherList(): void
     - *getPendingUsersList(): void
     - *addUser(action): void
     - *removeUser(action): void
-    ==actions==
+    -- actions --
     + getLists(): object
     + getStudentsListAction(): object
     + getTeachersListActiob(): object

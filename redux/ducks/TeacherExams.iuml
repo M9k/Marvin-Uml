@@ -1,15 +1,15 @@
 !include ../interfaces/duck.iuml
 class TeacherExams{
-  == types ==
+  -- types --
   - SET_EXAMS_LIST: string
   - PUSH_EXAM: string
   - POP_EXAM: string
   - LIST_LOADING: string
   - LIST_ERRORED: string
-  == selectors ==
+  -- selectors --
   + examByCode(int): array<object>
   + examByCourse(int): array<object>
-  == actions ==
+  -- actions --
   + setExamsList(array<object>): object
   + pushExam(object): object
   + popExam(string): object

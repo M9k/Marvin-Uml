@@ -1,15 +1,15 @@
 !include ../interfaces/saga.iuml
 !include ../ducks/AdminEmployer.iuml
 class AdminEmployerSaga{
-  == types ==
+  -- types --
   - ADD_NEW_ADMIN : string
   - REMOVE_ADMIN : string
   - GET_ALL_ADMINS : string
-  == sagas ==
+  -- sagas --
   - *addAdmin(action): void
   - *removeAdmin(action): void
   - *getAllAdmins(): void
-  == actions ==
+  -- actions --
   + addNewAdminAction(string): object
   + removeAdminAction(string): object
   + getAllAdminsAction(): object
