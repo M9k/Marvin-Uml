@@ -1,0 +1,45 @@
+@startuml
+
+box "React" #Pink
+participant Virtual_DOM
+participant TeacherExams
+end box
+
+box "Redux" #Plum
+participant Redux
+end box
+
+box "Web3" #LightGreen
+participant Web3
+end box
+
+[o-> TeacherExams: "Manage Exams"
+note left: A teacher clicks "Manage Exams"\non his home page
+activate TeacherExams
+
+TeacherExams -> Redux: getExams()
+activate Redux
+note right: STATE -> loading = true
+
+TeacherExams -> TeacherExams: render()
+activate TeacherExams
+
+TeacherExams --> Virtual_DOM: update
+note left: Show a loading component
+deactivate TeacherExams
+
+Redux --> TeacherExams: list
+deactivate Redux
+note right: STATE -> loading = false, list
+
+TeacherExams -> TeacherExams: render()
+activate TeacherExams
+
+TeacherExams --> Virtual_DOM: update
+note left: Show the list
+
+
+deactivate TeacherExams
+
+
+@enduml
