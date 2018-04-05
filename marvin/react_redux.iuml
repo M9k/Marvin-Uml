@@ -1,13 +1,17 @@
-LoginPage ..> marvin.SessionSaga: <<use>>
-SubmissionPage ..> marvin.BookingSaga: <<use>>
-AdminCourseExams ..> marvin.ManageExamsSaga: <<use>>
-AdminUsersConfirmed ..> marvin.AdminSaga: <<use>>
-AdminUsersNotConfirmed ..> marvin.AdminSaga: <<use>>
-AdminCourses ..> marvin.CourseSaga: <<use>>
-StudentSummary ..> marvin.StudentSaga: <<use>>
-StudentOptionalExam ..> marvin.StudentSaga: <<use>>
-StudentExams ..> marvin.StudentSaga: <<use>>
-UniversityAdmins ..> marvin.AdminEmployerSaga: <<use>>
-UniversityAcademicYears ..> marvin.ManageYearsSaga: <<use>>
-TeacherExamStudents ..> marvin.EvaluatorSaga: <<use>>
-TeacherExams ..> marvin.TeacherExamsSaga: <<use>>
+react.LoginPage ..> redux.SessionSaga
+react.SubmissionPage ..> redux.BookingSaga
+
+react.AdminCourseExams ..> redux.ManageExamsSaga
+react.AdminUsersConfirmed ..> redux.AdminSaga
+react.AdminUsersNotConfirmed ..> redux.AdminSaga
+react.AdminCourses ..> redux.CourseSaga
+
+react.StudentSummary ..> redux.StudentSaga
+react.StudentOptionalExam ..> redux.StudentSaga
+react.StudentExams ..> redux.StudentSaga
+
+react.UniversityAdmins ..> redux.AdminEmployerSaga
+react.UniversityAcademicYears ..> redux.ManageYearsSaga
+
+react.TeacherExamStudents ..> redux.EvaluatorSaga
+react.TeacherExams ..> redux.TeacherExamsSaga

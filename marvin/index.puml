@@ -1,6 +1,10 @@
 @startuml
 skinparam linetype ortho
 skinparam classAttributeIconSize 0
+skinparam ranksep 200
+legend right
+  Every dependency relationship has the <<use>> tag
+end legend
 !include react_redux.iuml
 !include redux_web3.iuml
 @enduml

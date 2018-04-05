@@ -1,60 +1,60 @@
-marvin.SessionSaga ..> web3.Session: <<use>>
+redux.SessionSaga ..> web3.Session
 'getData, getRole'
 
 
-marvin.BookingSaga ..> web3.Session: <<use>>
+redux.BookingSaga ..> web3.Session
 'create'
 ''''''''''''''''''
-marvin.BookingSaga ..> web3.Year: <<use>>
+redux.BookingSaga ..> web3.Year
 'getAcademicYearContractByYear
-marvin.BookingSaga ..> web3.UniversityYear: <<use>>
+redux.BookingSaga ..> web3.UniversityYear
 'getCourseNumber, getCourseContractAt
-marvin.BookingSaga ..> web3.Course: <<use>>
+redux.BookingSaga ..> web3.Course
 'getName
 
-marvin.AdminEmployerSaga ..> web3.UniversityAdmin: <<use>>
+redux.AdminEmployerSaga ..> web3.UniversityAdmin
 'getAdminNumber, getAdminAt, addAdmin, removeAdmin'
 
-marvin.AdminSaga ..> web3.UniversityStudent: <<use>>
+redux.AdminSaga ..> web3.UniversityStudent
 'getStudent*, getNonApprovedStudent*'
-marvin.AdminSaga ..> web3.UniversityTeacher: <<use>>
+redux.AdminSaga ..> web3.UniversityTeacher
 'getTeacher*, getNonApprovedTeacher*'
-marvin.AdminSaga ..> web3.User: <<use>>
+redux.AdminSaga ..> web3.User
 
-marvin.ManageYearsSaga ..> web3.UniversityYear: <<use>>
+redux.ManageYearsSaga ..> web3.UniversityYear
 'getAcademicYerNumber, getAcademicYearContractAt,''
 ''''''''''''''''''''addAdmin, removeAdmin
-marvin.ManageYearsSaga ..> web3.Year: <<use>>
+redux.ManageYearsSaga ..> web3.Year
 'getSolarYear'
 
-marvin.EvaluatorSaga ..> web3.Exam: <<use>>
+redux.EvaluatorSaga ..> web3.Exam
 'getEnrolled*'
-marvin.EvaluatorSaga ..> web3.User: <<use>>
+redux.EvaluatorSaga ..> web3.User
 'getName, getSurname'
 '''''''''''''
-marvin.EvaluatorSaga ..> web3.Teacher: <<use>>
+redux.EvaluatorSaga ..> web3.Teacher
 'registerNewVoteStudentExam'
 
-marvin.TeacherExamsSaga ..> web3.Teacher: <<use>>
+redux.TeacherExamsSaga ..> web3.Teacher
 'getExam*'
-marvin.TeacherExamsSaga ..> web3.Exam: <<use>>
+redux.TeacherExamsSaga ..> web3.Exam
 'getName, getCourse'
-marvin.TeacherExamsSaga ..> web3.Course: <<use>>
+redux.TeacherExamsSaga ..> web3.Course
 'getName'
 
-marvin.CourseSaga ..>web3.Year: <<use>>
+redux.CourseSaga ..>web3.Year
 'addNewCourse, getSolarYear'
-marvin.CourseSaga ..>web3.Course: <<use>>
+redux.CourseSaga ..>web3.Course
 'getName, getSolarYear'
 
-marvin.ManageExamsSaga ..>web3.Course: <<use>>
+redux.ManageExamsSaga ..>web3.Course
 'addNewExam, getName, getExamContractAt'
-marvin.ManageExamsSaga ..>web3.Exam: <<use>>
+redux.ManageExamsSaga ..>web3.Exam
 'getName, getCredits, getTeacherContract'
-marvin.ManageExamsSaga ..>web3.Teacher: <<use>>
+redux.ManageExamsSaga ..>web3.Teacher
 'getName, getSurname, getAddress'
-marvin.ManageExamsSaga ..>web3.UniversityExam: <<use>>
+redux.ManageExamsSaga ..>web3.UniversityExam
 'associateTeacherToExam'
 
-marvin.ManageYearsSaga ..>web3.UniversityYear: <<use>>
+redux.ManageYearsSaga ..>web3.UniversityYear
 'addNewYear, removeAcademicYear, getAcademicYear*'
