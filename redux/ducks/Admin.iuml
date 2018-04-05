@@ -5,29 +5,25 @@ class Admin{
   - SET_STUDENTS_LIST: string
   - SET_TEACHERS_LIST: string
   - SET_PENDING_LIST: string
+  - LIST_ERRORED: string
+  - LIST_LOADING: string
+  - SWITCH_USER : string
   ==actions==
   + setStudentsList(array<Object>): object
   + setTeachersList(array<Object>): object
   + setPendingList(array<Object>): object
+  + switchUser(string) : string
+  + listIsLoading(): object
+  + listHasErrored(): object
 }
 
 note right of Admin
 initialState: {
-  StudentsList:{
     errored: false,
     loading: false,
-    list: array<{name, surname, address}> = []
-  }
-  TeachersList:{
-    errored: false,
-    loading: false,
-    list: array<name, surname, address> = []
-  }
-  PendingList:{
-    errored: false,
-    loading: false,
-    list: array<name, surname, address, role> = []
-  }
+    studentList: array<{name, surname, address}> = []
+    teachersList:{array<{name, surname, address}> = []
+    pendingList:{array<{name, surname, address, role}> = []
 }
 end note
 Admin --|>marvin.Duck

@@ -5,14 +5,20 @@ class ManageExamsSaga{
   - ADD_NEW_EXAM : string
   - GET_ALL_EXAMS : string
   - GET_EXAMS_BY_COURSE : string
+  - GET_PROFESSOR_TO_ASSOCIATE : string
+  - ASSOCIATE_PROFESSOR : string
   == sagas ==
   - *addNewExam(string, string, uint, bool) : void
   - *getAllExams() : void
   - *getExamsByCourse(string) : void
+  - *getProfessorToAssociate(string) : void
+  - *associateProfessor(string, string) : void
   == actions ==
   + addNewExamAction(string, string, uint, bool) : object
   + getAllExamsAction() : object
-  + getExamsByCourse(string) : object
+  + getExamsByCourseAction(string) : object
+  + getProfessorToAssociate() : object
+  + associateProfessorAction(string, string) : void
 }
 ManageExamsSaga --|> marvin.Saga
 ManageExamsSaga ..> marvin.ManageExams : <<use>>

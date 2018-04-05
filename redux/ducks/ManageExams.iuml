@@ -4,10 +4,12 @@ class ManageExams{
   - PUSH_NEW_EXAM : string
   - SET_ALL_EXAMS_LIST : string
   - SET_EXAMS_LIST_BY_COURSE : string
+  - SET_PROFESSOR_LIST : string
   == actions ==
   + pushNewExam(sting) : object
   + setAllExamsList(array<Object>) : object
   + setExamsListByCourse(array<Object>) : object
+  + setProfessorList(array<Object>) : object
   + listIsLoading(): object
   + listHasErrored(): object
 }
@@ -16,8 +18,9 @@ note right of ManageExams
 initialState = {
   loading: false,
   errored: false,
-  allExamsList: array<{name, credits, sign, professorName, professorSurname}> = [],
-  examsListByCourse: array<{name, credits, sign, professorName, professorSurname}> = []
+  allExamsList: array<{name, credits, courseName, professorName, professorSurname}> = [],
+  examsListByCourse: array<{name, credits, professorName, professorSurname}> = [],
+  professorList: array<{name, surname, address} = []
 }
 end note
 
