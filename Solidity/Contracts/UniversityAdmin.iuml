@@ -1,6 +1,6 @@
 @startuml
 
-class UniversityAdmin #AquaMarine {
+class UniversityAdmin #99FFF3 {
 - adminList: address [0...*]
 __modifiers__
 validAdminAddress( _address:address)

@@ -1,6 +1,6 @@
 @startuml
 
-class UniversityExam #AquaMarine {
+class UniversityExam #99FFF3 {
 __modifiers__
 __
 + associateTeacherToExam (_teacher: Teacher, _exam: Exam) {onlyAdmin}

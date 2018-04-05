@@ -1,11 +1,13 @@
 @startuml
+hide circle
+
 skinparam classAttributeIconSize 0
     !include Contracts/Course.iuml
     !include Contracts/Exam.iuml
     !include Contracts/User.iuml
     !include Contracts/Student.iuml
     !include Contracts/Teacher.iuml
-package "UniversityHierarchy" #DDDDDD {
+package "UniversityHierarchy" #F2FFFD {
     !include Contracts/University.iuml
     !include Contracts/UniversityExam.iuml
     !include Contracts/UniversityStudent.iuml

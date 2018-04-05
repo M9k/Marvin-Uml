@@ -1,6 +1,6 @@
 @startuml
 
-class UniversityYear #AquaMarine {
+class UniversityYear #99FFF3 {
 __modifiers__
 yearNotFound(_year: uint16)
 yearFound(_year: uint16)

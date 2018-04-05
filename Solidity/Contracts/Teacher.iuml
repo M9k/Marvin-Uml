@@ -1,6 +1,6 @@
 @startuml
 
-class Teacher #LightGreen {
+class Teacher #87FF95 {
 - examList: Exam [0...*]
 __modifiers__
 onlyUniversity

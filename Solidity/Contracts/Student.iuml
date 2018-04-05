@@ -1,6 +1,6 @@
 @startuml
 
-class Student #LightGreen {
+class Student #87FF95 {
 - course: Course
 - examList: Exam [0...*]
 __modifiers__

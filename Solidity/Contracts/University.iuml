@@ -1,6 +1,6 @@
 @startuml
 
-class University #AquaMarine {
+class University #99FFF3 {
 #universityAddress: address
 __modifiers__
 onlyFounder

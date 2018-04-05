@@ -1,6 +1,6 @@
 @startuml
 
-class User #LightGreen {
+class User #87FF95 {
 # publicAddress: address
 # name: bytes32
 # surname: bytes32

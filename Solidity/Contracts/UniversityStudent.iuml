@@ -1,6 +1,6 @@
 @startuml
 
-class UniversityStudent #AquaMarine {
+class UniversityStudent #99FFF3 {
 __modifiers__
 isValidContractUnconfirmedStudent(_student: Student)
 isValidContractStudent(_student: Student)
