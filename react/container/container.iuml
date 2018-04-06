@@ -11,6 +11,7 @@ note right of reactRedux.Connect
   to the redux store
 end note
 
+
 StudentOptionalExams --|> Container
 StudentSummary --|> Container
 StudentExams --|> Container

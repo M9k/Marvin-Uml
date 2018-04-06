@@ -28,7 +28,7 @@ left to right direction
     !include teacher/index.iuml
     !include student/index.iuml
 
-    !include routes/index.iuml
+    !include routes/indexPac.iuml
 
 /' Containers  '/
     !include container/container.iuml
