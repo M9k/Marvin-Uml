@@ -56,5 +56,5 @@ redux.ManageExamsSaga ..>web3.Teacher
 redux.ManageExamsSaga ..>web3.UniversityExam
 'associateTeacherToExam'
 
-redux.ManageYearsSaga ..>web3.UniversityYear
-'addNewYear, removeAcademicYear, getAcademicYear*'
+redux.StudentSaga ..>web3.Student
+'getExam*, EnrollToOptionalExam'
