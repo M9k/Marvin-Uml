@@ -1,0 +1,22 @@
+!include ../interfaces/duck.iuml
+
+class Metamask{
+  --types--
+  - METAMASK_LOGIN: string
+  - METAMASK_LOGOUT: string
+  - METAMASK_ADDRESS: string
+  - METAMASK_NOT_FOUND: string
+  --actions--
+  + login(): object
+  + logout(): object
+  + setAddress(string): object
+  + metamaskNotFound(): object
+}
+Metamask --|> marvin.Duck
+note bottom of Metamask
+initialState = {
+  present: true,
+  logged: false,
+  account: ''
+}
+end note

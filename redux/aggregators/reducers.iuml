@@ -9,6 +9,7 @@ note right of Reducers
   courses: Course,
   currentUser: Session
   exams: ManageExams,
+  metamask: Metamask,
   selectedExam: Evaluator,
   signup: Booking,
   studentData: Student,

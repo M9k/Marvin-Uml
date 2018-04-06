@@ -19,7 +19,6 @@ initialState: {
   errored: false,
   loading: false,
   role: string = null,
-  account: string = null,
   data: {
     errored: false,
     loading: false,
