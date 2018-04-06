@@ -3,9 +3,9 @@ namespace aggregators <<istantiate the custom classes to fill in the redux store
   !include aggregators/sagas.iuml
   !include aggregators/reducers.iuml
 
-  redux.SagaMiddleware  ..> Sagas : <<create>>
+  redux.SagaMiddleware  *-- "1..1" Sagas
     Sagas *-- "1..*" marvin.Saga
 
-  redux.Store ..> Reducers : <<create>>
+  redux.Store *-- "1..1" Reducers
   Reducers *-- "1..*" marvin.Duck
 }

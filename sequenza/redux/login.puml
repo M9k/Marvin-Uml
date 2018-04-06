@@ -8,6 +8,8 @@ participant redux.SessionSaga
 participant web3.Session
 participant redux.Session
 
+User ->> react.LoginPage: click login button
+activate User
 activate react.LoginPage
 react.LoginPage ->> redux.Store: dispatch(loginAction())
 activate redux.Store
@@ -34,4 +36,5 @@ activate redux.Session
 redux.Session --> redux.Store: object
 deactivate redux.Session
 redux.Store ->> react.LoginPage: update()
+User -> react.LoginPage: watch changes
 @enduml

@@ -1,12 +1,8 @@
 interface Duck{
-  - initialState: object
-  --
+  + initialState(): object
   + reducer(object, object): object
   -- purpouse --
   classes inherited by this interface
   are responsible to manage the redux
   state by reacting to predefined actions
 }
-note bottom of Duck
- Strategy Pattern
-end note
