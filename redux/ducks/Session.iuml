@@ -7,6 +7,8 @@ class Session{
   - CLEAN_DATA: string
   - ROLE_LOADING: string
   - DATA_LOADING: string
+  --selectors--
+  + isLogged(object): bool
   -- actions --
   + setRole(int, bool=false): object
   + setData(object, bool=false): object

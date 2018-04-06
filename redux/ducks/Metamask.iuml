@@ -10,7 +10,7 @@ class Metamask{
   + login(): object
   + logout(): object
   + setAddress(string): object
-  + metamaskNotFound(): object
+  + notFound(): object
 }
 Metamask --|> marvin.Duck
 note bottom of Metamask
