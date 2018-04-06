@@ -7,4 +7,6 @@ class ProgressBar{
          srOnly : boolean
          striped : boolean
          active : boolean
+    --render--
+        render a progress bar
 }

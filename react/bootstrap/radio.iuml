@@ -5,6 +5,8 @@ class Radio{
        title : string
        validationState : StateEnum
        inputRef : function
+  --render--
+        radio button
 }
 Radio --> StateEnum
 /'Radio button'/

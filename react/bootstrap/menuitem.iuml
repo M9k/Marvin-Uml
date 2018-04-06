@@ -2,4 +2,6 @@ class MenuItem {
     --props--
          active : boolean
          disabled : boolean
+    --render--
+        item for the dropdown button
 }

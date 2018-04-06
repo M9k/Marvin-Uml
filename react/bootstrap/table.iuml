@@ -3,4 +3,6 @@ class Table{
          striped : boolean
          bordered : boolean
          hover : boolean
+    --render--
+        render a table
 }

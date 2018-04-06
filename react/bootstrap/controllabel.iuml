@@ -1,4 +1,6 @@
 class ControlLabel{
     --props--
          children : string
+    --render--
+        label for validation
 }

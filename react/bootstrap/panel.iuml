@@ -3,5 +3,9 @@ class Panel{
        active : boolean
        disabled : boolean
        onClick : function
+  --render--
+    apply a basic border
+    and padding to contain
+    some content
 }
 /'Questa è una prova 3'/

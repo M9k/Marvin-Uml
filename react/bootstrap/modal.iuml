@@ -2,4 +2,6 @@ class Modal {
     --props--
         show : boolean
         onHide : function
+    --render--
+        render a modal dialog
 }

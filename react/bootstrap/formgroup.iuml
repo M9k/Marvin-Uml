@@ -2,6 +2,11 @@ class FormGroup{
     --props--
          controlId :string
          validationState : StateEnum
+    --render--
+        render a form control with
+        proper spacing, along with
+        support for a label, help
+        text, and validation state
 }
 
 FormGroup --> StateEnum

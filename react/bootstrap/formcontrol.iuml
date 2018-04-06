@@ -2,4 +2,7 @@ class FormControl{
     --props--
          type : string
          inputRef : function
+    --render--
+        render a a form control
+        with Bootstrap styling
 }
