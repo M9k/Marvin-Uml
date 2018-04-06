@@ -10,4 +10,5 @@ class PageContainer {
 PageContainer ..> Panel
 PageContainer ..> Footer
 PageContainer ..> Navbar
+Page ..> PageContainer
 

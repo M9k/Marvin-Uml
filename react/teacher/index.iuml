@@ -16,7 +16,6 @@ class TeacherExams {
     list of the selected exam
 }
 TeacherExams ..> PageTableForm
-TeacherExams ..> MessageBox
 
 class TeacherExamStudents {
     --props--
@@ -27,7 +26,6 @@ class TeacherExamStudents {
     of the seleted exam
 }
 TeacherExamStudents ..> PageTableForm
-TeacherExamStudents ..> MessageBox
 
 }
 

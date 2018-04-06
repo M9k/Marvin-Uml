@@ -19,6 +19,7 @@ left to right direction
     !include custom/index.iuml
 
 /'Page templates or public one '/
+    !include pageTemplates/index.iuml
     !include public/index.iuml
 
 /' User pages different section for each one '/

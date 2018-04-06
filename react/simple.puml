@@ -1,0 +1,42 @@
+@startuml
+
+hide circle
+
+skinparam classAttributeIconSize 0
+
+skinparam linetype ortho
+
+skinparam hide circle
+
+left to right direction
+
+
+package Bootstrap-React as BR{}
+
+package Custom-Components as CC{}
+
+CC ..> BR
+
+package PageTemplates as PT{}
+
+PT ..> CC
+
+package UniversityPages as UP{}
+package AdminPages as AP{}
+package TeacherPages as TP{}
+package StudentPages as SP{}
+
+UP ..> PT
+AP ..> PT
+TP ..> PT
+SP ..> PT
+
+
+package Routes as RT{}
+
+RT ..> UP
+RT ..> AP
+RT ..> TP
+RT ..> SP
+
+@enduml

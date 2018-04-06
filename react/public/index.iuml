@@ -18,7 +18,6 @@ package PublicPages #D6C544 {
     --render--
     show loging process
   }
-	LoginPage ..> MessageBox
 
   class LogoutPage {
     --render--
@@ -43,7 +42,6 @@ package PublicPages #D6C544 {
     show a form with name,surname
     and two selectbox to choose type of user
   }
-	SubmissionPage ..> MessageBox
 }
 
 note left of PublicPages: UC1 & UC3 & UC11

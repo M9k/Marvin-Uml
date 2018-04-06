@@ -3,7 +3,7 @@ Custom components
 created by 353 group
 '/
 
-package custom-components as CustomComponents {
+package Custom-Components as CustomComponents {
 
 !include navbar.iuml
 
@@ -19,13 +19,7 @@ package custom-components as CustomComponents {
 
 !include messageBox.iuml
 
-!include pageTableForm.iuml
-
-!include pageContainer.iuml
-
 }
-
-Page ..> PageContainer
 
 note bottom of CustomComponents: components created by us
 
