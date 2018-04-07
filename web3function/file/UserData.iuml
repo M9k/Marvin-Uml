@@ -1,6 +1,8 @@
 @startuml
 !include UniversityStudent.iuml
 !include UniversityTeacher.iuml
+!include University.iuml
+!include User.iuml
 class Session{
   - getStudentData(): object
   - getTeacherData(): object
@@ -8,6 +10,7 @@ class Session{
   + getData(number): object
   + create(string, string, address): bool
 }
+Session ..> User: <<use>>
 Session ..> UniversityStudent: <<use>>
 Session ..> UniversityTeacher: <<use>>
 Session ..> University: <<use>>
@@ -22,3 +25,4 @@ note right of Session
   logic behind the contract selection (UniversityTeacher/UniversityStudent)
   is written in this facade
 end note
+@enduml
