@@ -1,0 +1,45 @@
+@startuml
+
+box "React" #Pink
+participant Virtual_DOM
+participant UniversityAdmins
+end box
+
+box "Redux" #Plum
+participant Redux
+end box
+
+box "Web3" #LightGreen
+participant Web3
+end box
+
+[o-> UniversityAdmins: "Add Admin"
+note left: A university user clicks "Add Admin"\non "Manage admins" page
+activate UniversityAdmins
+
+UniversityAdmins -> Redux: addAdmin()
+activate Redux
+
+Redux --> UniversityAdmins: errored
+deactivate Redux
+
+alt errored = true
+    UniversityAdmins -> UniversityAdmins: render()
+    activate UniversityAdmins
+
+    UniversityAdmins --> Virtual_DOM: update
+    note left: show a error message
+    deactivate UniversityAdmins
+
+else errored = false
+    UniversityAdmins -> UniversityAdmins: render()
+    activate UniversityAdmins
+
+    UniversityAdmins --> Virtual_DOM: update
+    note left: show a confirm message
+    deactivate UniversityAdmins
+end
+
+deactivate UniversityAdmins
+
+@enduml
