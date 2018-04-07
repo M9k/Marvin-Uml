@@ -2,16 +2,16 @@
 title "Redux Login Sequence Diagram"
 
 actor User
-participant react.LoginPage
+participant reactLayer
+participant redux.Session
 participant redux.Store
 participant redux.SessionSaga
 participant web3.Session
-participant redux.Session
 
-User ->> react.LoginPage: click login button
+User ->> reactLayer: click login button
 activate User
-activate react.LoginPage
-react.LoginPage ->> redux.Store: dispatch(loginAction())
+activate reactLayer
+reactLayer ->> redux.Store: dispatch(loginAction())
 activate redux.Store
 redux.Store ->> redux.SessionSaga: handler(loginAction())
 activate redux.SessionSaga
@@ -24,7 +24,8 @@ redux.Store -> redux.Session: reducer(state, setRole(number))
 activate redux.Session
 redux.Session --> redux.Store: object
 deactivate redux.Session
-redux.Store ->> react.LoginPage: update()
+redux.Store ->> reactLayer: update()
+User -> reactLayer: watch changes
 redux.SessionSaga -> web3.Session: retrieveData(number)
 activate web3.Session
 web3.Session --> redux.SessionSaga: object
@@ -35,6 +36,6 @@ redux.Store -> redux.Session: reducer(state, setData(object))
 activate redux.Session
 redux.Session --> redux.Store: object
 deactivate redux.Session
-redux.Store ->> react.LoginPage: update()
-User -> react.LoginPage: watch changes
+redux.Store ->> reactLayer: update()
+User -> reactLayer: watch changes
 @enduml
