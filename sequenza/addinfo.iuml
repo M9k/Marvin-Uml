@@ -6,22 +6,47 @@ participant UniversityAdmins
 end box
 
 box "Redux" #Plum
-participant Redux
+participant Store
+participant AdminEmployer
+participant AdminEmployerSaga
 end box
 
 box "Web3" #LightGreen
-participant Web3
+participant UniversityAdmin
 end box
 
 [o-> UniversityAdmins: "Add Admin"
 note left: A university user clicks "Add Admin"\non "Manage admins" page
 activate UniversityAdmins
 
-UniversityAdmins -> Redux: addAdmin()
-activate Redux
+UniversityAdmins -> AdminEmployerSaga: addAdmin()
+activate AdminEmployerSaga
 
-Redux --> UniversityAdmins: errored
-deactivate Redux
+AdminEmployerSaga -> UniversityAdmin: addNewAdmin()
+activate UniversityAdmin
+
+
+alt  web3 writes on the blockchain
+    AdminEmployerSaga -> AdminEmployer: pushAdmin(string)
+    activate AdminEmployer
+
+    AdminEmployer --> Store: reducer
+    activate Store
+    deactivate Store
+
+
+else  web3 doesn't writes on the blockchain
+    UniversityAdmin --> AdminEmployerSaga: errored()
+    deactivate UniversityAdmin
+
+    AdminEmployerSaga --> AdminEmployer: errored()
+    deactivate AdminEmployer
+
+end
+
+deactivate AdminEmployerSaga
+
+
 
 alt errored = true
     UniversityAdmins -> UniversityAdmins: render()
