@@ -1,0 +1,76 @@
+@startuml
+
+box "React" #Pink
+participant Virtual_DOM
+participant UniversityAdmins
+end box
+
+box "Redux" #Plum
+participant AdminEmployer
+participant Store
+participant AdminEmployerSaga
+end box
+
+box "Web3" #LightGreen
+participant UniversityAdmin
+end box
+
+[o-> UniversityAdmins: "Add Admin"
+note left: A university user clicks "Add Admin"\non "Manage admins" page
+activate UniversityAdmins
+activate Store
+
+UniversityAdmins ->> Store: dispatch(addNewAdminAction(string))
+Store ->>AdminEmployerSaga: handler(addnewAdminAction(string))
+activate AdminEmployerSaga
+
+AdminEmployerSaga ->> Store: dispatch(listIsLoading())
+Store -> AdminEmployer: reducer(state, listIsLoading())
+activate AdminEmployer
+AdminEmployer --> Store: object
+deactivate AdminEmployer
+Store ->> UniversityAdmins: update()
+UniversityAdmins -> UniversityAdmins: render()
+UniversityAdmins --> Virtual_DOM: update
+note left: show a loading component
+
+AdminEmployerSaga -> UniversityAdmin: addNewAdmin(string)
+activate UniversityAdmin
+
+alt  web3 writes on the blockchain
+    AdminEmployerSaga ->> Store: dispatch(pushAdmin())
+    Store -> AdminEmployer: reducer(state, pushAdmin(string))
+    activate AdminEmployer
+    AdminEmployer --> Store: object
+    deactivate AdminEmployer
+
+
+else  web3 doesn't writes on the blockchain
+    UniversityAdmin --> AdminEmployerSaga: throw Exception
+    deactivate UniversityAdmin
+    AdminEmployerSaga ->> Store: dispatch(listHasErrored())
+    deactivate AdminEmployerSaga
+    Store -> AdminEmployer: reducer(state, listHasErrored())
+    activate AdminEmployer
+    AdminEmployer --> Store: object
+    deactivate AdminEmployer
+end
+
+Store ->> UniversityAdmins: update()
+
+alt errored = true
+    UniversityAdmins -> UniversityAdmins: render()
+
+    UniversityAdmins --> Virtual_DOM: update
+    note left: show a error message
+
+else errored = false
+    UniversityAdmins -> UniversityAdmins: render()
+
+    UniversityAdmins --> Virtual_DOM: update
+    note left: show a confirm message
+end
+
+deactivate UniversityAdmins
+
+@enduml
