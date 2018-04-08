@@ -48,7 +48,7 @@ alt all exams fetched without errors
     deactivate TeacherExam
 
 else at least one exam fetched with errors
-    TeacherExamsSaga ->> Store : dispatch(listHasErrored)
+    TeacherExamsSaga ->> Store : dispatch(listHasErrored())
     Store -> TeacherExam : reducer(state, ListHasErrored())
     activate TeacherExam
     TeacherExam --> Store: object
@@ -59,7 +59,7 @@ deactivate TeacherExamsSaga
 Store ->> TeacherExams: update()
 TeacherExams -> TeacherExams: render()
 TeacherExams --> Virtual_DOM: update
-note left: Show the list
+note left: Show the list or the error message
 
 
 deactivate TeacherExams
