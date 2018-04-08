@@ -6,20 +6,46 @@ participant TeacherExams
 end box
 
 box "Redux" #Plum
-participant Redux
+participant Store
+participant TeacherExam
+participant TeacherExamsSaga
 end box
 
 box "Web3" #LightGreen
-participant Web3
+participant Teacher
 end box
 
 [o-> TeacherExams: "Manage Exams"
 note left: A teacher clicks "Manage Exams"\non his home page
 activate TeacherExams
 
-TeacherExams -> Redux: getExams()
-activate Redux
+TeacherExams -> TeacherExamsSaga: getExams()
+activate TeacherExamsSaga
 note right: STATE -> loading = true
+
+loop for each exam held by the teacher
+TeacherExamsSaga -> Teacher: getListAction()
+activate Teacher
+    alt exam fetched
+        Teacher -> TeacherExamsSaga: object
+        TeacherExamsSaga -> TeacherExam : setExamsList()
+        activate TeacherExam
+        TeacherExam --> Store: reducer
+        deactivate TeacherExam
+
+        activate Store
+        deactivate Store
+    else exam not fetched
+        Teacher -> TeacherExamsSaga: errored()
+        TeacherExamsSaga -> TeacherExam : ListHasErrored()
+        activate TeacherExam
+        deactivate TeacherExam
+        note right: STATE -> loading = false
+
+    end
+    deactivate Teacher
+    deactivate TeacherExamsSaga
+end
 
 TeacherExams -> TeacherExams: render()
 activate TeacherExams
@@ -27,10 +53,6 @@ activate TeacherExams
 TeacherExams --> Virtual_DOM: update
 note left: Show a loading component
 deactivate TeacherExams
-
-Redux --> TeacherExams: list
-deactivate Redux
-note right: STATE -> loading = false, list
 
 TeacherExams -> TeacherExams: render()
 activate TeacherExams
