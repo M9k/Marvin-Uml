@@ -6,8 +6,8 @@ participant TeacherExams
 end box
 
 box "Redux" #Plum
-participant Store
 participant TeacherExam
+participant Store
 participant TeacherExamsSaga
 end box
 
@@ -18,45 +18,46 @@ end box
 [o-> TeacherExams: "Manage Exams"
 note left: A teacher clicks "Manage Exams"\non his home page
 activate TeacherExams
+activate Store
 
-TeacherExams -> TeacherExamsSaga: getExams()
+TeacherExams ->> Store: dispatch(getListAction())
+Store ->> TeacherExamsSaga: handler(getListAction())
 activate TeacherExamsSaga
-note right: STATE -> loading = true
-
-loop for each exam held by the teacher
-TeacherExamsSaga -> Teacher: getListAction()
-activate Teacher
-    alt exam fetched
-        Teacher -> TeacherExamsSaga: object
-        TeacherExamsSaga -> TeacherExam : setExamsList()
-        activate TeacherExam
-        TeacherExam --> Store: reducer
-        deactivate TeacherExam
-
-        activate Store
-        deactivate Store
-    else exam not fetched
-        Teacher -> TeacherExamsSaga: errored()
-        TeacherExamsSaga -> TeacherExam : ListHasErrored()
-        activate TeacherExam
-        deactivate TeacherExam
-        note right: STATE -> loading = false
-
-    end
-    deactivate Teacher
-    deactivate TeacherExamsSaga
-end
-
+TeacherExamsSaga ->> Store: dispatch(listIsLoading())
+Store -> TeacherExam: reducer(state, listIsLoading())
+activate TeacherExam
+TeacherExam --> Store: object
+deactivate TeacherExam
+Store ->> TeacherExams: update()
 TeacherExams -> TeacherExams: render()
-activate TeacherExams
-
 TeacherExams --> Virtual_DOM: update
 note left: Show a loading component
-deactivate TeacherExams
+TeacherExamsSaga -> Teacher: getExamNumber(address)
+activate Teacher
+Teacher --> TeacherExamsSaga: number
+loop for each exam held by the teacher
+  TeacherExamsSaga ->> Teacher: getExamContractAt(address, i)
+  Teacher --> TeacherExamsSaga: object
+end
+deactivate Teacher
+alt all exams fetched without errors
+    TeacherExamsSaga ->> Store: dispatch(setExamsList(object))
+    Store -> TeacherExam : reducer(state, setExamsList())
+    activate TeacherExam
+    TeacherExam --> Store: object
+    deactivate TeacherExam
 
+else at least one exam fetched with errors
+    TeacherExamsSaga ->> Store : dispatch(listHasErrored)
+    Store -> TeacherExam : reducer(state, ListHasErrored())
+    activate TeacherExam
+    TeacherExam --> Store: object
+    deactivate TeacherExam
+
+end
+deactivate TeacherExamsSaga
+Store ->> TeacherExams: update()
 TeacherExams -> TeacherExams: render()
-activate TeacherExams
-
 TeacherExams --> Virtual_DOM: update
 note left: Show the list
 
