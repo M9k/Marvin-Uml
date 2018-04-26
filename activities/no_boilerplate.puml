@@ -1,0 +1,14 @@
+@startuml
+start
+:type "npm run scaffold" on the CLI;
+if(do you need the sagas?) then (yes)
+  :type "saga";
+else (no)
+  :type "duck";
+endif
+:type the the name of your feature;
+:press enter;
+:write relevant code;
+:run the tests;
+stop
+@enduml

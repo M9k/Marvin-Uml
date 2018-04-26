@@ -33,7 +33,11 @@ initialState = {
   address: string = null //exam contract
   code: string = null,
   course: string = null,
-  studentList: array<{name, surname, address, vote}> = []
+  studentList: {
+    loading: false,
+    errored: false,
+    list: array<{name, surname, address, vote}> = []
+  }
 }
 end note
 Evaluator --|> marvin.Duck

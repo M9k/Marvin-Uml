@@ -1,0 +1,22 @@
+@startuml
+start
+:create duck file under ducks folder;
+:write the exentsible-duck skeleton;
+:fill the file with relevant code;
+:create duck unit test file under test/ducks folder;
+:import the standard required library for testing;
+:update reducers aggregators with the new duck;
+if (do you need the sagas?) then (yes)
+  :create saga file under sagas folder;
+  :write the skeleton of the file;
+  :fill the file with relevant code;
+  :create saga unit test file under test/sagas folder;
+  :import the standard required library for testing;
+  :update sagas aggreagator with the new saga;
+  :create saga/duck integration test under the test/integration/redux folder;
+  :import the standard require library for integration test;
+else (no)
+endif
+:run the tests;
+stop
+@enduml
