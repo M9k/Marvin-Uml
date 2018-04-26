@@ -5,6 +5,7 @@ class EvaluatorSaga{
   - GET_LIST: string
   - ASSIGN_VOTE: string
   -- sagas --
+  - *getStudentData(int = indexInExam)
   - *getList(string): void
   - *assignVote(int, int, int): void
   -- actions --
