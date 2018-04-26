@@ -6,10 +6,10 @@ class EvaluatorSaga{
   - ASSIGN_VOTE: string
   -- sagas --
   - *getList(string): void
-  - *assignVote(string, int): void
+  - *assignVote(int, int, int): void
   -- actions --
-  + getListAction(string): object
-  + assignVoteAction(string, int): object
+  + getListAction(examAddress = string): object
+  + assignVoteAction(examTeacherIndex = int, studentIndexInExams = int, vote = int): object
 }
 EvaluatorSaga --|> marvin.Saga
 EvaluatorSaga ..> marvin.Evaluator: <<use>>

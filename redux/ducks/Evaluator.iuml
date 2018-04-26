@@ -31,12 +31,13 @@ initialState = {
   loading: false,
   errored: false,
   address: string = null //exam contract
+  index: string = null //index of the exam in the list
   code: string = null,
   course: string = null,
   studentList: {
     loading: false,
     errored: false,
-    list: array<{name, surname, address, vote}> = []
+    list: array<{name, surname, studentAddress, studentIndex, vote}> = []
   }
 }
 end note
