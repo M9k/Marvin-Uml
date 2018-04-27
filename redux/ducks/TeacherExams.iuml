@@ -6,6 +6,7 @@ class TeacherExams{
   - POP_EXAM: string
   - LIST_LOADING: string
   - LIST_ERRORED: string
+  - LIST_FINISHED: string
   -- selectors --
   + examByCode(int): array<object>
   + examByCourse(int): array<object>
@@ -15,12 +16,13 @@ class TeacherExams{
   + popExam(string): object
   + listIsLoading(): object
   + listHasErrored(): object
+  + listHasFinished(): object
 }
 note right of TeacherExams
 initialState = {
   loading: false,
   errored: false,
-  list: array<{code, courseName, address}>
+  list: array<{code, courseName, address, index}>
 }
 end note
 TeacherExams --|> marvin.Duck
