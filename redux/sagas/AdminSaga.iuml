@@ -20,8 +20,8 @@ class AdminSaga {
     + getStudentsListAction(): object
     + getTeachersListActiob(): object
     + getPendingUsersListAction(): object
-    + approveStudentAction(address = string): object
-    + removeStudentAction(address = string): object
+    + approveUserAction(address = string): object
+    + removeUserAction(address = string): object
     + approveTeacherAction(address = string): object
     + removeTeacherAction(address = string): object
 }
