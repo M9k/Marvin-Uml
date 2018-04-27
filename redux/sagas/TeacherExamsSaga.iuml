@@ -6,7 +6,7 @@ class TeacherExamsSaga{
   -- sagas --
   - *getList(): void
   -- actions --
-  + getListAction(): object
+  + getListAction(userAddress = string): object
 }
 TeacherExamsSaga --|> marvin.Saga
 TeacherExamsSaga ..> marvin.TeacherExams: <<use>>

@@ -10,6 +10,7 @@ class Evaluator{
   - VOTE_ERRORED: string
   - LIST_LOADING: string
   - LIST_ERRORED: string
+  - SET_EXAM: string
   -- selectors --
   + studentByName(int): array<object>
   + studentBySurname(int): array<object>
@@ -25,6 +26,7 @@ class Evaluator{
   + voteHasErrored(): object
   + listIsLoading(): object
   + listHasErrored(): object
+  + setExam(address = string, index = string, code = string, course = string)
 }
 note right of Evaluator
 initialState = {
