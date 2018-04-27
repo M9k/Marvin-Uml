@@ -6,8 +6,8 @@ class TeacherExams{
   - LIST_ERRORED: string
   - LIST_FINISHED: string
   -- selectors --
-  + examByCode(int): array<object>
-  + examByCourse(int): array<object>
+  + examsByCode(int): array<object>
+  + examsByCourse(int): array<object>
   -- actions --
   + pushExam(object): object
   + listIsLoading(): object
