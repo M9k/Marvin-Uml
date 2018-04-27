@@ -1,9 +1,7 @@
 !include ../interfaces/duck.iuml
 class TeacherExams{
   -- types --
-  - SET_EXAMS_LIST: string
   - PUSH_EXAM: string
-  - POP_EXAM: string
   - LIST_LOADING: string
   - LIST_ERRORED: string
   - LIST_FINISHED: string
@@ -11,9 +9,7 @@ class TeacherExams{
   + examByCode(int): array<object>
   + examByCourse(int): array<object>
   -- actions --
-  + setExamsList(array<object>): object
   + pushExam(object): object
-  + popExam(string): object
   + listIsLoading(): object
   + listHasErrored(): object
   + listHasFinished(): object
