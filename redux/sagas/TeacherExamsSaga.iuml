@@ -4,7 +4,8 @@ class TeacherExamsSaga{
   -- types --
   - GET_LIST: string
   -- sagas --
-  - *getList(): void
+  - *getExamData(teacherAddr = string, examIndex = int): void
+  - *getList(action): void
   -- actions --
   + getListAction(userAddress = string): object
 }
