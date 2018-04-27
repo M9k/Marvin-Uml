@@ -1,7 +1,6 @@
 !include ../interfaces/duck.iuml
 
 class Admin{
-  + LISTS: array<string>
   --types--
   - SET_STUDENTS_LIST: string
   - SET_TEACHERS_LIST: string
@@ -13,20 +12,16 @@ class Admin{
   + setStudentsList(array<Object>): object
   + setTeachersList(array<Object>): object
   + setPendingList(array<Object>): object
-  + switchUser(address = string, from_list = string, to_list = string) : string
-  + listIsLoading(list = string): object
-  + listHasErrored(list = string): object
+  + switchUser(string) : string
+  + listIsLoading(): object
+  + listHasErrored(): object
 }
 
 note right of Admin
 initialState: {
-    student_errored: false,
-    student_loading: false,
-    teacher_errored: false,
-    teacher_loading: false,
-    pending_errored: false,
-    pending_loading: false,
-    studentList: array<{name, surname, address, course_name}> = []
+    errored: false,
+    loading: false,
+    studentList: array<{name, surname, address}> = []
     teachersList:{array<{name, surname, address}> = []
     pendingList:{array<{name, surname, address, role}> = []
 }

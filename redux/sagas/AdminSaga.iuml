@@ -7,12 +7,13 @@ class AdminSaga {
     - GET_STUDENT_LIST: string
     - GET_TEACHERS_LIST: string
     - GET_PENDING_USERS_LIST: string
-    - APPROVE_STUDENT: string
-    - REMOVE_STUDENT: string
-    - APPROVE_TEACHER: string
-    - REMOVE_TEACHER: string
+    - APPROVE_USER: string
+    - REMOVE_USER: string
     -- sagas --
-    - *getLists(action): void
+    - *getLists(): void
+    - *getStudentList(): void
+    - *getTeacherList(): void
+    - *getPendingUsersList(): void
     - *addUser(action): void
     - *removeUser(action): void
     -- actions --
@@ -20,10 +21,8 @@ class AdminSaga {
     + getStudentsListAction(): object
     + getTeachersListActiob(): object
     + getPendingUsersListAction(): object
-    + approveUserAction(address = string): object
-    + removeUserAction(address = string): object
-    + approveTeacherAction(address = string): object
-    + removeTeacherAction(address = string): object
+    + addUserAction(string): object
+    + removeUserAction(string): object
 }
 
 AdminSaga --|> marvin.Saga

@@ -16,6 +16,7 @@ Metamask --|> marvin.Duck
 note bottom of Metamask
 initialState = {
   present: true,
+  logged: false,
   account: ''
 }
 end note
