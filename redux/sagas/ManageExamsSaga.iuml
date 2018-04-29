@@ -8,19 +8,24 @@ class ManageExamsSaga{
   - GET_ALL_EXAMS : string
   - GET_EXAMS_BY_COURSE : string
   - GET_TEACHERS: string
+  - ASSOCIATE_PROFESSOR_TO_COURSE_EXAM : string
   - ASSOCIATE_PROFESSOR_TO_EXAM : string
   -- sagas --
+  - *getExamData(examAddress = string): object
+  - *associateProfessor(action) : void
   - *addNewExam(action) : void
   - *getAllExams(action) : void
   - *getExamsByCourse(action) : void
   - *getTeachers() : void
-  - *associateProfessor(action) : void
+  - *associateProfessorToCourseExam(action): void
+  - *associateProfessorToExam(action): void
   -- actions --
   + addNewExamAction(courseAddress = string, name = string, credits = uint, mandatory = bool) : object
   + getAllExamsAction(solarYear = string) : object
   + getExamsByCourseAction(courseAddress = string) : object
   + getTeachers() : object
-  + associateProfessorAction(examAddress = string, teacherAddress = string) : void
+  + associateProfessorToCourseExamAction(examAddress = string, teacherAddress = string) : void
+  + associateProfessorToExamAction(examAddress = string, teacherAddress = string) : void
 }
 ManageExamsSaga --|> marvin.Saga
 ManageExamsSaga ..> marvin.TeachersList : <<use>>
