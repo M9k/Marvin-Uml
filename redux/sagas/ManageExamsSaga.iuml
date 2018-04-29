@@ -1,24 +1,28 @@
 !include ../interfaces/saga.iuml
-!include ../ducks/ManageExams.iuml
+!include ../ducks/CourseExams.iuml
+!include ../ducks/TeachersList.iuml
+!include ../ducks/ExamsList.iuml
 class ManageExamsSaga{
   -- types --
   - ADD_NEW_EXAM : string
   - GET_ALL_EXAMS : string
   - GET_EXAMS_BY_COURSE : string
-  - GET_PROFESSOR_TO_ASSOCIATE : string
-  - ASSOCIATE_PROFESSOR : string
+  - GET_TEACHERS: string
+  - ASSOCIATE_PROFESSOR_TO_EXAM : string
   -- sagas --
-  - *addNewExam(string, string, uint, bool) : void
-  - *getAllExams() : void
-  - *getExamsByCourse(string) : void
-  - *getProfessorToAssociate(string) : void
-  - *associateProfessor(string, string) : void
+  - *addNewExam(action) : void
+  - *getAllExams(action) : void
+  - *getExamsByCourse(action) : void
+  - *getTeachers() : void
+  - *associateProfessor(action) : void
   -- actions --
-  + addNewExamAction(string, string, uint, bool) : object
-  + getAllExamsAction() : object
-  + getExamsByCourseAction(string) : object
-  + getProfessorToAssociate() : object
-  + associateProfessorAction(string, string) : void
+  + addNewExamAction(courseAddress = string, name = string, credits = uint, mandatory = bool) : object
+  + getAllExamsAction(solarYear = string) : object
+  + getExamsByCourseAction(courseAddress = string) : object
+  + getTeachers() : object
+  + associateProfessorAction(examAddress = string, teacherAddress = string) : void
 }
 ManageExamsSaga --|> marvin.Saga
-ManageExamsSaga ..> marvin.ManageExams : <<use>>
+ManageExamsSaga ..> marvin.TeachersList : <<use>>
+ManageExamsSaga ..> marvin.CourseExams : <<use>>
+ManageExamsSaga ..> marvin.ExamsList : <<use>>

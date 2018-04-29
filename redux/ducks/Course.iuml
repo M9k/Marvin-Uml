@@ -22,7 +22,7 @@ note right of Course
 initialState = {
   loading: false,
   errored: false,
-  degreeCoursesList: array<{name, solarYear}> = [],
+  degreeCoursesList: array<{courseAddress, name, solarYear}> = [],
   academicYears: array<{solarYear}> = []
   }
 end note

@@ -6,13 +6,15 @@ note right of Reducers
   academicYears: ManageYears,
   accounts: Admin,
   admins: AdminEmployer,
+  course: CourseExams,
   courses: Course,
   currentUser: Session
-  exams: ManageExams,
+  exams: ExamsList,
   metamask: Metamask,
   selectedExam: Evaluator,
   signup: Booking,
   studentData: Student,
-  teacherData: TeacherExams
+  teacherData: TeacherExams,
+  techersList: TeachersList
 }
 end note

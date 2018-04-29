@@ -1,0 +1,19 @@
+!include ../interfaces/duck.iuml
+class TeachersList {
+  == types ==
+  - LIST_LOADING: string
+  - LIST_ERRORED: string
+  - SET_LIST: string
+  == actions ==
+  + listIsLoading(): string
+  + listHasErrored(): string
+  + setList(): string
+}
+note right of TeachersList
+initialState = {
+  errored: false,
+  loading: false,
+  list: array<{name, surname, address} = []
+}
+end note
+TeachersList --|> marvin.Duck
