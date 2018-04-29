@@ -16,7 +16,7 @@ initialState = {
   loading: false,
   errored: false,
   list: array<{
-    examAddress, name, credits, mandatory
+    address, name, credits, mandatory
     solarYear,
     courseAddress, courseName,
     professorName, professorSurname, professorAddress

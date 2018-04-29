@@ -23,7 +23,7 @@ initialState = {
     solarYear: string = null
     loading: false,
     error: false,
-    examsList: array<{name, credits, mandatory, professorName, professorSurname, professorAddress}> = [],
+    examsList: array<{address, name, credits, mandatory, professorName, professorSurname, professorAddress}> = [],
 }
 end note
 
