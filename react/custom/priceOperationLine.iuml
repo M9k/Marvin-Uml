@@ -1,0 +1,13 @@
+
+class PriceOperationLine{
+    --props--
+       operation: string
+       gasCost: number
+	   ethToEur: number
+       gasCostSafe: number
+       gasCostAverage: number
+       gasCostFast: number
+       gasCostFastest: number
+    --render--
+    rend table row for table with the price and gas with different trasaction speed in the live eth blockchain
+}

@@ -1,0 +1,21 @@
+@startuml
+
+hide circle
+
+title Relationships - Class Diagram for Marvin Frontend
+
+skinparam classAttributeIconSize 0
+
+skinparam linetype ortho
+
+skinparam hide circle
+
+left to right direction
+
+
+/' Base Bootstrap elements and Custom one '/
+    !include ../bootstrap/index.iuml
+    !include ../custom/index.iuml
+
+
+@enduml

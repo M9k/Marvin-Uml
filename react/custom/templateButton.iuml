@@ -1,0 +1,10 @@
+class TemplateButton{
+    --props--
+        clickFunction: function
+        objectToWorkOn: string/number/object
+        text: string
+        type: string
+    --render--
+        custom button with icon and
+         text and a personalized function to call on click
+}

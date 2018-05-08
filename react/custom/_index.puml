@@ -17,6 +17,18 @@ created by 353 group
 
 package custom-components as CustomComponents {
 
+!include alertDismissable.iuml
+
+!include errorTaker.iuml
+
+!include loadingSpinner.iuml
+
+!include modalForm.iuml
+
+!include priceOperationLine.iuml
+
+!include templateButton.iuml
+
 !include navbar.iuml
 
 !include field.iuml
@@ -26,8 +38,6 @@ package custom-components as CustomComponents {
 !include footer.iuml
 
 !include cardWithIcon.iuml
-
-!include deleteButton.iuml
 
 !include messageBox.iuml
 

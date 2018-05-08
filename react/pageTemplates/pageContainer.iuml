@@ -1,8 +1,8 @@
 class PageContainer {
     --props--
-        loggedIn: bool
-        links: object[0...*]
         children: nodes
+        route: object
+        location: object
     --render--
         render the navbar and the footer
 }
@@ -10,5 +10,8 @@ class PageContainer {
 PageContainer ..> Panel
 PageContainer ..> Footer
 PageContainer ..> Navbar
+PageContainer ..> ErrorTaker
+PageContainer ..> AlertDismissable
+PageContainer ..> LoadingSpinner
 Page ..> PageContainer
 

@@ -1,0 +1,7 @@
+
+class ErrorTaker{
+    --props--
+       children: node
+    --render--
+    display a text in case it catches any error inside the page
+}

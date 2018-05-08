@@ -1,4 +1,4 @@
-class MessageBox {
+class Message {
     --props--
        isError: boolean
        description: string
@@ -7,5 +7,5 @@ class MessageBox {
     modal with positive or failure icon with description
 }
 
-MessageBox ..> Modal
-MessageBox ..> ProgressBar
+Message ..> Modal
+Message ..> ProgressBar

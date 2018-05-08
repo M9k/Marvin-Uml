@@ -1,15 +1,13 @@
 class PageTableForm{
     --props--
         getTableData: function
-        editTableData: function
-        deleteTableData: function
-        addTableData: function
+        tableData: array(dataObj)
+        headerInfo: array(strings)
+        tableButtons: array(buttons)
+        columFilter: bool
     --render--
         render table with custom row with buttons
-        and a form to add some data related to that table
 }
 PageTableForm ..> Table
-PageTableForm ..> Button
-PageTableForm ..> Form
-PageTableForm ..> Modal
-PageTableForm ..> DeleteButton
+PageTableForm ..> TemplateButton
+PageTableForm ..> Utils

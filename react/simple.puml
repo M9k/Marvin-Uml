@@ -25,12 +25,13 @@ package UniversityPages as UP{}
 package AdminPages as AP{}
 package TeacherPages as TP{}
 package StudentPages as SP{}
+package PublicPages as PP{}
 
 UP ..> PT
 AP ..> PT
 TP ..> PT
 SP ..> PT
-
+PP ..> PT
 
 package Routes as RT{}
 
@@ -38,5 +39,6 @@ RT ..> UP
 RT ..> AP
 RT ..> TP
 RT ..> SP
+RT ..> PP
 
 @enduml

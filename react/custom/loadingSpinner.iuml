@@ -1,0 +1,8 @@
+
+class LoadingSpinner{
+    --props--
+       isLoading: bool
+       children: node
+    --render--
+    show a spinner while the page is loading
+}

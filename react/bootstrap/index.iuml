@@ -4,6 +4,8 @@ from https://react-bootstrap.github.io/components/alerts/
 '/
 package Bootstrap-React as BR {
 
+!include alert.iuml
+
 /'BEGIN Form'/
 !include formgroup.iuml
 !include formcontrol.iuml

@@ -1,0 +1,10 @@
+
+class AlertDismissable{
+    --props--
+       type: string
+       message: string
+    --render--
+    show message alert dismissable with close icon
+}
+
+AlertDismissable ..> Alert

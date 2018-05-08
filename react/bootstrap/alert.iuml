@@ -1,0 +1,10 @@
+
+class Alert{
+    --props--
+       bsStyle: string
+       children: nodes
+       onDismiss: function
+    --render--
+    show alert with children inside and
+    dismiss click event function
+}

@@ -13,30 +13,6 @@ class AdminIndex{
 }
 AdminIndex ..> CardWithIcon
 
-class AdminUsersConfirmed{
-    --props--
-        userType: string
-        getUsers: function
-        functionDeleteUser: function
-    --render--
-        table with user list and one button
-        for each row to delete
-}
-AdminUsersConfirmed ..> PageTableForm
-
-
-class AdminUsersNotConfirmed{
-    --props--
-        userType: string
-        getUsers: function
-        functionConfirmUser: function
-        functionDeleteUser: function
-    --render--
-        table with user list and two button
-        for each row to confirm or delete
-}
-AdminUsersNotConfirmed ..> PageTableForm
-
 class AdminCourses{
     --props--
         getCourses: function
@@ -61,6 +37,22 @@ class AdminCourseExams{
         course
 }
 AdminCourseExams ..> PageTableForm
+
+class ConfirmStudentUser{
+}
+ConfirmStudentUser ..> PageTableForm
+
+class ConfirmTeacherUser{
+}
+ConfirmTeacherUser ..> PageTableForm
+
+class ExamDetails{
+}
+
+class SystemUsers{
+}
+SystemUsers ..> PageTableForm
+
 
 }
 

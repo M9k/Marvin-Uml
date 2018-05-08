@@ -1,0 +1,24 @@
+@startuml
+
+hide circle
+
+title Relationships - Class Diagram for Marvin Frontend
+
+skinparam classAttributeIconSize 0
+
+skinparam linetype ortho
+
+skinparam hide circle
+
+left to right direction
+
+   !include ../app/index.iuml
+
+/'Page templates or public one '/
+    !include ../pageTemplates/index.iuml
+
+
+
+
+
+@enduml

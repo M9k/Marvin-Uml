@@ -33,7 +33,7 @@ package PublicPages #D6C544 {
     show list of actions and related price with table
   }
 
-  class SubmissionPage {
+  class Register {
     --props--
     currentAddr: object
     courses: object[0..*]
@@ -42,6 +42,23 @@ package PublicPages #D6C544 {
     show a form with name,surname
     and two selectbox to choose type of user
   }
+
+   class Price {
+           --render--
+           show all the prices of
+            inside Marvin
+         }
+
+   class License {
+         --render--
+         show license of Marvin
+       }
+
+   class NotFound {
+         --render--
+         not found page 404
+       }
+
 }
 
 note left of PublicPages: UC1 & UC3 & UC11
