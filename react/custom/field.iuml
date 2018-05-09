@@ -19,3 +19,5 @@ Field ..> FormGroup
 Field ..> Radio
 Field ..> MenuItem
 Field ..> TemplateButton
+Field ..> fieldtypes
+Field ..> Utils

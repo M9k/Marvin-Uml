@@ -5,6 +5,10 @@ created by 353 group
 
 package Custom-Components as CustomComponents {
 
+!include utils.iuml
+
+!include fieldtypes.iuml
+
 !include alertDismissable.iuml
 
 !include errorTaker.iuml

@@ -10,3 +10,6 @@ class ModalForm{
     --render--
     modal a modal with props to show and display yes and no button with related event clicks, inside anything you want
 }
+ModalForm ..> Button
+ModalForm ..> Modal
+ModalForm ..> Form

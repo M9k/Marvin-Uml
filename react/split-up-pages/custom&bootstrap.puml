@@ -17,5 +17,7 @@ left to right direction
     !include ../bootstrap/index.iuml
     !include ../custom/index.iuml
 
+  BR -[hidden]- CustomComponents
+
 
 @enduml

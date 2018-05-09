@@ -18,11 +18,11 @@ package Bootstrap-React as BR {
 !include table.iuml
 !include button.iuml
 
-!include dropdownbutton.iuml
 !include menuitem.iuml
 !include modal.iuml
-!include progressbar.iuml
 !include StateEnum.iuml
+
+!include image.iuml
 }
 
 note bottom of BR: JavaScript package

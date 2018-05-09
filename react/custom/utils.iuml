@@ -1,0 +1,20 @@
+
+class Utils{
+
+{static} generateKey(paramObj) : string
+
+{static} existValue(e) : int
+
+{static} notNullValue(e) : int
+
+{static} validEthAddress(ind) : int
+
+{static} moreThanCurrentYear(year) : int
+
+{static} validGrade(grade) : int
+
+{static} positiveNumber(number) : int
+
+{static} alwaysTrue(e) : int
+
+}

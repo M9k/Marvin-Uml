@@ -1,16 +1,22 @@
 package PublicPages #D6C544 {
 
   class PublicIndex {
+    --props--
+    metamask: bool
+    account: string
     --render--
     describes marvin system with images, logo and text
+    with related alert messages in case users hasn't metamask or registered account
   }
-	PublicIndex ..> MessageBox
+	PublicIndex ..> CardWithIcon
+	PublicIndex ..> AlertDismissable
 
   class HelpPage {
     --render--
     show list of paragraphs and videos/images to help user
     with common problem or questions
   }
+  HelpPage ..> Image
 
   class LoginPage {
     --props--
@@ -18,19 +24,29 @@ package PublicPages #D6C544 {
     --render--
     show loging process
   }
+  LoginPage ..> RedirectToHome
 
-  class LogoutPage {
+  class Logout {
     --render--
     show logout process
   }
-	LogoutPage ..> MessageBox
+	Logout ..> Image
 
-  class PricePage {
+  class Price {
     ----
     - currentEthPrice()
     - currentGasPrice()
     --render--
     show list of actions and related price with table
+  }
+  Price ..> PriceOperationLine
+
+  class RedirectToHome{
+    --props--
+    type: string
+    message: string
+    --render--
+    redirect to home after 1 second passing in the url type and message of alert to show
   }
 
   class Register {
@@ -42,6 +58,7 @@ package PublicPages #D6C544 {
     show a form with name,surname
     and two selectbox to choose type of user
   }
+  Register ..> Form
 
    class Price {
            --render--

@@ -7,3 +7,4 @@ class CardWithIcon{
         card with icon and description
         plus a link button to go to a specific page
 }
+CardWithIcon ..> Image

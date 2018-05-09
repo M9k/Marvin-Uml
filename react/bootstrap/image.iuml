@@ -1,0 +1,13 @@
+
+class Image{
+    --props--
+        src: string
+        responsive: bool
+        rounded: bool
+        circle: bool
+    --render--
+    show an image with src an custom
+    border radius based on props
+
+
+}

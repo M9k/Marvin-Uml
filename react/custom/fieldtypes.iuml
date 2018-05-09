@@ -1,0 +1,6 @@
+enum fieldtypes {
+  TEXT: 'text',
+  RADIO: 'radio',
+  CHECKBOX: 'checkbox',
+  SELECT: 'select',
+}
