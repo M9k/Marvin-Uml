@@ -26,30 +26,66 @@ AdminCourses ..> PageTableForm
 
 class AdminCourseExams{
     --props--
-        course: object
-        getExams: function
-        addExam: function
-        validExam: function
-        setTeacher: function
+      params: object
+      getExams: func
+      addExam: func
+      examList: array(object)
+      location: object
     --render--
         table with exams list from specific course
         with a form to add a new one to the current
         course
 }
 AdminCourseExams ..> PageTableForm
+AdminCourseExams ..> Form
+AdminCourseExams ..> Utils
+AdminCourseExams ..> ExamDetails
 
 class ConfirmStudentUser{
+    --props--
+      confirmStudent: func
+      getPendingStudents: func
+      denyStudent: func
+      pendingStudents: array(object)
+    --render--
+       show table of unconfirmed students with 2 button, 1 to accept request and one to deny
 }
 ConfirmStudentUser ..> PageTableForm
 
 class ConfirmTeacherUser{
+    --props--
+      confirmTeacher: func
+      getPendingTeachers: func
+      denyTeacher: func
+      pendingTeachers: array(object)
+    --render--
+       show table of unconfirmed teachers with 2 button, 1 to accept request and one to deny
 }
 ConfirmTeacherUser ..> PageTableForm
 
 class ExamDetails{
+    --props--
+      object: object
+      show: bool
+      getTeachers: func
+      teacherList: array(object)
+      loadingTeacher: bool
+      setTeacher: func
+      moreDetails: bool
+    --render--
+      show the details of an exam and if there's not an assigned prof, it let's you choose one to set with an inner form
 }
 
 class SystemUsers{
+    --props--
+      getTeachers: func
+      getStudents: func
+      deleteTeacher: func
+      deleteStudent: func
+      teacherAccounts: array(object)
+      studentAccounts: array(object)
+    --render--
+    show two tables with list of confirmed teachers and students
 }
 SystemUsers ..> PageTableForm
 

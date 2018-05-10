@@ -2,36 +2,35 @@ package StudentPages #BEAFCA {
 
 class StudentIndex{
     --render--
+        show credits progress on the top
         cardWithIcon to go ExamsList -> Exams
-        cardWithIcon to go OptionalExamsList -> OptionalExams
-        cardWi5thIcon to go credits summary -> Summary
+        cardWithIcon to go OptionalExams -> OptionalExams
 }
 StudentIndex ..> CardWithIcon
 
 class StudentExams{
     --props--
-        getExams : function
+        getExams : func
+        ExamsList: array(objExams)
+        myAddress: string
     --render--
-        table with list of all exams
+        table with list of all student exams
 }
 StudentExams ..> PageTableForm
 
+
 class StudentOptionalExams{
     --props--
-        getOptionalExams : function
-        selectExam : function
+        getExams : function
+        ExamsList: array(objExams)
+        myAddress: string
+        enrollToExam: func
     --render--
         table with list of all optional exams
 }
 StudentOptionalExams ..> PageTableForm
+StudentOptionalExams ..> ModalForm
 
-class StudentSummary{
-    --props--
-        getStudentCredits : function
-    --render--
-        show all credits and credits to end
-}
-StudentSummary ..> MessageBox
 
 }
 

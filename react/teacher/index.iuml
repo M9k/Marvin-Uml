@@ -6,10 +6,13 @@ class TeacherIndex {
         cardWithIcon to go -> TeacherExams
 }
 TeacherIndex ..> CardWithIcon
+TeacherIndex ..> Button
 
 class TeacherExams {
     --props--
-        getExams: function
+      getMyAssignedExams: func
+      assignedExams: func
+      myContract: func
     --render--
     table with exams list and one
     button to see the students
@@ -19,13 +22,20 @@ TeacherExams ..> PageTableForm
 
 class TeacherExamStudents {
     --props--
-        getStudents: function
-        addGrade: function
+      params: object
+      myWeb3Address: string
+      studentsOfExam: array(objStudents)
+      getStudentsOfExam: func
+      addGradeToStudent: func
+      location: object
     --render--
     table with the students list
     of the seleted exam
 }
 TeacherExamStudents ..> PageTableForm
+TeacherExamStudents ..> Utils
+TeacherExamStudents ..> ModalForm
+TeacherExamStudents ..> Form
 
 }
 
